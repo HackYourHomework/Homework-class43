@@ -19,7 +19,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-Java
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
 function giveCompliment(name) {
-  const compliment = [
+  const compliments = [
     'Great',
     'Amazing',
     'Awesome',
@@ -31,7 +31,7 @@ function giveCompliment(name) {
     'Skilled',
     'The best of the best',
   ];
-  const randomItem = compliment[Math.floor(Math.random()*compliment.length)];
+  const randomItem = compliments[Math.floor(Math.random()*compliments.length)];
 
   return `You are ${randomItem}, ${name}!`
 }
@@ -42,7 +42,7 @@ console.log(giveCompliment('Ruslan'));
 
 
 function main() {
-  // TODO substitute your own name for "HackYourFuture"
+  
   const myName = 'HackYourFuture';
 
   console.log(giveCompliment(myName));
@@ -53,7 +53,7 @@ function main() {
 
   console.log(giveCompliment(yourName));
   console.log(giveCompliment(yourName));
-  console.log(giveCompliment(yourName));
+  console.log(giveCompliment(yourName)); 
 }
 
 // ! Do not change or remove the code below

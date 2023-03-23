@@ -1,18 +1,6 @@
-*** Unit Test Error Report ***
 
-✕ giveCompliment should have all TODO comments removed
-✕ giveCompliment should include a `compliments` array inside its function body
-✕ giveCompliment the `compliments` array should be initialized with 10 strings
-✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
-
-
-Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/otteowo/hackyourfuture/Homework-class43/test-runner/CustomReporter.js"
-Browserslist: caniuse-lite is outdated. Please run:
-  npx browserslist@latest --update-db
-  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 *** Spell Checker Report ***
 
 ex1-giveCompliment.js:39:29 - Unknown word (Ruslan)
 ex1-giveCompliment.js:40:29 - Unknown word (Ruslan)
 ex1-giveCompliment.js:41:29 - Unknown word (Ruslan)
-ex1-giveCompliment.js:46:19 - Unknown word (Ruslan)
