@@ -34,5 +34,16 @@
         "typeof",
         "usingapis",
         "Woww"
+        "Ruslan"
+    ],
+    "dictionaries": [
+        "custom-dictionary"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "custom-dictionary",
+            "path": "./.cspell/custom-dictionary.txt",
+            "addWords": true
+        }
     ]
 }
