@@ -1,0 +1,43 @@
+2023-03-25 12:36:32 info: ----------------------------------------------
+2023-03-25 12:36:32 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-25 12:36:32 info: ----------------------------------------------
+2023-03-25 12:36:36 info: All unit tests passed.
+2023-03-25 12:36:41 info: All steps were completed successfully
+2023-03-25 12:36:57 info: ----------------------------------------
+2023-03-25 12:36:57 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-03-25 12:36:57 info: ----------------------------------------
+2023-03-25 12:37:00 info: All unit tests passed.
+2023-03-25 12:37:05 info: All steps were completed successfully
+2023-03-25 12:37:17 info: -------------------------------------------
+2023-03-25 12:37:17 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-03-25 12:37:17 info: -------------------------------------------
+2023-03-25 12:37:21 info: All unit tests passed.
+2023-03-25 12:37:26 error: *** Spell Checker Report ***
+
+ex3-tellFortune.js:54:63 - Unknown word (Ksenya)
+
+2023-03-25 12:38:22 info: -------------------------------------------
+2023-03-25 12:38:22 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-03-25 12:38:22 info: -------------------------------------------
+2023-03-25 12:38:26 info: All unit tests passed.
+2023-03-25 12:38:31 info: All steps were completed successfully
+2023-03-25 12:38:45 info: --------------------------------------------
+2023-03-25 12:38:45 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-03-25 12:38:45 info: --------------------------------------------
+2023-03-25 12:38:45 warn: A unit test file was not provided.
+2023-03-25 12:38:50 info: All steps were completed successfully
+2023-03-25 12:39:29 info: ------------------------------------------------
+2023-03-25 12:39:29 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-03-25 12:39:29 info: ------------------------------------------------
+2023-03-25 12:39:29 warn: A unit test file was not provided.
+2023-03-25 12:39:35 info: All steps were completed successfully
+2023-03-25 12:39:48 info: -----------------------------------------
+2023-03-25 12:39:48 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-03-25 12:39:48 info: -----------------------------------------
+2023-03-25 12:39:48 warn: A unit test file was not provided.
+2023-03-25 12:39:53 info: All steps were completed successfully
+2023-03-25 12:40:05 info: -------------------------------------------
+2023-03-25 12:40:05 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-03-25 12:40:05 info: -------------------------------------------
+2023-03-25 12:40:05 warn: A unit test file was not provided.
+2023-03-25 12:40:11 info: All steps were completed successfully
