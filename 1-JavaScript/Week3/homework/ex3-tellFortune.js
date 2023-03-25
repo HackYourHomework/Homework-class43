@@ -1,4 +1,7 @@
 'use strict';
+
+const { sample } = require('lodash');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-3-be-your-own-fortune-teller
 
@@ -33,29 +36,51 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function selectRandomly(arrayParameter) {
+  const randomElementOfArray = Math.floor(
+    Math.random() * arrayParameter.length
+  );
+  return arrayParameter[randomElementOfArray];
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
+  const valuesFromArrayNumKids = selectRandomly(numKids);
+  const valuesFromArrayPartnerNames = selectRandomly(partnerNames);
+  const valuesFromLocations = selectRandomly(locations);
+  const valuesFromJobTitles = selectRandomly(jobTitles);
+
+  return (
+    'You will be a ' +
+    valuesFromJobTitles +
+    ' in ' +
+    valuesFromLocations +
+    ', married to ' +
+    valuesFromArrayPartnerNames +
+    ' with ' +
+    valuesFromArrayNumKids +
+    ' kids '
+  );
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  const numKids = [0, 1, 2, 3, 4];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
+  const partnerNames = ['A', 'B', 'C', 'D', 'E'];
 
   const locations = [
-    // TODO add elements here
+    'Netherlands',
+    'Azerbaijan',
+    'Australia',
+    'Canada',
+    'Brasil',
   ];
 
   const jobTitles = [
-    // TODO add elements here
+    'Web developer',
+    'Accountant',
+    'Doctor',
+    'Magician',
+    'Killer',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
