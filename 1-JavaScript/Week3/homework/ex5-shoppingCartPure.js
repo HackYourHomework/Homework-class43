@@ -27,7 +27,7 @@ function addToShoppingCart(arrOriginal, groceryItem) {
     newArr.shift();
   }
   return newArr;
-  
+
 }
 addToShoppingCart()
 
