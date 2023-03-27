@@ -1,0 +1,104 @@
+2023-03-25 11:33:37 info: ----------------------------------------------
+2023-03-25 11:33:37 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-25 11:33:37 info: ----------------------------------------------
+2023-03-25 11:33:37 info: Exercise has not yet been modified
+2023-03-25 11:33:38 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should take a single parameter
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-03-26 07:11:29 info: ----------------------------------------------
+2023-03-26 07:11:29 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 07:11:29 info: ----------------------------------------------
+2023-03-26 07:11:30 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-03-26 07:11:31 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
+2023-03-26 07:13:08 info: ----------------------------------------------
+2023-03-26 07:13:08 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 07:13:08 info: ----------------------------------------------
+2023-03-26 07:13:09 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-03-26 07:13:10 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
+2023-03-26 07:18:21 info: ----------------------------------------------
+2023-03-26 07:18:21 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 07:18:21 info: ----------------------------------------------
+2023-03-26 07:18:22 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-03-26 07:18:23 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
+2023-03-26 07:27:06 info: ----------------------------------------------
+2023-03-26 07:27:06 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 07:27:06 info: ----------------------------------------------
+2023-03-26 07:27:07 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-03-26 07:27:08 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
+2023-03-26 07:27:24 info: Disclaimer turned off
+2023-03-26 07:27:34 info: ----------------------------------------------
+2023-03-26 07:27:34 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 07:27:34 info: ----------------------------------------------
+2023-03-26 07:27:35 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-03-26 07:27:36 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
+2023-03-26 07:28:57 info: ----------------------------------------------
+2023-03-26 07:28:57 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 07:28:57 info: ----------------------------------------------
+2023-03-26 07:28:57 info: All unit tests passed.
+2023-03-26 07:28:58 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
