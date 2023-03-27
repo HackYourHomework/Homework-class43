@@ -6,10 +6,10 @@ const shoppingCart = ['bananas', 'milk'];
 function addToShoppingCart(groceryItem) {
   const item = groceryItem;
 
-  if (item === undefined) {
+  if (item === undefined || NaN || null) {
     return `You bought ${shoppingCart.join(', ')}!`;
   }
-  if (item !== undefined) {
+  if (typeof item === 'string') {
     shoppingCart.push(item);
   }
   if (shoppingCart.length > 3) {
