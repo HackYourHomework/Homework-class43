@@ -16,12 +16,12 @@ it pure. Do the following:
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
 // ! Function under test
-function addToShoppingCart(arrOriginal, groceryItem) {
+function addToShoppingCart(arrOriginal, itemGrocery) {
 
   arrOriginal = ['bananas', 'milk'];
   
   const newArr = [...arrOriginal];
-  newArr.push(groceryItem);
+  newArr.push(itemGrocery);
 
   if (newArr.length > 3) {
     newArr.shift();
