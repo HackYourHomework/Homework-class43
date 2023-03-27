@@ -26,6 +26,7 @@ function addToShoppingCart(arrOriginal, itemGrocery) {
   if (newArr.length > 3) {
     newArr.shift();
   }
+  
   return newArr;
 
 }
