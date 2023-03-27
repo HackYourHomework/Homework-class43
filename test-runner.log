@@ -102,3 +102,28 @@ ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
 
 ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
 
+2023-03-27 09:47:13 info: ----------------------------------------------
+2023-03-27 09:47:13 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-27 09:47:13 info: ----------------------------------------------
+2023-03-27 09:47:14 info: All unit tests passed.
+2023-03-27 09:47:15 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:23:19 - Unknown word (Valentyn)
+
+2023-03-27 09:47:29 info: ----------------------------------------
+2023-03-27 09:47:29 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-03-27 09:47:29 info: ----------------------------------------
+2023-03-27 09:47:29 info: All unit tests passed.
+2023-03-27 09:47:30 error: *** ESLint Report ***
+
+ex2-dogYears.js
+  4:7  warning  'dogAge' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-03-27 09:48:41 info: ----------------------------------------
+2023-03-27 09:48:41 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-03-27 09:48:41 info: ----------------------------------------
+2023-03-27 09:48:41 info: All unit tests passed.
+2023-03-27 09:48:43 info: All steps were completed successfully
