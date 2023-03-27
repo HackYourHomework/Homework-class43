@@ -25,26 +25,21 @@ const shoppingCart = ['bananas', 'milk'];
 // ! Function to be tested
 function addToShoppingCart(groceryItem) {
 
-  shoppingCart.push(groceryItem)
+  const item = groceryItem;
 
-  if(shoppingCart.length > 3) {
-    return shoppingCart.shift(groceryItem)
+  if (item === undefined) {
+    return `You bought ${shoppingCart.join(', ')}!`;
   }
-
-  return `You bought ${shoppingCart}!`
-
-  
-
-  // for (let i = 0; i < shoppingCart.length; i++) {
-  //   shoppingCart.length > 2
-  // }
+  if (item !== undefined) {
+    shoppingCart.push(item);
+  }
+  if (shoppingCart.length > 3) {
+    shoppingCart.shift();
+  }
+  return `You bought ${shoppingCart.join(', ')}!`;
 }
-// addToShoppingCart('mango')
-// addToShoppingCart('cola')
-// addToShoppingCart('moka')
 
-
-
+addToShoppingCart();
 
 
 
