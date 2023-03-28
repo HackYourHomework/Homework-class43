@@ -1,0 +1,94 @@
+2023-03-26 03:48:16 info: ----------------------------------------------
+2023-03-26 03:48:16 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 03:48:16 info: ----------------------------------------------
+2023-03-26 03:48:17 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are great, HackYourFuture!
+  Received: You are great, HackYourFuture
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/honu/Documents/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-03-26 03:50:14 info: Disclaimer turned off
+2023-03-26 03:50:24 info: ----------------------------------------------
+2023-03-26 03:50:24 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 03:50:24 info: ----------------------------------------------
+2023-03-26 03:50:25 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+  Expected: You are great, HackYourFuture!
+  Received: You are great, HackYourFuture
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="/Users/honu/Documents/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-03-26 03:53:28 info: ----------------------------------------------
+2023-03-26 03:53:28 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-26 03:53:28 info: ----------------------------------------------
+2023-03-26 03:53:29 info: All unit tests passed.
+2023-03-26 03:53:30 info: All steps were completed successfully
+2023-03-26 03:53:42 info: ----------------------------------------
+2023-03-26 03:53:42 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-03-26 03:53:42 info: ----------------------------------------
+2023-03-26 03:53:42 info: All unit tests passed.
+2023-03-26 03:53:43 info: All steps were completed successfully
+2023-03-26 03:53:57 info: -------------------------------------------
+2023-03-26 03:53:57 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-03-26 03:53:57 info: -------------------------------------------
+2023-03-26 03:53:58 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Marketing Manager in Toronto, married to Robin with 1 kids.
+  Received: "You will be a Marketing Manager in Toronto, 
+  married to Robin with 1 kids."
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/honu/Documents/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-03-26 03:58:15 info: -------------------------------------------
+2023-03-26 03:58:15 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-03-26 03:58:15 info: -------------------------------------------
+2023-03-26 03:58:16 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Marketing Manager in Toronto, married to Robin with 1 kids.
+  Received: "You will be a Marketing Manager in Toronto, married to Robin with 1 kids."
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/honu/Documents/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-03-26 03:58:51 info: -------------------------------------------
+2023-03-26 03:58:51 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-03-26 03:58:51 info: -------------------------------------------
+2023-03-26 03:58:51 info: All unit tests passed.
+2023-03-26 03:58:53 info: All steps were completed successfully
+2023-03-26 03:59:07 info: --------------------------------------------
+2023-03-26 03:59:07 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-03-26 03:59:07 info: --------------------------------------------
+2023-03-26 03:59:07 warn: A unit test file was not provided.
+2023-03-26 03:59:08 info: All steps were completed successfully
+2023-03-26 04:00:00 info: ------------------------------------------------
+2023-03-26 04:00:00 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-03-26 04:00:00 info: ------------------------------------------------
+2023-03-26 04:00:00 warn: A unit test file was not provided.
+2023-03-26 04:00:01 info: All steps were completed successfully
+2023-03-26 04:00:28 info: -----------------------------------------
+2023-03-26 04:00:28 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-03-26 04:00:28 info: -----------------------------------------
+2023-03-26 04:00:28 warn: A unit test file was not provided.
+2023-03-26 04:00:30 info: All steps were completed successfully
+2023-03-26 04:00:40 info: -------------------------------------------
+2023-03-26 04:00:40 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-03-26 04:00:40 info: -------------------------------------------
+2023-03-26 04:00:40 warn: A unit test file was not provided.
+2023-03-26 04:00:41 info: All steps were completed successfully
