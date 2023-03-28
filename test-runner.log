@@ -157,3 +157,8 @@ ex2-dogYears.js
 2023-03-27 07:08:22 info: -----------------------------------------
 2023-03-27 07:08:22 warn: A unit test file was not provided.
 2023-03-27 07:08:23 info: All steps were completed successfully
+2023-03-28 11:44:18 info: -------------------------------------------
+2023-03-28 11:44:18 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-03-28 11:44:18 info: -------------------------------------------
+2023-03-28 11:44:18 warn: A unit test file was not provided.
+2023-03-28 11:44:19 info: All steps were completed successfully
