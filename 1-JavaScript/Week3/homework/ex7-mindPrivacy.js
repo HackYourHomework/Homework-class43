@@ -31,7 +31,7 @@ const employeeRecords = [
 
 // ! Function under test
 function filterPrivateData(arr) {
-  newEmployeeRecords = [];
+  const newEmployeeRecords = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i]) {
       const { name, occupation, email } = employeeRecords[i];
@@ -40,7 +40,7 @@ function filterPrivateData(arr) {
       console.log(newEmployeeRecords);
     }
   }
-  return arr;
+  return newEmployeeRecords;
 }
 filterPrivateData(employeeRecords)
 // ! Test functions (plain vanilla JavaScript)
