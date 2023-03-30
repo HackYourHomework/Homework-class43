@@ -372,3 +372,23 @@ ex4-shoppingCart.js
 2023-03-27 02:33:24 info: ------------------------------------------------
 2023-03-27 02:33:24 warn: A unit test file was not provided.
 2023-03-27 02:33:31 info: All steps were completed successfully
+2023-03-27 03:21:42 info: ----------------------------------------------
+2023-03-27 03:21:42 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-27 03:21:42 info: ----------------------------------------------
+2023-03-27 03:21:47 info: All unit tests passed.
+2023-03-27 03:21:52 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:39:29 - Unknown word (Ruslan)
+ex1-giveCompliment.js:40:29 - Unknown word (Ruslan)
+ex1-giveCompliment.js:41:29 - Unknown word (Ruslan)
+
+2023-03-27 03:32:59 info: ----------------------------------------------
+2023-03-27 03:32:59 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-03-27 03:32:59 info: ----------------------------------------------
+2023-03-27 03:33:03 info: All unit tests passed.
+2023-03-27 03:33:09 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:39:29 - Unknown word (Ruslan)
+ex1-giveCompliment.js:40:29 - Unknown word (Ruslan)
+ex1-giveCompliment.js:41:29 - Unknown word (Ruslan)
+
