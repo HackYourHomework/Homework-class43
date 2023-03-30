@@ -33,45 +33,43 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
+const numKids = [3, 2, 4, 1, 6];
+
+const partnerNames = ['Peter', 'Luke', 'Matt', 'John', 'Paul'];
+
+const locations = ['London', 'Manchester', 'Amsterdam', 'Paris', 'Rotterdam'];
+
+const jobTitles = ['Banker', 'Lawyer', 'Engineer', 'Programmer', 'Investor'];
+
 function selectRandomly(arr) {
- return random = arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+function selectRandomly(arr) {
+ return arr[Math.floor(Math.random() * arr.length)];
 
   
 
 }
 
 function tellFortune(kids, names, location, jobs) {
-for (let i = 0; i < arr.length; i++)
-    if (arr[i] == kids) {
-      kid = selectRandomly(kids);
-      name = selectRandomly(names)
-      location = selectRandomly(location)
-      job = selectRandomly(jobs)
-    }
+const randomNum = selectRandomly(numKids);
+  const randomName = selectRandomly(partnerNames);
+  const randomLocation = selectRandomly(locations);
+  const randomJob = selectRandomly(jobTitles);
+
+  return `You will be a ${randomJob} in ${randomLocation} married to ${randomName} with ${randomNum} kids.`;
   
-  return `You will be a ${job} in ${location} married to ${name} with ${kid} kids.`;
+ 
 
 }
 tellFortune()
 
+console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 
 function main() {
-  const numKids = [
-   [3, 2, 4, 1, 6]
-  ];
-
-  const partnerNames = [
-    "Peter", "Luke", "Matt", "John", "Paul"
-  ];
-
-  const locations = [
-    "London", "Manchester", "Amsterdam", "Paris", "Rotterdam"
-  ];
-
-  const jobTitles = [
-    "Banker", "Lawyer", "Engineer", "Programmer", "Investor"
-  ];
-
+ 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
