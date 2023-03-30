@@ -34,9 +34,9 @@ body, this code is now written once only in a separated function.
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 function selectRandomly(arr) {
- let random = arr[Math.floor(Math.random() * arr.length)];
+ return random = arr[Math.floor(Math.random() * arr.length)];
 
-  return random;
+  
 
 }
 
