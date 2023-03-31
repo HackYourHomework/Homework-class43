@@ -31,16 +31,21 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(mondayTasks, hourlyRate) {
+  const result = mondayTasks.map((item) => item.duration / 60);
+
+  const duration = result.reduce((a, b) => a + b, 0) * hourlyRate;
+  return `€${duration.toFixed(2)}`;
 }
+
+console.log(computeEarnings(mondayTasks, hourlyRate));
 
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {
   test('should take two parameters', () => {
-    // The `.length` property indicates the number of parameters expected by
-    // the function.
-    expect(computeEarnings).toHaveLength(2);
+    const result = computeEarnings.length(2);
+    const expected = 2;
+    expect(result).toHaveLength(expected);
   });
 
   test('should compute the earnings as a formatted Euro amount', () => {
