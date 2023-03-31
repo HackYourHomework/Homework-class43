@@ -1,0 +1,23 @@
+2023-03-31 05:05:27 info: ------------------------------------------------------
+2023-03-31 05:05:27 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-03-31 05:05:27 info: ------------------------------------------------------
+2023-03-31 05:05:27 info: Exercise has not yet been modified
+2023-03-31 05:05:31 info: All unit tests passed.
+2023-03-31 05:05:36 info: All steps were completed successfully
+2023-03-31 05:55:51 info: ------------------------------------------------------
+2023-03-31 05:55:51 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-03-31 05:55:51 info: ------------------------------------------------------
+2023-03-31 05:55:55 info: All unit tests passed.
+2023-03-31 05:55:57 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  15:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-03-31 05:56:42 info: ------------------------------------------------------
+2023-03-31 05:56:42 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-03-31 05:56:42 info: ------------------------------------------------------
+2023-03-31 05:56:46 info: All unit tests passed.
+2023-03-31 05:56:51 info: All steps were completed successfully
