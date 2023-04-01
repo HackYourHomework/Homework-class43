@@ -31,10 +31,22 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
-}
+function computeEarnings(tasks, rate) {
+  
+  const totalSum = tasks
+    .map((task) => (task.duration / 60) * rate)
+    .reduce((acc, curr) => acc + curr, 0);
 
+  const sumInEuro = new Intl.NumberFormat('en-Us', { 
+    style: 'currency', 
+    currency: 'EUR' 
+  }).format(totalSum);
+
+  console.log(sumInEuro);
+  return sumInEuro;
+} 
+
+computeEarnings(mondayTasks, hourlyRate)
 // ! Unit tests (using Jest)
 describe('computeEarnings', () => {
   test('should take two parameters', () => {
