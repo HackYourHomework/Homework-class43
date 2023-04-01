@@ -24,7 +24,9 @@ const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart(ele) {
-  shoppingCart.push(ele);
+  if (ele !== '') {
+    shoppingCart.push(ele);
+  }
   if (shoppingCart.length > 3) {
     shoppingCart.shift();
   }
@@ -32,12 +34,9 @@ function addToShoppingCart(ele) {
   return `You bought ${result}!`;
 }
 
-
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
-  console.log(
-    addToShoppingCart()
-  );
+  console.log(addToShoppingCart());
   const expected = 'You bought bananas, milk!';
   const actual = addToShoppingCart();
   console.assert(actual === expected);
