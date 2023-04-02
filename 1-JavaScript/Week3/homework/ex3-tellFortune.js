@@ -33,58 +33,30 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-const numKids = [
-  2, 3, 1, 4, 2
-];
-
-const partnerNames = [
-  'June', 'Mary', 'Sophia', 'Ella', 'Johanna'
-];
-
-const locations = [
-  'London', 'Liverpool', 'Bristol', 'Oxford', 'Coventry'
-];
-
-const jobTitles = [
-  'teacher', 'pilot', 'doctor', 'police', 'seller'
-];
 
 function selectRandomly(myArray) {
-  const randomItem =
-    [Math.floor(Math.random() * myArray.length)];
-    return myArray[randomItem];
+  const randomItem = Math.floor(Math.random() * myArray.length);
+  return myArray[randomItem];
 }
 
 function tellFortune(numKids, partnerNames, locations, jobTitles) {
-  const  arrayNumKids = selectRandomly(numKids);
-  const  arrayPartnerNames = selectRandomly(partnerNames);
-  const  arrayLocations = selectRandomly(locations);
-  const  arrayJobTitles = selectRandomly(jobTitles);
+  const arrayNumKids = selectRandomly(numKids);
+  const arrayPartnerNames = selectRandomly(partnerNames);
+  const arrayLocations = selectRandomly(locations);
+  const arrayJobTitles = selectRandomly(jobTitles);
 
-  
-  return 'You will be a ' + arrayJobTitles + ' in ' + arrayLocations + '  married to ' +
-   arrayPartnerNames + ' ' + ' with ' + arrayNumKids + ' kids.';
-   
-   
+  return `You will be a ${arrayJobTitles} in ${arrayLocations}, married to 
+   ${arrayPartnerNames} with ${arrayNumKids} kids.`;
 }
-tellFortune(numKids,partnerNames, locations, jobTitles);
 
 function main() {
-  const numKids = [
-    2, 3, 1, 4, 2
-  ];
+  const numKids = [2, 3, 1, 4, 2];
 
-  const partnerNames = [
-    'June', 'Mary', 'Sophia', 'Ella', 'Johanna'
-  ];
+  const partnerNames = ['June', 'Mary', 'Sophia', 'Ella', 'Johanna'];
 
-  const locations = [
-    'London', 'Liverpool', 'Bristol', 'Oxford', 'Coventry'
-  ];
+  const locations = ['London', 'Liverpool', 'Bristol', 'Oxford', 'Coventry'];
 
-  const jobTitles = [
-    'teacher', 'pilot', 'doctor', 'police', 'seller'
-  ];
+  const jobTitles = ['teacher', 'pilot', 'doctor', 'police', 'seller'];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
