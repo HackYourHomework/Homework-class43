@@ -15,23 +15,16 @@ it pure. Do the following:
    spread syntax.
 5. Confirm that you function passes the provided unit tests.
 ------------------------------------------------------------------------------*/
-const shoppingCart = ['bananas', 'milk'];
 
-function addToShoppingCart(final, grocery) {
-  const result = Array.from(addToShoppingCart);
-  console.log(final);
-  if(grocery === undefined || grocery === null) {
-    shoppingCart;
+function addToShoppingCart(shoppingCart, grocery) {
+  const final = [...shoppingCart];
+  final.push(grocery);
+  if (final.length > 3) {
+    final.shift();
   }
-  if(typeof grocery === 'string') {
-   shoppingCart.push(grocery);
-  }
-  if(shoppingCart.length > 3) {
-   shoppingCart.shift();
-  }
-  const listOfItem = shoppingCart.join(', ');
-  return `You bought ${listOfItem}!`;
-  }
+
+  return final;
+}
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
