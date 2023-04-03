@@ -23,3 +23,4 @@ observable.notify("Let's see what happens here!");
 // Let's see what happens here! (console.log subscriber)
 // LET'S SEE WHAT HAPPENS HERE! (consoleUpperCase subscriber)
 // let's see what happens here! (consoleLowerCase subscriber)
+
