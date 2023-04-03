@@ -1,0 +1,20 @@
+2023-03-29 12:40:27 info: --------------------------------------------
+2023-03-29 12:40:27 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-03-29 12:40:27 info: --------------------------------------------
+2023-03-29 12:40:27 warn: A unit test file was not provided.
+2023-03-29 12:40:32 info: All steps were completed successfully
+2023-03-29 12:41:47 info: ------------------------------------------------
+2023-03-29 12:41:47 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-03-29 12:41:47 info: ------------------------------------------------
+2023-03-29 12:41:47 warn: A unit test file was not provided.
+2023-03-29 12:41:52 info: All steps were completed successfully
+2023-03-29 12:43:28 info: ------------------------------------------------
+2023-03-29 12:43:28 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-03-29 12:43:28 info: ------------------------------------------------
+2023-03-29 12:43:28 warn: A unit test file was not provided.
+2023-03-29 12:43:33 info: All steps were completed successfully
+2023-03-29 12:45:19 info: -------------------------------------------
+2023-03-29 12:45:19 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2023-03-29 12:45:19 info: -------------------------------------------
+2023-03-29 12:45:19 warn: A unit test file was not provided.
+2023-03-29 12:45:25 info: All steps were completed successfully

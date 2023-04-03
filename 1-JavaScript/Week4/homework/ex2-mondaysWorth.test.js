@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description atL https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week4#exercise-2-whats-your-monday-worth
 
@@ -31,8 +32,12 @@ const mondayTasks = [
 
 const hourlyRate = 25;
 
-function computeEarnings(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function computeEarnings(tasks, hourlyRate) {
+  const sum = tasks
+    .map((ele) => ele.duration)
+    .reduce((acc, curr) => acc + curr, 0);
+  const total = (sum / 60) * hourlyRate;
+  return `€${total.toFixed(2)}`;
 }
 
 // ! Unit tests (using Jest)
