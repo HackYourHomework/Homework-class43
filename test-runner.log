@@ -1,0 +1,731 @@
+2023-04-03 01:14:01 info: ------------------------------------------------------
+2023-04-03 01:14:01 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-04-03 01:14:01 info: ------------------------------------------------------
+2023-04-03 01:14:02 info: All unit tests passed.
+2023-04-03 01:14:03 info: All steps were completed successfully
+2023-04-03 01:16:49 info: ------------------------------------------------------
+2023-04-03 01:16:49 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-04-03 01:16:49 info: ------------------------------------------------------
+2023-04-03 01:16:50 info: All unit tests passed.
+2023-04-03 01:16:51 info: All steps were completed successfully
+2023-04-03 03:54:31 info: -------------------------------------------------
+2023-04-03 03:54:31 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-04-03 03:54:31 info: -------------------------------------------------
+2023-04-03 03:54:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    ✓ should take two parameters (1 ms)
+    ✕ should compute the earnings as a formatted Euro amount (2 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      56 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      57 |     const expected = '€187.50';
+    > 58 |     expect(result).toBe(expected);
+         |                    ^
+      59 |   });
+      60 | });
+      61 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.197 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+2023-04-03 04:00:06 info: -------------------------------------------------
+2023-04-03 04:00:06 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-04-03 04:00:06 info: -------------------------------------------------
+2023-04-03 04:00:07 info: All unit tests passed.
+2023-04-03 04:00:08 info: All steps were completed successfully
+2023-04-03 04:16:40 info: -------------------------------------------------
+2023-04-03 04:16:40 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:16:40 info: -------------------------------------------------
+2023-04-03 04:16:41 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✕ should take two parameters (2 ms)
+    ✕ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      36 |   test('should take two parameters', () => {
+      37 |     // TODO replace next line with your code
+    > 38 |     expect(false).toBe(true);
+         |                   ^
+      39 |   });
+      40 |
+      41 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:38:19)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      43 |     const originalFruitBasketContents = [...fruitBasket];
+      44 |     // TODO replace next line with your code
+    > 45 |     expect(false).toBe(true);
+         |                   ^
+      46 |   });
+      47 |
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:45:19)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      49 |     // TODO replace next line with your code
+    > 50 |     expect(false).toBe(true);
+         |                   ^
+      51 |   });
+      52 | });
+      53 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:50:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.188 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:16:42 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  29:10  error  'sanitizeFruitBasket' is defined but never used                   no-unused-vars
+  43:11  error  'originalFruitBasketContents' is assigned a value but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2023-04-03 04:19:10 info: -------------------------------------------------
+2023-04-03 04:19:10 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:19:10 info: -------------------------------------------------
+2023-04-03 04:19:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array (1 ms)
+    ✕ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      43 |     const originalFruitBasketContents = [...fruitBasket];
+      44 |     // TODO replace next line with your code
+    > 45 |     expect(false).toBe(true);
+         |                   ^
+      46 |   });
+      47 |
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:45:19)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      49 |     // TODO replace next line with your code
+    > 50 |     expect(false).toBe(true);
+         |                   ^
+      51 |   });
+      52 | });
+      53 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:50:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.163 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:19:11 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  43:11  error  'originalFruitBasketContents' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-04-03 04:22:51 info: -------------------------------------------------
+2023-04-03 04:22:51 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:22:51 info: -------------------------------------------------
+2023-04-03 04:22:52 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    ReferenceError: n is not defined
+
+      44 |     // TODO replace next line with your code
+      45 |     const actual = originalFruitBasketContents;
+    > 46 |     const expect = fruitBasket;n
+         |                                ^
+      47 |     expect(actual).toBe(expect);
+      48 |   });
+      49 |
+
+      at Object.n (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:32)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      51 |     // TODO replace next line with your code
+    > 52 |     expect(false).toBe(true);
+         |                   ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:52:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.165 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:22:52 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  46:32  error  'n' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-04-03 04:23:13 info: -------------------------------------------------
+2023-04-03 04:23:13 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:23:13 info: -------------------------------------------------
+2023-04-03 04:23:13 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    TypeError: expect is not a function
+
+      45 |     const actual = originalFruitBasketContents;
+      46 |     const expect = fruitBasket;
+    > 47 |     expect(actual).toBe(expect);
+         |     ^
+      48 |   });
+      49 |
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.expect (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:47:5)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      51 |     // TODO replace next line with your code
+    > 52 |     expect(false).toBe(true);
+         |                   ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:52:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.165 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:26:24 info: -------------------------------------------------
+2023-04-03 04:26:24 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:26:24 info: -------------------------------------------------
+2023-04-03 04:26:24 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters
+    ✕ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    TypeError: expect is not a function
+
+      45 |     const actual = fruitBasket;
+      46 |     const expect = originalFruitBasketContents;
+    > 47 |     expect(actual).toBe(expect);
+         |     ^
+      48 |   });
+      49 |
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.expect (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:47:5)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      51 |     // TODO replace next line with your code
+    > 52 |     expect(false).toBe(true);
+         |                   ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:52:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.163 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:29:31 info: -------------------------------------------------
+2023-04-03 04:29:31 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:29:31 info: -------------------------------------------------
+2023-04-03 04:29:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    TypeError: expect is not a function
+
+      45 |     const actual = fruitBasket;
+      46 |     const expect = originalFruitBasketContents;
+    > 47 |     expect(expect).toBe(actual);
+         |     ^
+      48 |   });
+      49 |
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.expect (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:47:5)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      50 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      51 |     // TODO replace next line with your code
+    > 52 |     expect(false).toBe(true);
+         |                   ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:52:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.166 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:32:39 info: -------------------------------------------------
+2023-04-03 04:32:39 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:32:39 info: -------------------------------------------------
+2023-04-03 04:32:39 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array (2 ms)
+    ✕ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    If it should pass with deep equality, replace "toBe" with "toStrictEqual"
+
+    Expected: ["apple", "lemon", "grapefruit", "lemon", "banana", "watermelon", "lemon"]
+    Received: serializes to the same string
+
+      44 |     // TODO replace next line with your code
+      45 |     const actual = fruitBasket;
+    > 46 |     expect(actual).toBe(originalFruitBasketContents);
+         |                    ^
+      47 |   });
+      48 |
+      49 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:20)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      49 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      50 |     // TODO replace next line with your code
+    > 51 |     expect(false).toBe(true);
+         |                   ^
+      52 |   });
+      53 | });
+      54 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:51:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.164 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-03 04:35:25 info: -------------------------------------------------
+2023-04-03 04:35:25 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-03 04:35:25 info: -------------------------------------------------
+2023-04-03 04:35:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array (1 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      49 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      50 |     // TODO replace next line with your code
+    > 51 |     expect(false).toBe(true);
+         |                   ^
+      52 |   });
+      53 | });
+      54 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:51:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.159 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:02:35 info: -------------------------------------------------
+2023-04-04 10:02:35 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:02:35 info: -------------------------------------------------
+2023-04-04 10:02:36 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: ["apple", "lemon", "grapefruit", "lemon", "banana", "watermelon", "lemon"]
+
+      51 |     const received = fruitBasket;
+      52 |     const expected = sanitizeFruitBasket(fruitBasket, 'lemon') 
+    > 53 |     expect(received).toBe(Object.is (received,expected));
+         |                      ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.191 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:04:02 info: -------------------------------------------------
+2023-04-04 10:04:02 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:04:02 info: -------------------------------------------------
+2023-04-04 10:04:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ["apple", "grapefruit", "banana", "watermelon"]
+    Received: false
+
+      51 |     const received = fruitBasket;
+      52 |     const expected = sanitizeFruitBasket(fruitBasket, 'lemon') 
+    > 53 |     expect(Object.is (received,expected)).toBe(expected);
+         |                                           ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.16 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:05:05 info: -------------------------------------------------
+2023-04-04 10:05:05 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:05:05 info: -------------------------------------------------
+2023-04-04 10:05:06 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters
+    ✓ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    TypeError: Cannot read properties of undefined (reading 'is')
+
+      51 |     const received = fruitBasket;
+      52 |     const expected = sanitizeFruitBasket(fruitBasket, 'lemon') 
+    > 53 |     expect(Object.is (received,expected)).Object.is(expected);
+         |     ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.162 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:07:14 info: -------------------------------------------------
+2023-04-04 10:07:14 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:07:14 info: -------------------------------------------------
+2023-04-04 10:07:15 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array (1 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: ["apple", "grapefruit", "banana", "watermelon"]
+
+      51 |     const received = fruitBasket;
+      52 |     const expected = sanitizeFruitBasket(fruitBasket, 'lemon') 
+    > 53 |     expect(expected).toBe(Object.is(expected, received));
+         |                      ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.164 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:08:31 info: -------------------------------------------------
+2023-04-04 10:08:31 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:08:31 info: -------------------------------------------------
+2023-04-04 10:08:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array (1 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: ["apple", "lemon", "grapefruit", "lemon", "banana", "watermelon", "lemon"]
+
+      51 |     const received = fruitBasket;
+      52 |     const expected = sanitizeFruitBasket(fruitBasket, 'lemon') 
+    > 53 |     expect(received).toBe(Object.is(expected, received));
+         |                      ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.161 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:10:59 info: -------------------------------------------------
+2023-04-04 10:10:59 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:10:59 info: -------------------------------------------------
+2023-04-04 10:11:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: ["apple", "lemon", "grapefruit", "lemon", "banana", "watermelon", "lemon"]
+
+      51 |     const received = fruitBasket;
+      52 |     const expected = sanitizeFruitBasket(fruitBasket, 'lemon') 
+    > 53 |     expect(received).toBe(Object.is(expected, expected));
+         |                      ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBe (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.189 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 10:39:52 info: -------------------------------------------------
+2023-04-04 10:39:52 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 10:39:52 info: -------------------------------------------------
+2023-04-04 10:39:53 info: All unit tests passed.
+2023-04-04 10:39:54 info: All steps were completed successfully
+2023-04-04 11:22:25 info: ------------------------------------------
+2023-04-04 11:22:25 info: >>> Running Unit Test `ex4-observable` <<<
+2023-04-04 11:22:25 info: ------------------------------------------
+2023-04-04 11:22:26 info: All unit tests passed.
+2023-04-04 11:22:27 info: All steps were completed successfully
+2023-04-04 12:10:32 info: --------------------------------------
+2023-04-04 12:10:32 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 12:10:32 info: --------------------------------------
+2023-04-04 12:10:32 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+✕ wallet q3: What tooltip appears when hovering over the third debug button?
+✕ wallet q4: What is displayed in the console?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-04-04 12:10:33 error: *** ESLint Report ***
+
+ex5-wallet/index.js
+   80:13  error  'с' is not defined  no-undef
+   89:13  error  'с' is not defined  no-undef
+   98:13  error  'a' is not defined  no-undef
+  107:13  error  'a' is not defined  no-undef
+  116:13  error  'c' is not defined  no-undef
+
+✖ 5 problems (5 errors, 0 warnings)
+
+
+2023-04-04 12:11:31 info: --------------------------------------
+2023-04-04 12:11:31 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 12:11:31 info: --------------------------------------
+2023-04-04 12:11:32 error: *** Unit Test Error Report ***
+
+✕ wallet q1: At line 26, which variables are in the scope marked Closure?
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-04-04 12:22:06 info: --------------------------------------
+2023-04-04 12:22:06 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 12:22:06 info: --------------------------------------
+2023-04-04 12:22:07 error: *** Unit Test Error Report ***
+
+✕ wallet q2: What is in the Call Stack, from top to bottom?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/admin/Documents/HackYourFuture/Homework-class43/test-runner/CustomReporter.js"
+2023-04-04 12:24:06 info: --------------------------------------
+2023-04-04 12:24:06 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 12:24:06 info: --------------------------------------
+2023-04-04 12:24:06 info: All unit tests passed.
+2023-04-04 12:24:08 info: All steps were completed successfully
