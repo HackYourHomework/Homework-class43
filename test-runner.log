@@ -1,0 +1,65 @@
+2023-04-04 07:13:47 info: ----------------------------------------------
+2023-04-04 07:13:47 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-04-04 07:13:47 info: ----------------------------------------------
+2023-04-04 07:13:54 error: *** Unit Test Error Report ***
+
+✕ giveCompliment should have all TODO comments removed
+✕ giveCompliment should take a single parameter
+✕ giveCompliment should include a `compliments` array inside its function body
+✕ giveCompliment the `compliments` array should be initialized with 10 strings
+✕ giveCompliment should give a random compliment: You are `compliment`, `name`!
+
+
+Command failed: npx jest ex1-giveCompliment.test.js --colors --reporters="C:\Users\samra\OneDrive\Desktop\Homework-class43\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-04 07:14:22 info: ------------------------------------------
+2023-04-04 07:14:22 info: >>> Running Unit Test `ex4-observable` <<<
+2023-04-04 07:14:22 info: ------------------------------------------
+2023-04-04 07:14:28 info: All unit tests passed.
+2023-04-04 07:14:35 info: All steps were completed successfully
+2023-04-04 07:17:28 info: ------------------------------------------------------
+2023-04-04 07:17:28 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2023-04-04 07:17:28 info: ------------------------------------------------------
+2023-04-04 07:17:35 info: All unit tests passed.
+2023-04-04 07:17:42 info: All steps were completed successfully
+2023-04-04 07:20:16 info: -------------------------------------------------
+2023-04-04 07:20:16 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2023-04-04 07:20:16 info: -------------------------------------------------
+2023-04-04 07:20:22 info: All unit tests passed.
+2023-04-04 07:20:29 info: All steps were completed successfully
+2023-04-04 07:24:18 info: -------------------------------------------------
+2023-04-04 07:24:18 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 07:24:18 info: -------------------------------------------------
+2023-04-04 07:24:25 info: All unit tests passed.
+2023-04-04 07:24:32 info: All steps were completed successfully
+2023-04-04 07:28:47 info: --------------------------------------
+2023-04-04 07:28:47 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 07:28:47 info: --------------------------------------
+2023-04-04 07:28:53 error: *** Unit Test Error Report ***
+
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\samra\OneDrive\Desktop\Homework-class43\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-04 07:29:20 info: --------------------------------------
+2023-04-04 07:29:20 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 07:29:20 info: --------------------------------------
+2023-04-04 07:29:25 error: *** Unit Test Error Report ***
+
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="C:\Users\samra\OneDrive\Desktop\Homework-class43\test-runner\CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-04 07:31:37 info: --------------------------------------
+2023-04-04 07:31:37 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-04 07:31:37 info: --------------------------------------
+2023-04-04 07:31:41 info: All unit tests passed.
+2023-04-04 07:31:48 info: All steps were completed successfully
