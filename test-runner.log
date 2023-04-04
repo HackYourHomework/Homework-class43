@@ -2262,3 +2262,334 @@ Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 2023-04-04 10:54:00 info: ------------------------------------------
 2023-04-04 10:54:04 info: All unit tests passed.
 2023-04-04 10:54:08 info: All steps were completed successfully
+2023-04-04 11:42:29 info: ------------------------------------------
+2023-04-04 11:42:29 info: >>> Running Unit Test `ex4-observable` <<<
+2023-04-04 11:42:29 info: ------------------------------------------
+2023-04-04 11:42:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  createObservable
+    ✓ should exist and be a function (3 ms)
+    ✓ should return an object with `subscribe` and a `notify` function properties
+    ✕ should notify all subscribers of any notification (1 ms)
+
+  ● createObservable › should notify all subscribers of any notification
+
+    TypeError: subscriber.push is not a function
+
+      19 |     subscribe: function (subscriber) {
+      20 |       // TODO complete this function
+    > 21 |       subscriber.push(subscriber);
+         |                  ^
+      22 |     },
+      23 |     notify: function (message) {
+      24 |       // TODO complete this function
+
+      at Object.push [as subscribe] (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.js:21:18)
+      at Object.subscribe (1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:23:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.711 s, estimated 1 s
+Ran all test suites matching /ex4-observable.test.js/i.
+2023-04-04 11:43:15 info: ------------------------------------------
+2023-04-04 11:43:15 info: >>> Running Unit Test `ex4-observable` <<<
+2023-04-04 11:43:15 info: ------------------------------------------
+2023-04-04 11:43:18 info: All unit tests passed.
+2023-04-04 11:43:22 info: All steps were completed successfully
+2023-04-04 12:27:22 info: -------------------------------------------------
+2023-04-04 12:27:22 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 12:27:22 info: -------------------------------------------------
+2023-04-04 12:27:25 error: *** Unit Test Error Report ***
+
+console.log
+    [ 'apple', 'grapefruit', 'banana', 'watermelon' ]
+
+      at log (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:37:18)
+
+
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✕ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+      30 | function sanitizeFruitBasket(arr, fruit) {
+      31 |   // TODO complete this function
+    > 32 |   for (let i = 0; i < arr.length; i++) {
+         |                           ^
+      33 |     if (arr[i] !== fruit) {
+      34 |       newBasket.push(arr[i]);
+      35 |     }
+
+      at length (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:32:27)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:12)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    TypeError: expect(...).toBeEqual is not a function
+
+      51 |     const originalFruitBasketContents = [...fruitBasket];
+      52 |     // TODO replace next line with your code
+    > 53 |     expect(originalFruitBasketContents).toBeEqual([
+         |                                         ^
+      54 |       'apple',
+      55 |       'lemon',
+      56 |       'grapefruit',
+
+      at Object.toBeEqual (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:41)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    TypeError: expect(...).toBeEqual is not a function
+
+      64 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      65 |     // TODO replace next line with your code
+    > 66 |     expect(newBasket).toBeEqual([
+         |                       ^
+      67 |       'apple',
+      68 |       'grapefruit',
+      69 |       'banana',
+
+      at Object.toBeEqual (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:66:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.715 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 12:28:51 info: -------------------------------------------------
+2023-04-04 12:28:51 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 12:28:51 info: -------------------------------------------------
+2023-04-04 12:28:54 error: *** Unit Test Error Report ***
+
+console.log
+    [ 'apple', 'grapefruit', 'banana', 'watermelon' ]
+
+      at log (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:37:18)
+
+
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✕ should take two parameters (2 ms)
+    ✕ should not modify the original `fruitBasket` array (2 ms)
+    ✕ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+      30 | function sanitizeFruitBasket(arr, fruit) {
+      31 |   // TODO complete this function
+    > 32 |   for (let i = 0; i < arr.length; i++) {
+         |                           ^
+      33 |     if (arr[i] !== fruit) {
+      34 |       newBasket.push(arr[i]);
+      35 |     }
+
+      at length (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:32:27)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:12)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    TypeError: expect(...).toBeEqual is not a function
+
+      51 |     const originalFruitBasketContents = [...fruitBasket];
+      52 |     // TODO replace next line with your code
+    > 53 |     expect(originalFruitBasketContents).toBeEqual([
+         |                                         ^
+      54 |       'apple',
+      55 |       'lemon',
+      56 |       'grapefruit',
+
+      at Object.toBeEqual (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:53:41)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    TypeError: expect(...).toBeEqual is not a function
+
+      64 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      65 |     // TODO replace next line with your code
+    > 66 |     expect(newBasket).toBeEqual([
+         |                       ^
+      67 |       'apple',
+      68 |       'grapefruit',
+      69 |       'banana',
+
+      at Object.toBeEqual (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:66:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        0.642 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 12:31:21 info: -------------------------------------------------
+2023-04-04 12:31:21 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 12:31:21 info: -------------------------------------------------
+2023-04-04 12:31:23 error: *** Unit Test Error Report ***
+
+console.log
+    [ 'apple', 'grapefruit', 'banana', 'watermelon' ]
+
+      at log (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:37:18)
+
+
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✕ should take two parameters (2 ms)
+    ✓ should not modify the original `fruitBasket` array (1 ms)
+    ✓ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+      30 | function sanitizeFruitBasket(arr, fruit) {
+      31 |   // TODO complete this function
+    > 32 |   for (let i = 0; i < arr.length; i++) {
+         |                           ^
+      33 |     if (arr[i] !== fruit) {
+      34 |       newBasket.push(arr[i]);
+      35 |     }
+
+      at length (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:32:27)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.645 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 12:32:24 info: -------------------------------------------------
+2023-04-04 12:32:24 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 12:32:24 info: -------------------------------------------------
+2023-04-04 12:32:27 error: *** Unit Test Error Report ***
+
+console.log
+    []
+
+      at log (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:37:18)
+
+
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✕ should take two parameters (2 ms)
+    ✓ should not modify the original `fruitBasket` array (3 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (5 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: Cannot read properties of undefined (reading 'any')
+
+      30 | function sanitizeFruitBasket(arr, fruit) {
+      31 |   // TODO complete this function
+    > 32 |   for (let i = 0; i < arr.any; i++) {
+         |                           ^
+      33 |     if (arr[i] !== fruit) {
+      34 |       newBasket.push(arr[i]);
+      35 |     }
+
+      at any (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:32:27)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:12)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 1
+
+    - Array [
+    -   "apple",
+    -   "grapefruit",
+    -   "banana",
+    -   "watermelon",
+    - ]
+    + Array []
+
+      64 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      65 |     // TODO replace next line with your code
+    > 66 |     expect(newBasket).toEqual(['apple', 'grapefruit', 'banana', 'watermelon']);
+         |                       ^
+      67 |   });
+      68 | });
+      69 |
+
+      at Object.toEqual (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:66:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.677 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-04 12:33:25 info: -------------------------------------------------
+2023-04-04 12:33:25 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2023-04-04 12:33:25 info: -------------------------------------------------
+2023-04-04 12:33:28 error: *** Unit Test Error Report ***
+
+console.log
+    [ 'apple', 'grapefruit', 'banana', 'watermelon' ]
+
+      at log (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:37:18)
+
+
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✕ should take two parameters (1 ms)
+    ✓ should not modify the original `fruitBasket` array (2 ms)
+    ✓ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+      30 | function sanitizeFruitBasket(arr, fruit) {
+      31 |   // TODO complete this function
+    > 32 |   for (let i = 0; i < arr.length; i++) {
+         |                           ^
+      33 |     if (arr[i] !== fruit) {
+      34 |       newBasket.push(arr[i]);
+      35 |     }
+
+      at length (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:32:27)
+      at Object.sanitizeFruitBasket (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:46:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.593 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
