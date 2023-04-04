@@ -30,6 +30,7 @@ const cartForParty = {
 
 function calculateTotalPrice(obj) {
   let total = 0;
+  // eslint-disable-next-line no-restricted-syntax
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
       total += obj[key];
@@ -39,15 +40,13 @@ function calculateTotalPrice(obj) {
 }
 calculateTotalPrice(cartForParty);
 
-// ! Test functions (plain vanilla JavaScript)
+// ! test functions (plain vanilla JavaScriptT)
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  // TODO replace this comment with your code
 }
 
 function test2() {
   console.log('\nTest 2: return correct output when passed cartForParty');
-  // TODO replace this comment with your code
 }
 
 function test() {
