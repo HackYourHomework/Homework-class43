@@ -2593,3 +2593,149 @@ Tests:       1 failed, 2 passed, 3 total
 Snapshots:   0 total
 Time:        0.593 s, estimated 1 s
 Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2023-04-05 02:04:08 info: ----------------------------------------------
+2023-04-05 02:04:08 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2023-04-05 02:04:08 info: ----------------------------------------------
+2023-04-05 02:04:11 info: All unit tests passed.
+2023-04-05 02:04:16 info: All steps were completed successfully
+2023-04-05 02:05:39 info: ----------------------------------------
+2023-04-05 02:05:39 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-04-05 02:05:39 info: ----------------------------------------
+2023-04-05 02:05:42 error: *** Unit Test Error Report ***
+
+✕ calculateDogAge `calculateDogAge` should not contain unneeded console.log calls
+
+
+Command failed: npx jest ex2-dogYears.test.js --colors --reporters="/Users/chilachila/Desktop/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-05 02:06:05 info: ----------------------------------------
+2023-04-05 02:06:05 info: >>> Running Unit Test `ex2-dogYears` <<<
+2023-04-05 02:06:05 info: ----------------------------------------
+2023-04-05 02:06:08 info: All unit tests passed.
+2023-04-05 02:06:11 info: All steps were completed successfully
+2023-04-05 02:08:38 info: -------------------------------------------
+2023-04-05 02:08:38 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:08:38 info: -------------------------------------------
+2023-04-05 02:08:41 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Banker in London, married to Peter with 3 kids.
+  Received: You will be a Banker in London married to Peter with 3 kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/chilachila/Desktop/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-05 02:13:21 info: -------------------------------------------
+2023-04-05 02:13:21 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:13:21 info: -------------------------------------------
+2023-04-05 02:13:24 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Banker in London, married to Peter with 3 kids.
+  Received: You will be a Banker in London married to Peter with 3 kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/chilachila/Desktop/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-05 02:16:31 info: -------------------------------------------
+2023-04-05 02:16:31 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:16:31 info: -------------------------------------------
+2023-04-05 02:16:34 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Banker in London, married to Peter with 3 kids.
+  Received: You will be a Banker in London married to Peter with 3 kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/chilachila/Desktop/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-05 02:19:34 info: -------------------------------------------
+2023-04-05 02:19:34 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:19:34 info: -------------------------------------------
+2023-04-05 02:19:37 error: *** Unit Test Error Report ***
+
+✕ tellFortune should tell the fortune by randomly selecting array values
+  Expected: You will be a Banker in London, married to Peter with 3 kids.
+  Received: You will be a Banker in London married to Peter with 3 kids.
+
+
+Command failed: npx jest ex3-tellFortune.test.js --colors --reporters="/Users/chilachila/Desktop/Homework-class43/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2023-04-05 02:41:13 info: -------------------------------------------
+2023-04-05 02:41:13 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:41:13 info: -------------------------------------------
+2023-04-05 02:41:15 info: All unit tests passed.
+2023-04-05 02:41:17 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  36:7  error  'numKids' is assigned a value but never used       no-unused-vars
+  38:7  error  'partnerNames' is assigned a value but never used  no-unused-vars
+  40:7  error  'locations' is assigned a value but never used     no-unused-vars
+  42:7  error  'jobTitles' is assigned a value but never used     no-unused-vars
+  77:3  error  'main' is not defined                              no-undef
+
+✖ 5 problems (5 errors, 0 warnings)
+
+
+2023-04-05 02:49:50 info: -------------------------------------------
+2023-04-05 02:49:50 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:49:50 info: -------------------------------------------
+2023-04-05 02:49:53 info: All unit tests passed.
+2023-04-05 02:49:55 error: *** ESLint Report ***
+
+ex3-tellFortune.js
+  82:3  error  'main' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-04-05 02:54:15 info: -------------------------------------------
+2023-04-05 02:54:15 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2023-04-05 02:54:15 info: -------------------------------------------
+2023-04-05 02:54:18 info: All unit tests passed.
+2023-04-05 02:54:23 info: All steps were completed successfully
+2023-04-05 03:03:17 info: --------------------------------------------
+2023-04-05 03:03:17 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-04-05 03:03:17 info: --------------------------------------------
+2023-04-05 03:03:17 warn: A unit test file was not provided.
+2023-04-05 03:03:21 info: All steps were completed successfully
+2023-04-05 03:04:55 info: --------------------------------------------
+2023-04-05 03:04:55 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-04-05 03:04:55 info: --------------------------------------------
+2023-04-05 03:04:55 warn: A unit test file was not provided.
+2023-04-05 03:04:59 info: All steps were completed successfully
+2023-04-05 03:12:35 info: ------------------------------------------------
+2023-04-05 03:12:35 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2023-04-05 03:12:35 info: ------------------------------------------------
+2023-04-05 03:12:35 warn: A unit test file was not provided.
+2023-04-05 03:12:39 info: All steps were completed successfully
+2023-04-05 03:30:02 info: -----------------------------------------
+2023-04-05 03:30:02 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-04-05 03:30:02 info: -----------------------------------------
+2023-04-05 03:30:02 warn: A unit test file was not provided.
+2023-04-05 03:30:04 error: *** ESLint Report ***
+
+ex6-totalCost.js
+  33:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  33:12  warning  'item' is never reassigned. Use 'const' instead       no-autofix/prefer-const
+  52:3   warning  Avoid `for in` loops. Prefer `Object.keys()` instead  no-restricted-syntax
+  52:12  warning  'item' is never reassigned. Use 'const' instead       no-autofix/prefer-const
+
+✖ 4 problems (0 errors, 4 warnings)
+
+
+2023-04-05 03:35:20 info: -----------------------------------------
+2023-04-05 03:35:20 info: >>> Running Unit Test `ex6-totalCost` <<<
+2023-04-05 03:35:20 info: -----------------------------------------
+2023-04-05 03:35:20 warn: A unit test file was not provided.
+2023-04-05 03:35:24 info: All steps were completed successfully
