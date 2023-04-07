@@ -30,13 +30,9 @@ const cartForParty = {
 
 function calculateTotalPrice(cart) {
   let total = 0;
-  const keys = Object.keys(cart);
-
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[i];
-    total += cart[key];
-  }
-
+  Object.values(cart).forEach((value) => {
+    total += value;
+  });
   return `Total: €${total.toFixed(2)}`;
 }
 

@@ -17,11 +17,9 @@ it pure. Do the following:
 ------------------------------------------------------------------------------*/
 // ! Function under test
 function addToShoppingCart(cart, item) {
-  const newCart = [...cart];
-  if (newCart.length < 3) {
-    newCart.push(item);
-  } else {
-    newCart.splice(0, 1, item);
+  const newCart = [...cart, item];
+  if (newCart.length > 3) {
+    newCart.shift();
   }
   return newCart;
 }
