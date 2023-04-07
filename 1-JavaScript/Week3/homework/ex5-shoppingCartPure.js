@@ -19,9 +19,7 @@ it pure. Do the following:
 function addToShoppingCart(shoppingCardArray, groceryItem) {
   const newShoppingCartArray = [...shoppingCardArray];
 
-  const grocery = groceryItem;
-
-  newShoppingCartArray.push(grocery);
+  newShoppingCartArray.push(groceryItem);
 
   if (newShoppingCartArray.length > 3) {
     newShoppingCartArray.shift();

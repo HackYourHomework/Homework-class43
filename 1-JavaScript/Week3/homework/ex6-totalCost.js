@@ -32,7 +32,7 @@ function calculateTotalPrice(cartForParty) {
   let numberValues = 0;
   for (let value in cartForParty) {
     if (typeof cartForParty[value] === 'number') {
-      numberValues = numberValues + cartForParty[value];
+      numberValues += cartForParty[value];
     }
   }
   return 'Total:€ ' + numberValues;
