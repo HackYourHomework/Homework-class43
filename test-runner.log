@@ -162,3 +162,8 @@ ex2-dogYears.js
 2023-03-28 11:44:18 info: -------------------------------------------
 2023-03-28 11:44:18 warn: A unit test file was not provided.
 2023-03-28 11:44:19 info: All steps were completed successfully
+2023-04-11 11:10:44 info: --------------------------------------------
+2023-04-11 11:10:44 info: >>> Running Unit Test `ex4-shoppingCart` <<<
+2023-04-11 11:10:44 info: --------------------------------------------
+2023-04-11 11:10:44 warn: A unit test file was not provided.
+2023-04-11 11:10:45 info: All steps were completed successfully

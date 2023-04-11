@@ -9,13 +9,11 @@ const cartForParty = {
   nuts: 4.3,
 };
 
-function calculateTotalPrice(object) {
-  let amount = 0;
-  for (const price in object) {
-    if (typeof object[price] === 'number') {
-      amount += object[price];
-    }
-  }
+function calculateTotalPrice(shoppingCart) {
+  const amount = Object.values(shoppingCart).reduce(
+    (item1, item2) => item1 + item2
+  );
+
   return `Total: €${amount}`;
 }
 

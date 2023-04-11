@@ -4,16 +4,13 @@ const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart(groceryItem) {
-  const item = groceryItem;
-
-  if (item === undefined || NaN || null) {
-    return `You bought ${shoppingCart.join(', ')}!`;
-  }
-  if (typeof item === 'string') {
-    shoppingCart.push(item);
-  }
-  if (shoppingCart.length > 3) {
-    shoppingCart.shift();
+  if (groceryItem?.toString() !== undefined) {
+    shoppingCart.push(groceryItem);
+    if (shoppingCart.length > 3) {
+      shoppingCart.shift();
+    } else {
+      return `You bought ${shoppingCart.join(', ')}!`;
+    }
   }
 
   return `You bought ${shoppingCart.join(', ')}!`;

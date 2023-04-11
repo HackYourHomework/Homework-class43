@@ -18,13 +18,14 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-function filterPrivateData(array) {
-  const newEmployeeRecords = [];
-
-  for (const { name, occupation, email } of array) {
-    newEmployeeRecords.push({ name, occupation, email });
-  }
-
+function filterPrivateData(personData) {
+  const newEmployeeRecords = personData.map((person) => {
+    return {
+      name: person.name,
+      occupation: person.occupation,
+      email: person.email,
+    };
+  });
   return newEmployeeRecords;
 }
 

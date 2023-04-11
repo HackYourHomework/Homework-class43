@@ -2,16 +2,9 @@
 
 // ! Function under test
 function addToShoppingCart(array, groceryItem) {
-  const shoppingCart = [...array];
-  const item = groceryItem;
+  const shoppingCart = [...array, groceryItem];
 
-  shoppingCart.push(item);
-
-  if (shoppingCart.length > 3) {
-    shoppingCart.shift();
-  }
-
-  return shoppingCart;
+  return shoppingCart.length > 3 ? shoppingCart.slice(1) : shoppingCart;
 }
 
 // ! Test functions (plain vanilla JavaScript)
