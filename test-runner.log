@@ -1773,3 +1773,18 @@ ex3-lemonAllergy.test.js
 2023-04-03 01:55:03 info: -------------------------------------------------
 2023-04-03 01:55:08 info: All unit tests passed.
 2023-04-03 01:55:14 info: All steps were completed successfully
+2023-04-12 07:59:06 info: --------------------------------------
+2023-04-12 07:59:06 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-12 07:59:06 info: --------------------------------------
+2023-04-12 07:59:10 info: All unit tests passed.
+2023-04-12 07:59:15 info: All steps were completed successfully
+2023-04-12 08:06:24 info: --------------------------------------
+2023-04-12 08:06:24 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-12 08:06:24 info: --------------------------------------
+2023-04-12 08:06:27 info: All unit tests passed.
+2023-04-12 08:06:33 info: All steps were completed successfully
+2023-04-12 08:34:26 info: --------------------------------------
+2023-04-12 08:34:26 info: >>> Running Unit Test `ex5-wallet` <<<
+2023-04-12 08:34:26 info: --------------------------------------
+2023-04-12 08:34:31 info: All unit tests passed.
+2023-04-12 08:34:36 info: All steps were completed successfully
