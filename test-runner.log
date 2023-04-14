@@ -2257,3 +2257,8 @@ Ran all test suites matching /ex4-observable.test.js/i.
 2023-04-14 11:42:38 info: ----------------------------------------
 2023-04-14 11:42:45 info: All unit tests passed.
 2023-04-14 11:42:51 info: All steps were completed successfully
+2023-04-15 12:35:54 info: ---------------------------------------
+2023-04-15 12:35:54 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-04-15 12:35:54 info: ---------------------------------------
+2023-04-15 12:36:02 info: All unit tests passed.
+2023-04-15 12:36:08 info: All steps were completed successfully
