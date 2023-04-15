@@ -8,14 +8,30 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo(url) {
-  // Create a new element
-  const a = document.createElement('a');
-  // Set the href attribute
-  a.href = url;
-  // Set logo src and srcset
-  const logo = document.querySelector('img[alt="Google"]');
-  logo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg.';
-  logo.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg.';
+  // Create a new link element
+  const link = document.createElement('a');
+  link.href = url;
+
+  // Create a new image element
+  const img = document.createElement('img');
+  img.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+  img.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+  img.alt = 'Hack Your Future logo';
+  img.height = 92;
+  img.width = 272;
+
+  // Find the existing logo element
+  const logo = document.querySelector('.lnXdpd');
+  if (logo) {
+    // Change the logo style to display:none
+    logo.style.display = 'none';
+
+    // Append the new image to the new link element
+    link.appendChild(img);
+
+    // Replace the existing logo element with the new link element
+    logo.parentElement.replaceChild(link, logo);
+  }
 }
 
-hijackGoogleLogo('https://www.google.com');
+hijackGoogleLogo('https://www.google.com/');

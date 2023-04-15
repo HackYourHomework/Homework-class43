@@ -2267,3 +2267,16 @@ Ran all test suites matching /ex4-observable.test.js/i.
 2023-04-15 12:27:53 info: ------------------------------------------
 2023-04-15 12:27:57 info: All unit tests passed.
 2023-04-15 12:28:03 info: All steps were completed successfully
+2023-04-15 02:31:09 info: ------------------------------------------
+2023-04-15 02:31:09 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-04-15 02:31:09 info: ------------------------------------------
+2023-04-15 02:31:13 info: All unit tests passed.
+2023-04-15 02:31:18 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:24:43 - Unknown word (Xdpd)
+
+2023-04-15 02:31:56 info: ------------------------------------------
+2023-04-15 02:31:56 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-04-15 02:31:56 info: ------------------------------------------
+2023-04-15 02:31:59 info: All unit tests passed.
+2023-04-15 02:32:04 info: All steps were completed successfully
