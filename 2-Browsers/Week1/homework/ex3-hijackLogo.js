@@ -13,7 +13,7 @@ function hijackGoogleLogo(url) {
   // Set the href attribute
   a.href = url;
   // Set logo src and srcset
-  const logo = document.querySelector('.lnXdpd');
+  const logo = document.querySelector('img[alt="Google"]');
   logo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg.';
   logo.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg.';
 }
