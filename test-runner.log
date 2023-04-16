@@ -2280,3 +2280,95 @@ ex3-hijackLogo.js:24:43 - Unknown word (Xdpd)
 2023-04-15 02:31:56 info: ------------------------------------------
 2023-04-15 02:31:59 info: All unit tests passed.
 2023-04-15 02:32:04 info: All steps were completed successfully
+2023-04-16 09:53:20 info: --------------------------------------------
+2023-04-16 09:53:20 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-04-16 09:53:20 info: --------------------------------------------
+2023-04-16 09:53:30 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (6.492 s)
+  whatsTheTime
+    ✓ HTML should be syntactically valid (181 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `setInterval()` (1 ms)
+    ✓ should not call `setInterval()` more than once (2007 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (2 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        6.613 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2023-04-16 09:53:33 error: *** ESLint Report ***
+
+ex4-whatsTheTime/index.js
+  10:10  error    'addCurrentTime' is defined but never used  no-unused-vars
+  30:1   warning  Remove commented-out code                   hyf/no-commented-out-code
+
+✖ 2 problems (1 error, 1 warning)
+
+
+2023-04-16 09:54:22 info: --------------------------------------------
+2023-04-16 09:54:22 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-04-16 09:54:22 info: --------------------------------------------
+2023-04-16 09:54:32 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (6.527 s)
+  whatsTheTime
+    ✓ HTML should be syntactically valid (175 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` (1 ms)
+    ✓ should not call `setInterval()` more than once (2007 ms)
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (3 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      63 |
+      64 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 65 |     expect(state.onload).toBeDefined();
+         |                          ^
+      66 |   });
+      67 |
+      68 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:65:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        6.634 s, estimated 7 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2023-04-16 10:08:07 info: --------------------------------------------
+2023-04-16 10:08:07 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-04-16 10:08:07 info: --------------------------------------------
+2023-04-16 10:08:17 info: All unit tests passed.
+2023-04-16 10:08:25 info: All steps were completed successfully
