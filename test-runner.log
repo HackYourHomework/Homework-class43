@@ -2372,3 +2372,46 @@ Ran all test suites matching /ex4-whatsTheTime.test.js/i.
 2023-04-16 10:08:07 info: --------------------------------------------
 2023-04-16 10:08:17 info: All unit tests passed.
 2023-04-16 10:08:25 info: All steps were completed successfully
+2023-04-17 01:18:08 info: ---------------------------------------
+2023-04-17 01:18:08 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-04-17 01:18:08 info: ---------------------------------------
+2023-04-17 01:18:16 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (192 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✕ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (2 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      50 |
+      51 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 52 |     expect(state.onload).toBeDefined();
+         |                          ^
+      53 |   });
+      54 |
+      55 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.toBeDefined (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:52:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        4.67 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2023-04-17 02:40:35 info: ---------------------------------------
+2023-04-17 02:40:35 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-04-17 02:40:35 info: ---------------------------------------
+2023-04-17 02:40:42 info: All unit tests passed.
+2023-04-17 02:40:48 info: All steps were completed successfully
