@@ -22,7 +22,32 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
 function catWalk() {
-  // TODO complete this function
+  const img = document.querySelector('img');
+  let currentPosition = 0;
+
+  function move() {
+    currentPosition += 10;
+    img.style.left = `${currentPosition}px`;
+
+    if (currentPosition > window.innerWidth) {
+      currentPosition = 0;
+      img.style.left = `${currentPosition}px`;
+    }
+    if (
+      currentPosition >= (window.innerWidth - img.width) / 2 &&
+      currentPosition <= window.innerWidth / 2
+    ) {
+      clearTimeout();
+      img.src =
+        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+      currentPosition = `${window.innerWidth - img.width} / 2`;
+      setTimeout(() => {
+        img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+        currentPosition = window.innerWidth / 2;
+      }, 5000);
+    }
+  }
+  setInterval(move, 50);
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('DOMContentLoaded', catWalk);
