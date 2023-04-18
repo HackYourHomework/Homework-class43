@@ -1,1 +1,7 @@
 /* Write your style here */
+.book-read {
+  color: #104911;
+}
+.book-not-read {
+  color: #ba181b;
+}
