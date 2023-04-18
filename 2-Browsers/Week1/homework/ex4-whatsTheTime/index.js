@@ -1,6 +1,7 @@
 'use strict';
 
 // const { time } = require('systeminformation');
+// I commented above line because otherwise it did not work for me, i was having require error when I executed it with live server in Google Chrome.
 
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-4-whats-the-time
