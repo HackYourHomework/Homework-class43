@@ -1,1 +1,25 @@
-/* Write your style here */
+p { 
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+
+ul {
+  list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: disc;
+}
+
+img {
+  overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-left: 5px ;
+    size: 327*498;
+}
