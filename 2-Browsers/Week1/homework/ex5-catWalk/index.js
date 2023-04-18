@@ -21,33 +21,46 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
+
+// variables for clearInterval and clearTimeout
 let intervalId = null;
 let timeoutId = null;
 
-function catWalk() {
+// Im wrapping the catWalk() window.onload, because value screen width is undefined, now it is working
+window.onload = function () {
+  // find the cat image
   const cat = document.querySelector('img[alt="Cat walking"]');
-  const catPosition = parseInt(getComputedStyle(cat).left);
+  // screen width
   const screenWidth = window.innerWidth;
   const middleOfScreen = screenWidth / 2;
-  const rightMove = catPosition + 10;
+  // start position cat on screen
+  let catPosition = 0;
 
-  if (rightMove > screenWidth) {
-    cat.style.left = 0;
-  } else if (rightMove === middleOfScreen) {
-    const originalCatSrc = cat.src;
-    cat.src =
-      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-    clearInterval(intervalId);
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      cat.src = originalCatSrc;
-      intervalId = setInterval(catWalk, 50);
-    }, 5000);
-  } else {
-    cat.style.left = rightMove + 'px';
+  function catWalk() {
+    // move cat 10 pixels to the right
+    catPosition += 10;
+    const rightMove = catPosition;
+    // logic for when the cat reaches the right-hand of the screen
+    if (rightMove > screenWidth) {
+      catPosition = 0;
+    } else if (rightMove === middleOfScreen) {
+      clearInterval(intervalId);
+      const originalCatSrc = cat.src;
+      cat.src =
+        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+      // start the cat dancing
+      timeoutId = setTimeout(() => {
+        // clear the interval
+        clearTimeout(timeoutId);
+        // cat continues the walk
+        cat.src = originalCatSrc;
+        catPosition = rightMove + 10;
+        intervalId = setInterval(catWalk, 50);
+      }, 5000);
+    } else {
+      cat.style.left = rightMove + 'px';
+    }
   }
-}
 
-window.onload = () => {
   intervalId = setInterval(catWalk, 50);
 };
