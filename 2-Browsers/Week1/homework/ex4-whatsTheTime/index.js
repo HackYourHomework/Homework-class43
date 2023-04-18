@@ -1,4 +1,7 @@
 'use strict';
+
+// const { time } = require('systeminformation');
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-4-whats-the-time
 
@@ -8,7 +11,19 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
-  // TODO complete this function
+  const pElement = document.createElement('p');
+  document.body.append(pElement);
+  setInterval(() => {
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    const time = `${hours}:${minutes}:${seconds}`;
+    pElement.innerText = time;
+
+    console.log(time);
+  }, 1000);
 }
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
+window.addEventListener('load', addCurrentTime);
