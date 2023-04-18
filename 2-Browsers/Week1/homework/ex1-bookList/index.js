@@ -16,9 +16,33 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 
 -----------------------------------------------------------------------------*/
 //cspell: enable
+const classNames = { green: 'green', red: 'red' };
 
+const imgArray = [
+  'https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/assets/the_design_of_everyday_things.jpg',
+  'https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/assets/the_most_human_human.jpg',
+  'https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/assets/the_pragmatic_programmer.jpg',
+];
 function createBookList(books) {
   // TODO your code goes in here, return the ul element
+  const createBookArray = document.createElement('ul');
+  books.forEach(function (book, i) {
+    const createTitle = document.createElement('p');
+    const createBookObj = document.createElement('li');
+    const createImg = document.createElement('img');
+    createTitle.textContent = book.title;
+    createImg.src = imgArray[i];
+
+    if (book.alreadyRead) {
+      createBookObj.style.backgroundColor = classNames.green;
+    } else {
+      createBookObj.style.backgroundColor = classNames.red;
+    }
+
+    createBookObj.append(createTitle, createImg);
+    createBookArray.append(createBookObj);
+  });
+  return createBookArray;
 }
 
 function main() {

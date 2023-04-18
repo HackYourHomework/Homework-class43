@@ -9,6 +9,13 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
   // TODO complete this function
+
+  setInterval(function () {
+    const myTime = new Date();
+    console.log(myTime.toLocaleTimeString());
+  }, 1000);
 }
+
+document.addEventListener('DOMContentLoaded', addCurrentTime);
 
 // TODO execute `addCurrentTime` when the browser has completed loading the page
