@@ -21,36 +21,40 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
+function startCatWalk() {
+  const img = document.querySelector('img');
+  img.style.left = '0px';
+  img.src = 'https://i.imgur.com/7bAEo29.gif';
 
-const img = document.querySelector('img');
-img.style.left = '0px';
+  const move = 10;
+  const dance = 5000;
 
-let isDancing = false;
+  let isDancing = false;
 
-function catWalk() {
-  const currentLeft = parseInt(img.style.left);
-  const newLeft = currentLeft + 10;
+  function catWalk() {
+    const currentLeft = parseInt(img.style.left);
+    const newLeft = currentLeft + move;
 
-  if (newLeft > window.innerWidth) {
-    img.style.left = '0px';
-  } else {
-    img.style.left = newLeft + 'px';
+    if (newLeft > window.innerWidth) {
+      img.style.left = '0px';
+      isDancing = false;
+    } else {
+      img.style.left = newLeft + 'px';
 
-    if (!isDancing && newLeft > window.innerWidth / 2) {
-      isDancing = true;
-      const dancingCatUrl =
-        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-      const originalCatUrl = 'https://i.imgur.com/7bAEo29.gif';
+      if (!isDancing && newLeft > window.innerWidth / 2) {
+        isDancing = true;
+        const dancingCatUrl =
+          'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
 
-      img.src = dancingCatUrl;
-      setTimeout(function () {
-        img.src = originalCatUrl;
-        isDancing = false;
-      }, 5000);
-    } else if (isDancing && newLeft > window.innerWidth / 2) {
-      return newLeft;
+        img.src = dancingCatUrl;
+        setTimeout(function () {
+          img.src = 'https://i.imgur.com/7bAEo29.gif';
+          isDancing = false;
+        }, dance);
+      }
     }
   }
+  setInterval(catWalk, 50);
 }
 
-setInterval(catWalk, 50);
+window.addEventListener('load', startCatWalk);

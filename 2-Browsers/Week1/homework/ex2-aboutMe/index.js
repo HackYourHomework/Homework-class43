@@ -15,5 +15,5 @@ document.getElementById('hometown').textContent = 'addis ababa';
 
 const liElements = document.getElementsByTagName('li');
 for (let i = 0; i < liElements.length; i++) {
-  liElements[i].className = 'list-item';
+  liElements[i].classList.add('list-item');
 }

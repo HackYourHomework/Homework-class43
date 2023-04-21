@@ -18,7 +18,6 @@ function addCurrentTime() {
     const currentTimeString = `${hours}:${minutes}:${seconds}`;
 
     currentTimeElement.textContent = currentTimeString;
-    console.log(currentTimeString);
   }, 1000);
 
   document.body.appendChild(currentTimeElement);
