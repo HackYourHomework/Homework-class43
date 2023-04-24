@@ -2425,3 +2425,28 @@ Ran all test suites matching /ex5-catWalk.test.js/i.
 2023-04-18 04:36:43 info: ---------------------------------------
 2023-04-18 04:36:52 info: All unit tests passed.
 2023-04-18 04:36:58 info: All steps were completed successfully
+2023-04-24 09:52:39 info: ----------------------------------------
+2023-04-24 09:52:39 info: >>> Running Unit Test `ex1-bookList` <<<
+2023-04-24 09:52:39 info: ----------------------------------------
+2023-04-24 09:52:47 info: All unit tests passed.
+2023-04-24 09:52:53 info: All steps were completed successfully
+2023-04-24 09:53:11 info: ---------------------------------------
+2023-04-24 09:53:11 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2023-04-24 09:53:11 info: ---------------------------------------
+2023-04-24 09:53:18 info: All unit tests passed.
+2023-04-24 09:53:24 info: All steps were completed successfully
+2023-04-24 09:53:38 info: ------------------------------------------
+2023-04-24 09:53:38 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2023-04-24 09:53:38 info: ------------------------------------------
+2023-04-24 09:53:42 info: All unit tests passed.
+2023-04-24 09:53:47 info: All steps were completed successfully
+2023-04-24 09:54:03 info: ---------------------------------------
+2023-04-24 09:54:03 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-04-24 09:54:03 info: ---------------------------------------
+2023-04-24 09:54:10 info: All unit tests passed.
+2023-04-24 09:54:16 info: All steps were completed successfully
+2023-04-24 09:55:07 info: --------------------------------------------
+2023-04-24 09:55:07 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2023-04-24 09:55:07 info: --------------------------------------------
+2023-04-24 09:55:17 info: All unit tests passed.
+2023-04-24 09:55:23 info: All steps were completed successfully
