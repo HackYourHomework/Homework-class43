@@ -18,7 +18,57 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const bookDiv = document.getElementById('bookList');
+
+  books[0].img = 'the_design_of_everyday_things.jpg'; // added img books
+  books[1].img = 'the_most_human_human.jpg'; // added img books
+  books[2].img = 'the_pragmatic_programmer.jpg'; // added img books
+
+  // create ul element
+  const ul = document.createElement('ul');
+  //added ul style
+  ul.style.padding = '0px';
+  ul.style.margin = '0px';
+
+  // Iterate through the array of books.
+  books.forEach((book) => {
+    // create li element
+    const li = document.createElement('li');
+
+    // added li style
+    li.style.listStyle = 'none';
+    li.style.padding = '8px';
+    li.style.margin = '8px';
+    li.style.display = 'inline-block';
+    li.style.width = '400px';
+
+    // create p element
+    const p = document.createElement('p');
+
+    // add book title and author to p element
+    p.textContent = `${book.title} by ${book.author}`;
+
+    // add p to li
+    li.appendChild(p);
+
+    // create img element
+    const img = document.createElement('img');
+    img.src = `./assets/${book.img}`; // added img books
+    img.alt = book.title;
+
+    // add img to li
+    li.appendChild(img);
+
+    if (book.alreadyRead) {
+      li.style.backgroundColor = 'green'; // added li style background color
+    } else {
+      li.style.backgroundColor = 'red';
+    }
+    // add li to ul
+    ul.appendChild(li);
+  });
+  // add ul to bookDiv
+  bookDiv.appendChild(ul);
 }
 
 function main() {
