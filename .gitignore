@@ -121,3 +121,10 @@ dist
 .recent.json
 .disclaimer
 @homework*
+
+# .json
+cspell.json
+2-Browsers/.DS_Store
+.DS_Store
+2-Browsers/Week1/homework/.DS_Store
+2-Browsers/Week1/.DS_Store

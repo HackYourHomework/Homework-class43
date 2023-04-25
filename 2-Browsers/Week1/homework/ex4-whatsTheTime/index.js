@@ -24,8 +24,8 @@ function addCurrentTime() {
       ':' +
       seconds.toString().padStart(2, '0');
 
-    // add current time to the webpage id 'current-time'
-    const currentTime = document.getElementById('current-time');
+    // add current time to the webpage title
+    const currentTime = document.querySelector('title');
     currentTime.style.margin = '20px';
     // current time always show
     currentTime.textContent = timeString;

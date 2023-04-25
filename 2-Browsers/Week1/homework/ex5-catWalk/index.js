@@ -42,7 +42,7 @@ window.onload = function () {
     // logic for when the cat reaches the right-hand of the screen
     if (rightMove > screenWidth) {
       catPosition = 0;
-    } else if (rightMove === middleOfScreen) {
+    } else if (Math.abs(rightMove - middleOfScreen) < 5) {
       clearInterval(intervalId);
       const originalCatSrc = cat.src;
       cat.src =
