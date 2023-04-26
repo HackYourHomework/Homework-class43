@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+ex2-aboutMe/index.js:12:52 - Unknown word (Alhatab)
