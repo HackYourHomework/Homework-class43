@@ -14,6 +14,7 @@ function addCurrentTime() {
   function updateTime() {
     const time = new Date().toLocaleTimeString();
     currentTimeElement.textContent = `${time}`;
+    console.log(time);
   }
 
   setInterval(updateTime, 1000);
