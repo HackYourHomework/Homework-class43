@@ -18,7 +18,6 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  
   const ul = document.createElement('ul');
 
   books.forEach((book) => {
@@ -31,7 +30,14 @@ function createBookList(books) {
 
     li.appendChild(img);
     ul.appendChild(li);
-});
+
+    if (book.alreadyRead) {
+      li.style.backgroundColor = 'green';
+    } else {
+      li.style.backgroundColor = 'red';
+    }
+  });
+
   return ul;
 }
 
