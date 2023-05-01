@@ -14,10 +14,12 @@ function addCurrentTime() {
 
   setInterval(() => {
     const today = new Date();
-    const time =
-      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const time = today.toLocaleTimeString ('en-US');
     timeElement.textContent = time;
+    const date = new Date().toLocaleDateString();
+    console.log('Current date:', date);
   }, 1000);
+ 
 }
 
 window.addEventListener('load', addCurrentTime);
