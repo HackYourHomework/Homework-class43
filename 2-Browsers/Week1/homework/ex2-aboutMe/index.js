@@ -16,9 +16,8 @@ favfood.textContent = 'pizza';
 const hometown = document.querySelector('#hometown');
 hometown.textContent = 'Baku';
 
-const ul = document.querySelector('ul');
-const li = ul.querySelectorAll('li');
+const listItem = document.querySelectorAll('li');
 
-li.forEach((element) => {
+listItem.forEach((element) => {
   element.classList.add('list-item');
 });

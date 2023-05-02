@@ -6,10 +6,12 @@
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 2em;
   margin: 2%;
 }
 
-div {
-  width: 50%;
+li {
+  width: 450px;
+  margin: 20px;
+  padding: 20px;
 }

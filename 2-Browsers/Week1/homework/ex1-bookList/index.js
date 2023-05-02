@@ -18,7 +18,6 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
   const bookList = document.querySelector('#bookList');
   const ulElement = document.createElement('ul');
   books.forEach((element) => {
@@ -26,11 +25,7 @@ function createBookList(books) {
     const pElement = document.createElement('p');
     pElement.textContent = `${element.title} by ${element.author} `;
 
-    if (element.alreadyRead) {
-      liElement.style.backgroundColor = 'green';
-    } else {
-      liElement.style.backgroundColor = 'red';
-    }
+    liElement.style.backgroundColor = element.alreadyRead ? 'green' : 'red';
 
     const imgElement = document.createElement('img');
     imgElement.src = element.cover;
@@ -50,24 +45,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
-      cover:
-        'https://th.bing.com/th/id/R.0fd76ffdb40c5fae40df5b46800c17c9?rik=VS04xaipCGECUQ&riu=http%3a%2f%2fs.s-bol.com%2fimgbase0%2fimagebase3%2flarge%2fFC%2f4%2f8%2f4%2f2%2f9200000010922484.jpg&ehk=myq7hGlJBn4ciAOEdsCdNLc6%2bcBCa9KvBZyL2eSERYU%3d&risl=&pid=ImgRaw&r=0',
+      cover: './assets/the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
-      cover:
-        'https://th.bing.com/th/id/R.07075fc2af36e4f96b867ea21c01f582?rik=W4nahOQgxUlkLw&riu=http%3a%2f%2fwww.kurzweilai.net%2fimages%2fThe-Most-Human-Human-Paperback-Front-Cover.jpg&ehk=92fs5ROJmm%2fXQW3ge9IJD9mcHMZctLXaGpPh34TpbSg%3d&risl=&pid=ImgRaw&r=0',
+      cover: './assets/the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
-      cover:
-        'https://shanetully.com/assets/images/books/pragmatic_programmer_cover.jpg',
+      cover: './assets/the_pragmatic_programmer.jpg',
     },
   ];
 
