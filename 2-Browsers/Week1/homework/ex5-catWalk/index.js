@@ -21,8 +21,44 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
-}
+window.addEventListener('load', function () {
+  const img = document.querySelector('img');
+  img.style.position = 'absolute';
+  img.style.left = '0px';
 
-// TODO execute `catWalk` when the browser has completed loading the page
+  const walkingCat = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+  const dancingCat =
+    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+  const stepSpeed = 50;
+  let isDancing = false;
+  let finishedDancing = false;
+
+  function catWalk() {
+    const catPosition = parseInt(img.style.left);
+    const catWidth = img.width;
+    const middle = window.innerWidth / 2 - catWidth / 2;
+    const stepLength = 10;
+
+    if (catPosition > window.innerWidth) {
+      img.style.left = '0px';
+      finishedDancing = false;
+    } else {
+      img.style.left = catPosition + stepLength + 'px';
+
+      if (!isDancing && !finishedDancing && catPosition >= middle) {
+        isDancing = true;
+        clearInterval(interval);
+        img.src = dancingCat;
+
+        setTimeout(() => {
+          img.src = walkingCat;
+          interval = setInterval(catWalk, stepSpeed);
+          isDancing = false;
+          finishedDancing = true;
+        }, 5000);
+      }
+    }
+  }
+
+  let interval = setInterval(catWalk, stepSpeed);
+});
