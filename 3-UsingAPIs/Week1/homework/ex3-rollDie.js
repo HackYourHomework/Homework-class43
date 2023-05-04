@@ -12,8 +12,9 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-Usin
 ------------------------------------------------------------------------------*/
 
 // TODO Remove callback and return a promise
-function rollDie(callback) {
-  // Compute a random number of rolls (3-10) that the die MUST complete
+function rollDie() {
+  return new Promise((res, rej) => {
+      // Compute a random number of rolls (3-10) that the die MUST complete
   const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
   console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
 
@@ -24,14 +25,12 @@ function rollDie(callback) {
 
     // Use callback to notify that the die rolled off the table after 6 rolls
     if (roll > 6) {
-      // TODO replace "error" callback
-      callback(new Error('Oops... Die rolled off the table.'));
+       return rej(new Error('Oops... Die rolled off the table.'));
     }
 
     // Use callback to communicate the final die value once finished rolling
     if (roll === randomRollsToDo) {
-      // TODO replace "success" callback
-      callback(null, value);
+       res(`Success! Die settled on ${value}.`);
     }
 
     // Schedule the next roll todo until no more rolls to do
@@ -42,21 +41,26 @@ function rollDie(callback) {
 
   // Start the initial roll
   rollOnce(1);
+  })
 }
 
 function main() {
   // TODO Refactor to use promise
-  rollDie((error, value) => {
-    if (error !== null) {
-      console.log(error.message);
-    } else {
-      console.log(`Success! Die settled on ${value}.`);
-    }
-  });
+  rollDie().then((res) => console.log(res)).catch((error) => console.error(error.message));
 }
 
-// ! Do not change or remove the code below
+// ! Do  change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDie;
+
+/*
+The problem: when the die roll above 6, it muse die and we shoud expect an error message, however we 
+are getting error and sucess message
+The case (when using callback): This happens because when we die dies, the function rollOnce() called 
+again, on other word, when we get an error using callback, the code does not stop excuiting
+The case (when using Promise): Since promises offers the power of chains, when we reach an error,
+(rejection), the code will stop excuting so the problem will resolved, since the promise will wait to
+get a response or an error
+*/
