@@ -1,0 +1,800 @@
+2023-05-04 11:10:04 info: ---------------------------------------
+2023-05-04 11:10:04 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:10:04 info: ---------------------------------------
+2023-05-04 11:10:13 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()`
+    ✓ should take a single argument (1 ms)
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (2 ms)
+    ✕ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.501 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-04 11:11:13 info: ---------------------------------------
+2023-05-04 11:11:13 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:11:13 info: ---------------------------------------
+2023-05-04 11:11:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument (1 ms)
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when called with a string argument (4 ms)
+    ✕ should reject with an Error object when called without an argument (2 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.3 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-04 11:20:13 info: ---------------------------------------
+2023-05-04 11:20:13 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:20:13 info: ---------------------------------------
+2023-05-04 11:20:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (2 ms)
+    ✕ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.452 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-04 11:27:49 info: ---------------------------------------
+2023-05-04 11:27:49 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:27:49 info: ---------------------------------------
+2023-05-04 11:27:57 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument (1 ms)
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (2 ms)
+    ✕ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.398 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-04 11:30:03 info: ---------------------------------------
+2023-05-04 11:30:03 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:30:03 info: ---------------------------------------
+2023-05-04 11:30:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()`
+    ✓ should take a single argument
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when called with a string argument (2 ms)
+    ✕ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        1.534 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-04 11:34:01 info: ---------------------------------------
+2023-05-04 11:34:01 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:34:01 info: ---------------------------------------
+2023-05-04 11:34:09 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ should take a single argument (1 ms)
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when called with a string argument (2 ms)
+    ✓ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        1.48 s, estimated 2 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-04 11:34:53 info: ---------------------------------------
+2023-05-04 11:34:53 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-04 11:34:53 info: ---------------------------------------
+2023-05-04 11:35:01 info: All unit tests passed.
+2023-05-04 11:35:13 info: All steps were completed successfully
+2023-05-05 12:01:18 info: -------------------------------------------------
+2023-05-05 12:01:18 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-05 12:01:18 info: -------------------------------------------------
+2023-05-05 12:01:26 info: All unit tests passed.
+2023-05-05 12:01:39 info: All steps were completed successfully
+2023-05-05 12:11:32 info: ---------------------------------------
+2023-05-05 12:11:32 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 12:11:32 info: ---------------------------------------
+2023-05-05 12:11:32 info: Exercise has not yet been modified
+2023-05-05 12:11:42 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (4 ms)
+    ✕ should call `new Promise()` (1 ms)
+    ✕ `resolve()` should be called with a one argument (2 ms)
+    ✕ `reject()` should be called with a one argument (1 ms)
+    ✕ should resolve when the die settles successfully (15 ms)
+    ✕ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● rollDie › should call `new Promise()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      38 |
+      39 |   test('should call `new Promise()`', () => {
+    > 40 |     expect(state.newPromise).toBeDefined();
+         |                              ^
+      41 |   });
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.toBeDefined (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:40:30)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+  ● rollDie › `reject()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+    > 48 |     expect(state.reject).toBe(1);
+         |                          ^
+      49 |   });
+      50 |
+      51 |   test('should resolve when the die settles successfully', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:48:26)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    TypeError: callback is not a function
+
+      32 |     if (roll === randomRollsToDo) {
+      33 |       // TODO replace "success" callback
+    > 34 |       callback(null, value);
+         |       ^
+      35 |     }
+      36 |
+      37 |     // Schedule the next roll todo until no more rolls to do
+
+      at callback (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:24)
+      at cb (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:59:35)
+      at setTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:24)
+      at cb (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:59:35)
+      at setTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:44:3)
+      at Object.rollDie (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:61:21)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received one assertion call.
+
+      50 |
+      51 |   test('should resolve when the die settles successfully', () => {
+    > 52 |     expect.assertions(3);
+         |            ^
+      53 |     expect(exported).toBeDefined();
+      54 |
+      55 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:52:12)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      73 |
+      74 |   test('should reject with an Error when the die rolls off the table', async () => {
+    > 75 |     expect.assertions(3);
+         |            ^
+      76 |     expect(exported).toBeDefined();
+      77 |
+      78 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:75:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        1.594 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-05 12:25:23 info: ---------------------------------------
+2023-05-05 12:25:23 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 12:25:23 info: ---------------------------------------
+2023-05-05 12:25:32 info: All unit tests passed.
+2023-05-05 12:25:45 info: All steps were completed successfully
+2023-05-05 12:44:42 info: ---------------------------------------
+2023-05-05 12:44:42 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 12:44:42 info: ---------------------------------------
+2023-05-05 12:44:50 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ `resolve()` should be called with a one argument (1 ms)
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✕ should resolve when the die settles successfully (4 ms)
+    ✕ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    expect(received).resolves.toBeDefined()
+
+    Received: undefined
+
+      61 |     const promise = rollDie();
+      62 |     expect(promise).toBeInstanceOf(Promise);
+    > 63 |     const assertionPromise = expect(promise).resolves.toBeDefined();
+         |                                                       ^
+      64 |
+      65 |     promise.finally(() => {
+      66 |       setTimeoutSpy.mockRestore();
+
+      at Object.toBeDefined (node_modules/expect/build/index.js:194:22)
+      at Object.toBeDefined (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:63:55)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      73 |
+      74 |   test('should reject with an Error when the die rolls off the table', async () => {
+    > 75 |     expect.assertions(3);
+         |            ^
+      76 |     expect(exported).toBeDefined();
+      77 |
+      78 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:75:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.514 s, estimated 2 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-05 12:47:51 info: ---------------------------------------
+2023-05-05 12:47:51 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 12:47:51 info: ---------------------------------------
+2023-05-05 12:48:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should call `new Promise()`
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when the die settles successfully (2 ms)
+    ✕ should reject with an Error when the die rolls off the table (3 ms)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "Oops... Die rolled off the table."
+
+      87 |       await promise;
+      88 |     } catch (err) {
+    > 89 |       expect(err).toBeInstanceOf(Error);
+         |                   ^
+      90 |     } finally {
+      91 |       setTimeoutSpy.mockRestore();
+      92 |       randomSpy.mockRestore();
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:89:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        2.294 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-05 12:54:13 info: ---------------------------------------
+2023-05-05 12:54:13 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 12:54:13 info: ---------------------------------------
+2023-05-05 12:54:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✕ `resolve()` should be called with a one argument (4 ms)
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when the die settles successfully (2 ms)
+    ✕ should reject with an Error when the die rolls off the table (2 ms)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "Oops... Die rolled off the table."
+
+      87 |       await promise;
+      88 |     } catch (err) {
+    > 89 |       expect(err).toBeInstanceOf(Error);
+         |                   ^
+      90 |     } finally {
+      91 |       setTimeoutSpy.mockRestore();
+      92 |       randomSpy.mockRestore();
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:89:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.509 s, estimated 2 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-05 01:02:09 info: ---------------------------------------
+2023-05-05 01:02:09 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 01:02:09 info: ---------------------------------------
+2023-05-05 01:02:17 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (3 ms)
+    ✓ should have all TODO comments removed
+    ✓ should call `new Promise()`
+    ✕ `resolve()` should be called with a one argument (4 ms)
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when the die settles successfully (2 ms)
+    ✕ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "Oops... Die rolled off the table."
+
+      87 |       await promise;
+      88 |     } catch (err) {
+    > 89 |       expect(err).toBeInstanceOf(Error);
+         |                   ^
+      90 |     } finally {
+      91 |       setTimeoutSpy.mockRestore();
+      92 |       randomSpy.mockRestore();
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:89:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        1.489 s, estimated 2 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-05 01:25:52 info: ---------------------------------------
+2023-05-05 01:25:52 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 01:25:52 info: ---------------------------------------
+2023-05-05 01:26:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ `resolve()` should be called with a one argument (1 ms)
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when the die settles successfully (3 ms)
+    ✕ should reject with an Error when the die rolls off the table (4 ms)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "Oops... Die rolled off the table."
+
+      87 |       await promise;
+      88 |     } catch (err) {
+    > 89 |       expect(err).toBeInstanceOf(Error);
+         |                   ^
+      90 |     } finally {
+      91 |       setTimeoutSpy.mockRestore();
+      92 |       randomSpy.mockRestore();
+
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:89:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        1.503 s, estimated 2 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-05 01:32:11 info: ---------------------------------------
+2023-05-05 01:32:11 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-05 01:32:11 info: ---------------------------------------
+2023-05-05 01:32:19 info: All unit tests passed.
+2023-05-05 01:32:28 info: All steps were completed successfully
+2023-05-05 02:23:46 info: --------------------------------------------
+2023-05-05 02:23:46 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-05 02:23:46 info: --------------------------------------------
+2023-05-05 02:23:54 info: All unit tests passed.
+2023-05-05 02:24:05 info: All steps were completed successfully
+2023-05-05 02:45:58 info: --------------------------------------------
+2023-05-05 02:45:58 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-05 02:45:58 info: --------------------------------------------
+2023-05-05 02:46:06 info: All unit tests passed.
+2023-05-05 02:46:17 info: All steps were completed successfully
+2023-05-05 03:32:37 info: ----------------------------------------------
+2023-05-05 03:32:37 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-05 03:32:37 info: ----------------------------------------------
+2023-05-05 03:32:46 info: All unit tests passed.
+2023-05-05 03:32:58 info: All steps were completed successfully
+2023-05-05 03:33:50 info: ----------------------------------------------
+2023-05-05 03:33:50 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-05 03:33:50 info: ----------------------------------------------
+2023-05-05 03:33:58 info: All unit tests passed.
+2023-05-05 03:34:10 info: All steps were completed successfully
