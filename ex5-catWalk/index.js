@@ -21,32 +21,41 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-
-const imgEl = document.getElementsByTagName('img')[0];
-imgEl.style.left = '0px';
 function catWalk() {
-  // TODO complete this function
-  imgEl.style.left = parseInt(imgEl.style.left) + 10 + 'px';
-  let currentLeftPosition = parseInt(imgEl.style.left);
-  imgEl.style.left = currentLeftPosition + 10 + 'px';
-  if (currentLeftPosition > window.innerWidth - imgEl.width) {
-    imgEl.style.left = '0px';
-  }
-  if (
-    currentLeftPosition >= (window.innerWidth - imgEl.width) / 2 &&
-    currentLeftPosition <= window.innerWidth / 2
-  ) {
-    clearTimeout();
+  const img = document.querySelector('img');
+  let currentPosition = 0;
+  const middleOfScreen = (window.innerWidth - img.offsetWidth) / 2;
 
-    imgEl.src =
-      ' https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-    currentLeftPosition = (window.innerWidth - imgEl.width) / 2;
-    setTimeout(function () {
-      imgEl.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-      currentLeftPosition = (window.innerWidth - imgEl.width) / 2;
-    }, 5000);
-  }
+  let intervalId = setInterval(() => {
+    currentPosition += 10;
+    img.style.left = `${currentPosition}px`;
+
+    if (currentPosition > window.innerWidth) {
+      currentPosition = 0;
+    }
+
+    if (Math.abs(currentPosition - middleOfScreen) < 5) {
+      clearInterval(intervalId);
+      const savedSrc = img.src;
+      img.src =
+        'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+      setTimeout(() => {
+        img.src = savedSrc;
+
+        intervalId = setInterval(() => {
+          img.style.left = `${currentPosition}px`;
+          currentPosition += 10;
+
+          if (currentPosition > window.innerWidth) {
+            clearInterval(intervalId);
+            catWalk();
+          }
+        }, 50);
+      }, 5000);
+    }
+  }, 50);
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
-window.setInterval(catWalk, 50);
+window.addEventListener('DOMContentLoaded', () => {
+  catWalk();
+});
