@@ -11,7 +11,6 @@ Rewrite this function, but replace the callback syntax with the Promise syntax:
 
 const getAnonName = (firstName) => {
   return new Promise((resolve, reject) => {
-    // return a new Promise
     setTimeout(() => {
       if (firstName) {
         // check firstName
