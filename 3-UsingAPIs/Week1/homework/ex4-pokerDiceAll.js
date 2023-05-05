@@ -27,9 +27,9 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promises = dice.map((die) => rollDie(die));
+  return Promise.all(promises);
 }
 
 function main() {
@@ -43,3 +43,12 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/* 
+I think this it: 'In this rollDie() function, we use setTimeout() 
+for the next roll of the die after a delay of 500ms. 
+When a die is dropped from the table and the promise is rejected, 
+the promise rejection does not cancel scheduled setTimeout() calls. 
+This way, other scheduled throws continue to execute as scheduled, 
+regardless of whether there is an error or not.'
+*/
