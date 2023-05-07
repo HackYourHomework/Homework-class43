@@ -1,0 +1,600 @@
+2023-05-07 06:56:55 info: ---------------------------------------
+2023-05-07 06:56:55 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 06:56:55 info: ---------------------------------------
+2023-05-07 06:56:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (1 ms)
+    × should have all TODO comments removed (1 ms)
+    × `getAnonName` should not contain unneeded console.log calls (2 ms)
+    √ should call `new Promise()`
+    √ should take a single argument (1 ms)
+    √ `resolve()` should be called with a one argument
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (1 ms)
+    × should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● getAnonName › `getAnonName` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 6 passed, 9 total
+Snapshots:   0 total
+Time:        0.554 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-07 06:56:59 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  12:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  19:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  21:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 3 problems (0 errors, 3 warnings)
+
+
+2023-05-07 06:59:17 info: ---------------------------------------
+2023-05-07 06:59:17 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 06:59:17 info: ---------------------------------------
+2023-05-07 06:59:19 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (1 ms)
+    √ should have all TODO comments removed
+    √ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    √ should call `new Promise()`
+    √ should take a single argument
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (1 ms)
+    × should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.409 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-07 06:59:20 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  23:7  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-05-07 06:59:25 info: Disclaimer turned off
+2023-05-07 07:01:16 info: ---------------------------------------
+2023-05-07 07:01:16 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 07:01:16 info: ---------------------------------------
+2023-05-07 07:01:18 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (1 ms)
+    √ should have all TODO comments removed
+    × `getAnonName` should not contain unneeded console.log calls (1 ms)
+    √ should call `new Promise()`
+    √ should take a single argument
+    √ `resolve()` should be called with a one argument
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (1 ms)
+    × should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › `getAnonName` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 7 passed, 9 total
+Snapshots:   0 total
+Time:        0.427 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-07 07:02:19 info: ---------------------------------------
+2023-05-07 07:02:19 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 07:02:19 info: ---------------------------------------
+2023-05-07 07:02:21 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (1 ms)
+    √ should have all TODO comments removed
+    √ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    √ should call `new Promise()`
+    √ should take a single argument
+    √ `resolve()` should be called with a one argument
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (1 ms)
+    × should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should reject with an Error object when called without an argument
+
+    expect(received).rejects.toBeInstanceOf(expected)
+
+    Expected constructor: Error
+
+    Received value has no prototype
+    Received value: "You didn't pass in a first name!"
+
+      90 |     timeoutSpy.mockRestore();
+      91 |     expect(promise).toBeInstanceOf(Promise);
+    > 92 |     return expect(promise).rejects.toBeInstanceOf(Error);
+         |                                    ^
+      93 |   });
+      94 | });
+      95 |
+
+      at Object.toBeInstanceOf (node_modules/expect/build/index.js:241:22)
+      at Object.toBeInstanceOf (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:92:36)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.394 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-07 07:02:22 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  14:5  warning  Remove commented-out code  hyf/no-commented-out-code
+  24:5  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-05-07 07:03:43 info: ---------------------------------------
+2023-05-07 07:03:43 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 07:03:43 info: ---------------------------------------
+2023-05-07 07:03:44 info: All unit tests passed.
+2023-05-07 07:03:46 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  14:5  warning  Remove commented-out code  hyf/no-commented-out-code
+  24:5  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-05-07 07:04:09 info: ---------------------------------------
+2023-05-07 07:04:09 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 07:04:09 info: ---------------------------------------
+2023-05-07 07:04:11 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (1 ms)
+    √ should have all TODO comments removed (1 ms)
+    × `getAnonName` should not contain unneeded console.log calls (2 ms)
+    √ should call `new Promise()` (1 ms)
+    √ should take a single argument
+    √ `resolve()` should be called with a one argument
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (1 ms)
+    √ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › `getAnonName` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.405 s, estimated 1 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-07 07:04:29 info: ---------------------------------------
+2023-05-07 07:04:29 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-07 07:04:29 info: ---------------------------------------
+2023-05-07 07:04:31 info: All unit tests passed.
+2023-05-07 07:04:32 error: *** ESLint Report ***
+
+ex1-johnWho.js
+  24:7  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-05-07 07:05:09 info: -------------------------------------------------
+2023-05-07 07:05:09 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-07 07:05:09 info: -------------------------------------------------
+2023-05-07 07:05:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-checkDoubleDigits.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js
+  checkDoubleDigits
+    √ should exist and be executable (1 ms)
+    √ should have all TODO comments removed
+    × `checkDoubleDigits` should not contain unneeded console.log calls (2 ms)
+    √ should call new Promise()
+    √ `resolve()` should be called with a one argument
+    √ `reject()` should be called with a one argument
+    √ should be a function that takes a single argument
+    √ (9) should return a rejected promise with an Error object (1 ms)
+    × (10) should return a promise that resolves to "This is a double digit number!" (1 ms)
+    × (99) should return a promise that resolves to "This is a double digit number!"
+    √ (100) should return a rejected promise with an Error object (1 ms)
+
+  ● checkDoubleDigits › `checkDoubleDigits` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+  ● checkDoubleDigits › (10) should return a promise that resolves to "This is a double digit number!"
+
+    expect(received).resolves.toEqual(expected) // deep equality
+
+    Expected: StringContaining "This is a double digit number!"
+    Received: "10 is a double digit number!"
+
+      73 |     const promise = checkDoubleDigits(10);
+      74 |     expect(promise).toBeInstanceOf(Promise);
+    > 75 |     return expect(promise).resolves.toEqual(
+         |                                     ^
+      76 |       expect.stringContaining('This is a double digit number!')
+      77 |     );
+      78 |   });
+
+      at Object.toEqual (node_modules/expect/build/index.js:194:22)
+      at Object.toEqual (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:75:37)
+
+  ● checkDoubleDigits › (99) should return a promise that resolves to "This is a double digit number!"
+
+    expect(received).resolves.toEqual(expected) // deep equality
+
+    Expected: StringContaining "This is a double digit number!"
+    Received: "99 is a double digit number!"
+
+      82 |     const promise = checkDoubleDigits(99);
+      83 |     expect(promise).toBeInstanceOf(Promise);
+    > 84 |     return expect(promise).resolves.toEqual(
+         |                                     ^
+      85 |       expect.stringContaining('This is a double digit number!')
+      86 |     );
+      87 |   });
+
+      at Object.toEqual (node_modules/expect/build/index.js:194:22)
+      at Object.toEqual (3-UsingAPIs/Week1/unit-tests/ex2-checkDoubleDigits.test.js:84:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 8 passed, 11 total
+Snapshots:   0 total
+Time:        0.446 s
+Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2023-05-07 07:06:49 info: -------------------------------------------------
+2023-05-07 07:06:49 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-07 07:06:49 info: -------------------------------------------------
+2023-05-07 07:06:51 info: All unit tests passed.
+2023-05-07 07:06:52 error: *** ESLint Report ***
+
+ex2-checkDoubleDigits.js
+  18:7  warning  Remove commented-out code  hyf/no-commented-out-code
+  20:9  warning  Remove commented-out code  hyf/no-commented-out-code
+  23:9  warning  Remove commented-out code  hyf/no-commented-out-code
+  27:7  warning  Remove commented-out code  hyf/no-commented-out-code
+  38:7  warning  Remove commented-out code  hyf/no-commented-out-code
+  42:7  warning  Remove commented-out code  hyf/no-commented-out-code
+  46:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  52:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  58:3  warning  Remove commented-out code  hyf/no-commented-out-code
+  64:3  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 10 problems (0 errors, 10 warnings)
+
+
+2023-05-07 07:07:32 info: -------------------------------------------------
+2023-05-07 07:07:32 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-07 07:07:32 info: -------------------------------------------------
+2023-05-07 07:07:33 info: All unit tests passed.
+2023-05-07 07:07:36 info: All steps were completed successfully
+2023-05-07 07:08:00 info: ---------------------------------------
+2023-05-07 07:08:00 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-07 07:08:00 info: ---------------------------------------
+2023-05-07 07:08:02 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    √ should exist and be executable (1 ms)
+    × should have all TODO comments removed
+    √ should call `new Promise()`
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when the die settles successfully (1 ms)
+    √ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.435 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-07 07:08:03 error: *** ESLint Report ***
+
+ex3-rollDie.js
+   70:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   75:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   81:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   87:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   93:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   99:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  102:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  114:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 8 problems (0 errors, 8 warnings)
+
+
+2023-05-07 07:09:59 info: ---------------------------------------
+2023-05-07 07:09:59 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-07 07:09:59 info: ---------------------------------------
+2023-05-07 07:10:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    √ should exist and be executable
+    × should have all TODO comments removed (1 ms)
+    √ should call `new Promise()`
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when the die settles successfully (1 ms)
+    √ should reject with an Error when the die rolls off the table
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.403 s, estimated 1 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-07 07:10:02 error: *** ESLint Report ***
+
+ex3-rollDie.js
+   69:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   74:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   80:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   86:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   92:1  warning  Remove commented-out code  hyf/no-commented-out-code
+   98:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  101:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  113:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 8 problems (0 errors, 8 warnings)
+
+
+2023-05-07 07:10:31 info: ---------------------------------------
+2023-05-07 07:10:31 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-07 07:10:31 info: ---------------------------------------
+2023-05-07 07:10:33 info: All unit tests passed.
+2023-05-07 07:10:35 info: All steps were completed successfully
+2023-05-07 07:10:57 info: --------------------------------------------
+2023-05-07 07:10:57 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-07 07:10:57 info: --------------------------------------------
+2023-05-07 07:10:59 info: All unit tests passed.
+2023-05-07 07:11:01 info: All steps were completed successfully
+2023-05-07 07:11:15 info: ----------------------------------------------
+2023-05-07 07:11:15 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-07 07:11:15 info: ----------------------------------------------
+2023-05-07 07:11:17 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    √ should exist and be executable (1 ms)
+    × should have all TODO comments removed
+    √ `rollDice` should not contain unneeded console.log calls
+    √ should resolve when all dice settle successfully (122 ms)
+    √ should reject with an Error when a die rolls off the table (81 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.636 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2023-05-07 07:11:40 info: ----------------------------------------------
+2023-05-07 07:11:40 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-07 07:11:40 info: ----------------------------------------------
+2023-05-07 07:11:42 info: All unit tests passed.
+2023-05-07 07:11:45 info: All steps were completed successfully
