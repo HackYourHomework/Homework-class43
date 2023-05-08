@@ -14,42 +14,44 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-Usin
 // TODO Remove callback and return a promise
 function rollDie() {
   return new Promise((res, rej) => {
-      // Compute a random number of rolls (3-10) that the die MUST complete
-  const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
-  console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
+    // Compute a random number of rolls (3-10) that the die MUST complete
+    const randomRollsToDo = Math.floor(Math.random() * 8) + 3;
+    console.log(`Die scheduled for ${randomRollsToDo} rolls...`);
 
-  const rollOnce = (roll) => {
-    // Compute a random die value for the current roll
-    const value = Math.floor(Math.random() * 6) + 1;
-    console.log(`Die value is now: ${value}`);
+    const rollOnce = (roll) => {
+      // Compute a random die value for the current roll
+      const value = Math.floor(Math.random() * 6) + 1;
+      console.log(`Die value is now: ${value}`);
 
-    // Use callback to notify that the die rolled off the table after 6 rolls
-    if (roll > 6) {
-       return rej(new Error('Oops... Die rolled off the table.'));
-    }
+      // Use callback to notify that the die rolled off the table after 6 rolls
+      if (roll > 6) {
+        return rej(new Error('Oops... Die rolled off the table.'));
+      }
 
-    // Use callback to communicate the final die value once finished rolling
-    if (roll === randomRollsToDo) {
-       res(`Success! Die settled on ${value}.`);
-    }
+      // Use callback to communicate the final die value once finished rolling
+      if (roll === randomRollsToDo) {
+        res(value);
+      }
 
-    // Schedule the next roll todo until no more rolls to do
-    if (roll < randomRollsToDo) {
-      setTimeout(() => rollOnce(roll + 1), 500);
-    }
-  };
+      // Schedule the next roll todo until no more rolls to do
+      if (roll < randomRollsToDo) {
+        setTimeout(() => rollOnce(roll + 1), 500);
+      }
+    };
 
-  // Start the initial roll
-  rollOnce(1);
-  })
+    // Start the initial roll
+    rollOnce(1);
+  });
 }
 
 function main() {
   // TODO Refactor to use promise
-  rollDie().then((res) => console.log(res)).catch((error) => console.error(error.message));
+  rollDie()
+    .then((res) => console.log(`Success! Die settled on ${res}.`))
+    .catch((error) => console.error(error.message));
 }
 
-// ! Do  change or remove the code below
+// ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
