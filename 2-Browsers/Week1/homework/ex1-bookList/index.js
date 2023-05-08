@@ -19,27 +19,28 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 const classNames = { green: 'green', red: 'red' };
 
 const imgArray = [
-  'https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/assets/the_design_of_everyday_things.jpg',
-  'https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/assets/the_most_human_human.jpg',
-  'https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/assets/the_pragmatic_programmer.jpg',
+  './assets/the_design_of_everyday_things.jpg',
+  './assets/the_most_human_human.jpg',
+  './assets/the_pragmatic_programmer.jpg',
 ];
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
   const createBookArray = document.createElement('ul');
   books.forEach(function (book, i) {
     const createTitle = document.createElement('p');
+    const createAuthor = document.createElement('p');
     const createBookObj = document.createElement('li');
     const createImg = document.createElement('img');
     createTitle.textContent = book.title;
+    createAuthor.textContent = book.author;
+
     createImg.src = imgArray[i];
+    createImg.alt = 'image';
 
-    if (book.alreadyRead) {
-      createBookObj.style.backgroundColor = classNames.green;
-    } else {
-      createBookObj.style.backgroundColor = classNames.red;
-    }
+    createBookObj.style.backgroundColor = book.alreadyRead
+      ? classNames.green
+      : classNames.red;
 
-    createBookObj.append(createTitle, createImg);
+    createBookObj.append(createTitle, createAuthor, createImg);
     createBookArray.append(createBookObj);
   });
   return createBookArray;

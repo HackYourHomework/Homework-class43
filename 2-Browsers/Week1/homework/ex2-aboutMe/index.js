@@ -15,10 +15,15 @@ const myInfo = {
 };
 function createMyData() {
   const myData = document.querySelectorAll('span');
+  const ulElem = document.querySelector('ul');
+
   console.log(myData);
   for (const child of myData) {
     child.textContent = myInfo[child.id];
   }
+  for (const item of ulElem.children) {
+    item.classList.add('list-item');
+  }
 }
-// TODO add your JavaScript code here.
+
 createMyData();

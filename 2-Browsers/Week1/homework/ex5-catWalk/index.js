@@ -28,14 +28,15 @@ catImage.style.marginLeft = '0px';
 catImage.width = '320';
 
 function catWalk(step) {
-  // TODO complete this function
-
   catImage.style.marginLeft = `${step}px`;
-  if (step === window.innerWidth - catImage.width) {
+  if (step > window.innerWidth - catImage.width) {
     counter = 0;
     clearInterval(id);
     startIntervalFn(counter);
-  } else if (step + catImage.width / 2 === window.innerWidth / 2) {
+  } else if (
+    step + catImage.width / 2 > window.innerWidth / 2 &&
+    step + catImage.width / 2 < window.innerWidth / 2 + 20
+  ) {
     clearInterval(id);
     catImage.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
@@ -58,3 +59,4 @@ function startIntervalFn(defaultCounter) {
   }, 50);
 }
 startIntervalFn();
+window.addEventListener('DOMContentLoaded', startIntervalFn);
