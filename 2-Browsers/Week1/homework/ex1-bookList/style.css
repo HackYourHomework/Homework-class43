@@ -10,8 +10,23 @@ h1 {
   margin: 2%;
 }
 
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
+}
+
 li {
-  width: 450px;
-  margin: 20px;
-  padding: 20px;
+  display: inline-block;
+  width: 400px;
+  margin: 8px;
+  padding: 8px;
+  list-style-type: none;
+}
+
+p {
+  margin-bottom: 15px;
+  margin-top: 20px;
 }
