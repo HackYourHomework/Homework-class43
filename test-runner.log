@@ -270,3 +270,8 @@ Ran all test suites matching /ex3-hijackLogo.test.js/i.
 2023-04-21 07:17:51 info: ------------------------------------------
 2023-04-21 07:17:57 info: All unit tests passed.
 2023-04-21 07:18:04 info: All steps were completed successfully
+2023-04-30 04:52:41 info: ---------------------------------------
+2023-04-30 04:52:41 info: >>> Running Unit Test `ex5-catWalk` <<<
+2023-04-30 04:52:41 info: ---------------------------------------
+2023-04-30 04:52:50 info: All unit tests passed.
+2023-04-30 04:52:56 info: All steps were completed successfully
