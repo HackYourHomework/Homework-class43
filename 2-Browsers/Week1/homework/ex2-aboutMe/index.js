@@ -9,4 +9,15 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
+const nickname = document.querySelector('#nickname');
+nickname.textContent = 'tomriddle';
+const favfood = document.querySelector('#fav-food');
+favfood.textContent = 'pizza';
+const hometown = document.querySelector('#hometown');
+hometown.textContent = 'Baku';
+
+const listItem = document.querySelectorAll('li');
+
+listItem.forEach((element) => {
+  element.classList.add('list-item');
+});

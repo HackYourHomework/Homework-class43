@@ -18,7 +18,24 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const bookList = document.querySelector('#bookList');
+  const ulElement = document.createElement('ul');
+  books.forEach((element) => {
+    const liElement = document.createElement('li');
+    const pElement = document.createElement('p');
+    pElement.textContent = `${element.title} by ${element.author} `;
+
+    liElement.style.backgroundColor = element.alreadyRead ? 'green' : 'red';
+
+    const imgElement = document.createElement('img');
+    imgElement.src = element.cover;
+
+    bookList.appendChild(ulElement);
+    ulElement.appendChild(liElement);
+    liElement.appendChild(pElement);
+    liElement.appendChild(imgElement);
+  });
+  return ulElement;
 }
 
 function main() {
@@ -28,18 +45,21 @@ function main() {
       author: 'Don Norman',
       isbn: '978-0465050659',
       alreadyRead: false,
+      cover: './assets/the_design_of_everyday_things.jpg',
     },
     {
       title: 'The Most Human Human',
       author: 'Brian Christian',
       isbn: '978-1617933431',
       alreadyRead: true,
+      cover: './assets/the_most_human_human.jpg',
     },
     {
       title: 'The Pragmatic Programmer',
       author: 'Andrew Hunt',
       isbn: '978-0201616224',
       alreadyRead: true,
+      cover: './assets/the_pragmatic_programmer.jpg',
     },
   ];
 

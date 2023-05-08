@@ -21,8 +21,44 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-function catWalk() {
-  // TODO complete this function
-}
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('DOMContentLoaded', () => {
+  const imgElement = document.querySelector('img');
+  const catWalkGif = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+  const catDanceGif =
+    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+  const step = 10;
+  const intervalTime = 50;
+  let move = false;
+  let stand = false;
+  let interval;
+  imgElement.style.left = '0px';
+
+  function animateCat() {
+    const start = parseInt(imgElement.style.left);
+    const catWidth = imgElement.width;
+    const middle = window.innerWidth / 2 - catWidth / 2;
+
+    if (start > window.innerWidth) {
+      imgElement.style.left = '0px';
+      stand = false;
+    } else {
+      imgElement.style.left = start + step + 'px';
+
+      if (!move && !stand && start >= middle) {
+        move = true;
+        clearInterval(interval);
+        imgElement.src = catDanceGif;
+
+        setTimeout(() => {
+          imgElement.src = catWalkGif;
+          interval = setInterval(animateCat, 50);
+          move = false;
+          stand = true;
+        }, 5000);
+      }
+    }
+  }
+
+  interval = setInterval(animateCat, intervalTime);
+});
