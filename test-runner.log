@@ -86,3 +86,8 @@ ex4-pokerDiceAll.js
 ✖ 1 problem (1 error, 0 warnings)
 
 
+2023-05-09 06:34:30 info: ----------------------------------------------
+2023-05-09 06:34:30 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-09 06:34:30 info: ----------------------------------------------
+2023-05-09 06:34:38 info: All unit tests passed.
+2023-05-09 06:34:46 info: All steps were completed successfully
