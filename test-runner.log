@@ -2739,3 +2739,514 @@ ex6-totalCost.js
 2023-04-05 03:35:20 info: -----------------------------------------
 2023-04-05 03:35:20 warn: A unit test file was not provided.
 2023-04-05 03:35:24 info: All steps were completed successfully
+2023-05-08 10:09:14 info: ---------------------------------------
+2023-05-08 10:09:14 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-08 10:09:14 info: ---------------------------------------
+2023-05-08 10:09:17 info: All unit tests passed.
+2023-05-08 10:09:21 info: All steps were completed successfully
+2023-05-08 10:38:50 info: -------------------------------------------------
+2023-05-08 10:38:50 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-08 10:38:50 info: -------------------------------------------------
+2023-05-08 10:38:53 info: All unit tests passed.
+2023-05-08 10:38:57 info: All steps were completed successfully
+2023-05-08 10:57:10 info: ---------------------------------------
+2023-05-08 10:57:10 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-08 10:57:10 info: ---------------------------------------
+2023-05-08 10:57:10 info: Exercise has not yet been modified
+2023-05-08 10:57:13 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✕ should call `new Promise()`
+    ✕ `resolve()` should be called with a one argument (1 ms)
+    ✕ `reject()` should be called with a one argument
+    ✕ should resolve when the die settles successfully (2 ms)
+    ✕ should reject with an Error when the die rolls off the table
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● rollDie › should call `new Promise()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      38 |
+      39 |   test('should call `new Promise()`', () => {
+    > 40 |     expect(state.newPromise).toBeDefined();
+         |                              ^
+      41 |   });
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.toBeDefined (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:40:30)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+  ● rollDie › `reject()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+    > 48 |     expect(state.reject).toBe(1);
+         |                          ^
+      49 |   });
+      50 |
+      51 |   test('should resolve when the die settles successfully', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:48:26)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    TypeError: callback is not a function
+
+      32 |     if (roll === randomRollsToDo) {
+      33 |       // TODO replace "success" callback
+    > 34 |       callback(null, value);
+         |       ^
+      35 |     }
+      36 |
+      37 |     // Schedule the next roll todo until no more rolls to do
+
+      at callback (3-UsingAPIs/Week1/homework/ex3-rollDie.js:34:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:24)
+      at cb (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:59:35)
+      at setTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:24)
+      at cb (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:59:35)
+      at setTimeout (3-UsingAPIs/Week1/homework/ex3-rollDie.js:39:7)
+      at rollOnce (3-UsingAPIs/Week1/homework/ex3-rollDie.js:44:3)
+      at Object.rollDie (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:61:21)
+
+  ● rollDie › should resolve when the die settles successfully
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received one assertion call.
+
+      50 |
+      51 |   test('should resolve when the die settles successfully', () => {
+    > 52 |     expect.assertions(3);
+         |            ^
+      53 |     expect(exported).toBeDefined();
+      54 |
+      55 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:52:12)
+
+  ● rollDie › should reject with an Error when the die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      73 |
+      74 |   test('should reject with an Error when the die rolls off the table', async () => {
+    > 75 |     expect.assertions(3);
+         |            ^
+      76 |     expect(exported).toBeDefined();
+      77 |
+      78 |     const logSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:75:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 1 passed, 7 total
+Snapshots:   0 total
+Time:        0.828 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-08 11:41:49 info: ---------------------------------------
+2023-05-08 11:41:49 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-08 11:41:49 info: ---------------------------------------
+2023-05-08 11:41:52 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed
+    ✓ should call `new Promise()`
+    ✕ `resolve()` should be called with a one argument (2 ms)
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when the die settles successfully (1 ms)
+    ✓ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      42 |
+      43 |   test('`resolve()` should be called with a one argument', () => {
+    > 44 |     expect(state.resolve).toBe(1);
+         |                           ^
+      45 |   });
+      46 |
+      47 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.toBe (3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js:44:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.808 s, estimated 1 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-08 11:43:28 info: ---------------------------------------
+2023-05-08 11:43:28 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-08 11:43:28 info: ---------------------------------------
+2023-05-08 11:43:31 info: All unit tests passed.
+2023-05-08 11:43:35 info: All steps were completed successfully
+2023-05-08 11:49:09 info: ---------------------------------------
+2023-05-08 11:49:09 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-08 11:49:09 info: ---------------------------------------
+2023-05-08 11:49:11 info: All unit tests passed.
+2023-05-08 11:49:15 info: All steps were completed successfully
+2023-05-09 04:05:51 info: --------------------------------------------
+2023-05-09 04:05:51 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-09 04:05:51 info: --------------------------------------------
+2023-05-09 04:06:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js (5.85 s)
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()` (1 ms)
+    ✓ should resolve when all dice settle successfully (11 ms)
+    ✕ should reject with an Error when a die rolls off the table (5002 ms)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 2 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 3 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 4 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 5 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+      62 |   });
+      63 |
+    > 64 |   test('should reject with an Error when a die rolls off the table', async () => {
+         |   ^
+      65 |     expect.assertions(3);
+      66 |     expect(exported).toBeDefined();
+      67 |
+
+      at test (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:64:3)
+      at Object.describe (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:9:1)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        5.985 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2023-05-09 09:21:15 info: --------------------------------------------
+2023-05-09 09:21:15 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-09 09:21:15 info: --------------------------------------------
+2023-05-09 09:21:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js (5.774 s)
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()` (1 ms)
+    ✓ should use `Promise.all()` (1 ms)
+    ✓ should resolve when all dice settle successfully (19 ms)
+    ✕ should reject with an Error when a die rolls off the table (5003 ms)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 1 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 2 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 3 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 4 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    Die 5 rolled off the table.
+
+      81 |           offTable = true;
+      82 |         }
+    > 83 |         reject(new Error(`Die ${die} rolled off the table.\n`));
+         |                ^
+      84 |       }
+      85 |
+      86 |       // If the dice settles (i.e. all mandated rolls are completed) we
+
+      at rollOnce (3-UsingAPIs/helpers/pokerDiceRoller.js:83:16)
+      at Timeout.rollOnce [as _onTimeout] (3-UsingAPIs/helpers/pokerDiceRoller.js:96:26)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+      62 |   });
+      63 |
+    > 64 |   test('should reject with an Error when a die rolls off the table', async () => {
+         |   ^
+      65 |     expect.assertions(3);
+      66 |     expect(exported).toBeDefined();
+      67 |
+
+      at test (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:64:3)
+      at Object.describe (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:9:1)
+
+  ● ex4-pokerDiceAll › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+      63 |
+      64 |   test('should reject with an Error when a die rolls off the table', async () => {
+    > 65 |     expect.assertions(3);
+         |            ^
+      66 |     expect(exported).toBeDefined();
+      67 |
+      68 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0.999);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js:65:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        5.899 s, estimated 6 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2023-05-09 09:30:41 info: ----------------------------------------------
+2023-05-09 09:30:41 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-09 09:30:41 info: ----------------------------------------------
+2023-05-09 09:30:44 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js
+  ex5-pokerDiceChain
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should resolve when all dice settle successfully (20 ms)
+    ✓ should reject with an Error when a die rolls off the table (30 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.877 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2023-05-09 09:31:33 info: ----------------------------------------------
+2023-05-09 09:31:33 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-09 09:31:33 info: ----------------------------------------------
+2023-05-09 09:31:35 info: All unit tests passed.
+2023-05-09 09:31:39 info: All steps were completed successfully
