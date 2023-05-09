@@ -598,3 +598,13 @@ Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
 2023-05-07 07:11:40 info: ----------------------------------------------
 2023-05-07 07:11:42 info: All unit tests passed.
 2023-05-07 07:11:45 info: All steps were completed successfully
+2023-05-09 08:21:36 info: ---------------------------------------
+2023-05-09 08:21:36 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-09 08:21:36 info: ---------------------------------------
+2023-05-09 08:21:38 info: All unit tests passed.
+2023-05-09 08:21:41 info: All steps were completed successfully
+2023-05-09 08:23:44 info: -------------------------------------------------
+2023-05-09 08:23:44 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-09 08:23:44 info: -------------------------------------------------
+2023-05-09 08:23:46 info: All unit tests passed.
+2023-05-09 08:23:49 info: All steps were completed successfully

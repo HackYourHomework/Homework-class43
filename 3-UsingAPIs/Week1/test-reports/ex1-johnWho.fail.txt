@@ -1,8 +1,0 @@
-
-*** ESLint Report ***
-
-ex1-johnWho.js
-  24:7  warning  Remove commented-out code  hyf/no-commented-out-code
-
-✖ 1 problem (0 errors, 1 warning)
-

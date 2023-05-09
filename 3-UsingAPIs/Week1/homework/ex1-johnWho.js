@@ -11,23 +11,18 @@ Rewrite this function, but replace the callback syntax with the Promise syntax:
 
 const getAnonName = (firstName) => {
   return new Promise((resolve, reject) => {
-    try {
-      setTimeout(() => {
-        if (!firstName) {
-          reject(new Error("You didn't pass in a first name!"));
-        }
-        const fullName = `${firstName} Doe`;
-
-        resolve(fullName);
-      }, 1000);
-    } catch (error) {
-      reject(new Error("You didn't pass in a first name!"));
-    }
+    setTimeout(() => {
+      if (!firstName) {
+        reject(new Error("You didn't pass in a first name!"));
+      }
+      const fullName = `${firstName} Doe`;
+      resolve(fullName);
+    }, 1000);
   });
 };
 
 function main() {
-  getAnonName('', console.log)
+  getAnonName('John', console.log)
     .then((msg) => console.log('RESOLVED: ', msg))
     .catch((err) => console.log('REJECTED: ', err));
 }
