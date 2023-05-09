@@ -1,0 +1,10 @@
+
+*** ESLint Report ***
+
+ex3-rollDie.js
+  59:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  65:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  67:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 3 problems (0 errors, 3 warnings)
+
