@@ -24,12 +24,20 @@ exercise file.
 
 // The line below makes the rollDie() function available to this file.
 // Do not change or remove it.
+const { reject } = require('lodash');
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promises = dice.map(() => {
+    return new Promise((resolve, reject) => {
+      rollDie(1)
+        .then((result) => resolve(result))
+        .catch((error) => reject(error));
+    });
+  });
+
+  return Promise.all(promises);
 }
 
 function main() {
