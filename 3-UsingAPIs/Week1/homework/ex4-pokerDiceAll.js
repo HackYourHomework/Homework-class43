@@ -27,9 +27,13 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const rolls = dice.map(() => {
+    const roll = Math.floor(Math.random() * 6) + 1;
+    return rollDie(roll);
+  });
+
+  return Promise.all(rolls);
 }
 
 function main() {
