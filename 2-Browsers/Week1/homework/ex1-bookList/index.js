@@ -17,45 +17,37 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 -----------------------------------------------------------------------------*/
 //cspell: enable
 
-function createBookList(books, images) {
-  // TODO your code goes in here, return the ul element
-  const ulElement = document.createElement('ul');
+function createBookList(books) {
+  const ulElement = Object.assign(document.createElement('ul'),{
+    className: 'ul-element'
+  })
   // Iterate through the array of books
   books.forEach((book) => {
     // Create <p>, <li>, <img> elements
-    const liElement = document.createElement('li');
+    const liElement = Object.assign(document.createElement('li'),{
+      className: 'li-element'
+    })
+    
     const pElement = document.createElement('p');
     const imageElement = document.createElement('img');
-imageElement.src = `./assets`
 
+    const imageName =  book.title.toLowerCase().replaceAll(' ', '_')
+    imageElement.src = `./assets/${imageName}.jpg`;
+    imageElement.alt = book.title;
+  // Change the style of the book depending on whether you have read it(green) or not(red).
+
+  if (book.alreadyRead === true) {
+    liElement.style.background = 'green';
+  } else {
+    liElement.style.background = 'red';
+  }
     // Display my three favorite books
     pElement.textContent = `${book.title} by ${book.author}`;
 
     // Append elements to eachother
-    liElement.appendChild(pElement);
-    
-    liElement.appendChild(imageElement);
     ulElement.append(liElement);
-    
-
-    // Change the style of the book depending on whether you have read it(green) or not(red).
-
-    if (book.alreadyRead === true) {
-      liElement.style.background = 'green';
-    } else {
-      liElement.style.background = 'red';
-    }
-
-    // Display image with isbn
-    // if (book.isbn === '978-0465050659') {
-    //   imageElement.src = './assets/the_design_of_everyday_things.jpg';
-    // }
-    // if (book.isbn === '978-1617933431') {
-    //   imageElement.src = './assets/the_most_human_human.jpg';
-    // }
-    // if (book.isbn === '978-0201616224') {
-    //   imageElement.src = './assets/the_pragmatic_programmer.jpg';
-    // }
+    liElement.appendChild(pElement);
+    liElement.appendChild(imageElement);
   });
 
   return ulElement;
