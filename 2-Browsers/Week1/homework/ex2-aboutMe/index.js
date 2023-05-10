@@ -1,4 +1,7 @@
-'use strict';
+// 'use strict';
+
+// const { Linter } = require("eslint");
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-2-about-me
 
@@ -10,3 +13,16 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 ------------------------------------------------------------------------------*/
 
 // TODO add your JavaScript code here.
+
+const myInfo = {
+  nickname: 'Mehran',
+  Favfood: 'Lasagna',
+  hometown: 'Breda',
+};
+
+document.getElementById('nickname').textContent = myInfo.nickname;
+document.getElementById('fav-food').textContent = myInfo.Favfood;
+document.getElementById('hometown').textContent = myInfo.hometown;
+
+let liEl = document.querySelectorAll('li');
+liEl.forEach((element) => (element.className = 'list-item'));
