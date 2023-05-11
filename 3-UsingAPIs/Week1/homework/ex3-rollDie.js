@@ -28,14 +28,12 @@ function rollDie(call) {
       if (roll > 6) {
           // TODO replace "error" callback
           reject(new Error('Oops... Die rolled off the table.'));
-          return
       }
 
       // Use promise resolve to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
           // TODO replace "success" callback
           resolve( value);
-          return
       }
 
       // Schedule the next roll todo until no more rolls to do
