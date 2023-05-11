@@ -22,12 +22,12 @@ function rollDie() {
       const value = Math.floor(Math.random() * 6) + 1;
       console.log(`Die value is now: ${value}`);
 
-      // Use callback to notify that the die rolled off the table after 6 rolls
+      // Use condition to notify that the die rolled off the table after 6 rolls
       if (roll > 6) {
         reject(new Error('Oops... Die rolled off the table.'));
       }
 
-      // Use callback to communicate the final die value once finished rolling
+      // Use condition to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
         resolve(value);
       }
@@ -54,4 +54,11 @@ if (process.env.NODE_ENV !== 'test') {
 }
 module.exports = rollDie;
 
-// There is no problem now because promise can return only one time
+// When using callbacks, if the die rolls off the table, the error callback is called repeatedly,
+// once for each roll that exceeds the limit of 6 rolls. This happens because the rollOnce() function is
+// called recursively using setTimeout() in a loop until all the rolls are done, and there is no way to stop the loop once
+// the error callback is called.
+// However, in the solution with Promises, this issue does not happen because Promises can only be resolved or rejected once.
+// So, even though the rollOnce() function is also called recursively, instead of calling a callback function,
+// it either resolves the Promise with the final die value or rejects the Promise with an error message.
+// This ensures that the Promise is resolved or rejected only once, regardless of how many times rollOnce() is called recursively.
