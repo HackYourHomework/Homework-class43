@@ -12,7 +12,7 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-Usin
 ------------------------------------------------------------------------------*/
 
 // TODO Remove callback and return a promise
-function rollDie(call) {
+function rollDie( ) {
   return new Promise ((resolve, reject)=>{
    
           // Compute a random number of rolls (3-10) that the die MUST complete
