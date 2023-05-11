@@ -24,14 +24,14 @@ function rollDie(call) {
       const value = Math.floor(Math.random() * 6) + 1;
       console.log(`Die value is now: ${value}`);
 
-      // Use callback to notify that the die rolled off the table after 6 rolls
+      // Use promise reject to notify that the die rolled off the table after 6 rolls
       if (roll > 6) {
           // TODO replace "error" callback
           reject(new Error('Oops... Die rolled off the table.'));
           return
       }
 
-      // Use callback to communicate the final die value once finished rolling
+      // Use promise resolve to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
           // TODO replace "success" callback
           resolve( value);
