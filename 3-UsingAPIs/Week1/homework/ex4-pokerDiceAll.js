@@ -27,9 +27,15 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const promises = dice.map((die) => rollDie(die));
+  return Promise.all(promises)
+    .then((results) => {
+      return results;
+    })
+    .catch((error) => {
+      throw error;
+    });
 }
 
 function main() {
@@ -43,3 +49,9 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*In the case of a rejected promise, the Promise.all() method immediately rejects with the error and
+ any pending promises are terminated. However, the rollDie() function uses asynchronous code that has already been dispatched, 
+ so those asynchronous operations may continue to execute even after the rejection has occurred. 
+ Therefore, the resolved or rejected status of a promise does not affect the asynchronous operations that have already been dispatched, 
+they will continue to run until they are completed or rejected.*/
