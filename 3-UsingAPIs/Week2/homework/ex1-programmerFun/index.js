@@ -18,28 +18,47 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 function requestData(url) {
-  // TODO return a promise using `fetch()`
+
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((data) => {
+        if (!data.ok) {
+         throw new Error('There is no server at the modified url, therefore this should result in a network (DNS) error.');
+        }
+        return resolve(data.json());
+      })
+      .catch((error) => {
+        reject(`There was a problem with the fetch request: ${error.message}`);
+        
+      });
+  });
 }
 
 function renderImage(data) {
-  // TODO render the image to the DOM
-  console.log(data);
+    const picture = document.createElement('img');
+    picture.src = data.img;
+    picture.alt = data.title;
+    document.body.appendChild(picture);
+
+    console.log(data);
 }
 
 function renderError(error) {
-  // TODO render the error to the DOM
+  const oneError = document.createElement('h1');
+  oneError.textContent = error.message;
+  document.body.appendChild(oneError);
+
   console.log(error);
 }
 
-// TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
+async function main() {
+  try {
+    await requestData('https://xkcd.now.sh/?comic=latest')
     .then((data) => {
       renderImage(data);
     })
-    .catch((error) => {
-      renderError(error);
-    });
+  } catch(error) {
+    renderError(error)
+  }
 }
-
 window.addEventListener('load', main);
