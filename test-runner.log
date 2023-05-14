@@ -67,3 +67,8 @@ Ran all test suites matching /ex2-pokemonApp.test.js/i.
 2023-05-14 08:00:25 info: ----------------------------------------
 2023-05-14 08:00:25 warn: A unit test file was not provided.
 2023-05-14 08:00:36 info: All steps were completed successfully
+2023-05-14 08:02:33 info: ----------------------------------------
+2023-05-14 08:02:33 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-05-14 08:02:33 info: ----------------------------------------
+2023-05-14 08:02:42 info: All unit tests passed.
+2023-05-14 08:02:53 info: All steps were completed successfully
