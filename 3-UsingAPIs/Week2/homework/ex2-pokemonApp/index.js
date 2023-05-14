@@ -25,6 +25,7 @@ parameters and return values to pass data back and forth.
 // create a button with class btn-pokemon
 const button = document.createElement('button');
 button.classList.add('btn-pokemon');
+button.setAttribute('type', 'button');
 button.textContent = 'Get Pokemon!';
 document.body.appendChild(button);
 
