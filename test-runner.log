@@ -62,3 +62,8 @@ Ran all test suites matching /ex2-pokemonApp.test.js/i.
 2023-05-14 07:57:18 info: --------------------------------------------
 2023-05-14 07:57:18 warn: A unit test file was not provided.
 2023-05-14 07:57:29 info: All steps were completed successfully
+2023-05-14 08:00:25 info: ----------------------------------------
+2023-05-14 08:00:25 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-05-14 08:00:25 info: ----------------------------------------
+2023-05-14 08:00:25 warn: A unit test file was not provided.
+2023-05-14 08:00:36 info: All steps were completed successfully
