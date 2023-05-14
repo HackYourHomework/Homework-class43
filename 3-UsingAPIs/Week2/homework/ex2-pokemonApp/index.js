@@ -22,18 +22,86 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+// create a button with class btn-pokemon
+const button = document.createElement('button');
+button.classList.add('btn-pokemon');
+button.textContent = 'Get Pokemon!';
+document.body.appendChild(button);
+
+// create a select element with class pokemons-list
+const selectPokemons = document.createElement('select');
+selectPokemons.classList.add('pokemons-list');
+document.body.appendChild(selectPokemons);
+
+function fetchData(url) {
+  console.log(url); // check the console for the URL
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((data) => {
+        if (!data.ok) {
+          throw new Error(
+            'There is no server at the modified url, therefore this should result in a network (DNS) error.'
+          );
+        }
+        return data.json();
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((error) => {
+        reject(`There was a problem with the fetch request: ${error.message}`);
+      });
+  });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(data) {
+  console.log(data); // check the console for the data
+  const pokemonList = data.results;
+   
+  // choose pokemons from the selected list
+  pokemonList.forEach((pokemon, index) => {
+    const option = document.createElement('option');
+    option.text = pokemon.name;
+    selectPokemons.add(option, index);
+  });
+  document.body.appendChild(selectPokemons);
+  button.setAttribute('disabled', true);
+  // added event listener to selectPokemons
+  selectPokemons.addEventListener('change', (e) => {
+    const name = e.target.value;
+    fetchImage(name);
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(name) {
+  // check name for null
+  if (name) {
+    // read the documentation and get the url for the image
+  const pokemonListUrl = await fetchData(`https://pokeapi.co/api/v2/pokemon/${name}`);
+
+  if (pokemonListUrl.sprites.front_default) {
+    let imgPokemon = document.querySelector('.pokemon-image');
+    if (!imgPokemon) { // need to create an img element and choose it
+      imgPokemon = document.createElement('img');
+      imgPokemon.classList.add('pokemon-image');
+      document.body.appendChild(imgPokemon);
+    }
+    imgPokemon.src = pokemonListUrl.sprites.front_default; // set the src
+  }
+}
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  try {
+    await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151').then(
+      (data) => {
+        button.addEventListener('click', () => {
+          fetchAndPopulatePokemons(data);
+        });
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
 }
+window.addEventListener('load', main);

@@ -1,1 +1,9 @@
-/* add your styling here */
+.btn-pokemon {
+    margin-bottom: 10px;
+}
+
+.pokemons-list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
