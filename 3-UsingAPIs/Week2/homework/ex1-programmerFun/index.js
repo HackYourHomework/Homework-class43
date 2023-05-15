@@ -19,6 +19,24 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 ------------------------------------------------------------------------------*/
 function requestData(url) {
   // TODO return a promise using `fetch()`
+  return new Promise((resolve, reject) => {
+    fetch(url)
+    .then(response => {
+      if(!response.ok){
+       throw new Error("HTTP error, status: ", response.status)
+      }
+      return response.json()
+    })
+    .then(data => {
+      console.log(data)
+      resolve(data)
+    })
+    .catch(error => {
+      console.log('err', error)
+      reject(error);
+    })
+  })
+  
 }
 
 function renderImage(data) {
@@ -32,14 +50,21 @@ function renderError(error) {
 }
 
 // TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
-      renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+async function main() {
+  try {
+  const request = await requestData('https://xkcd.now.sh/?comic=latest')
+  
+  }
+  catch {
+
+  }
+
+    // .then((data) => {
+    //   renderImage(data);
+    // })
+    // .catch((error) => {
+    //   renderError(error);
+    // });
 }
 
 window.addEventListener('load', main);
