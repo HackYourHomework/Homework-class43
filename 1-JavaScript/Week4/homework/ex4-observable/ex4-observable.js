@@ -17,13 +17,18 @@ function createObservable() {
   const subscribers = [];
   return {
     subscribe: function (subscriber) {
-      // TODO complete this function
+      subscribers.push(subscriber);
     },
     notify: function (message) {
-      // TODO complete this function
+      subscribers.forEach((subscriber) => subscriber(message));
     },
   };
 }
-
+// function subscriber(message) {
+//   console.log(`Message for all ${message}`);
+// }
+// const res = createObservable();
+// res.subscribe(subscriber);
+// res.notify('Hello')
 // ! Do not change or remove the code below
 module.exports = createObservable;

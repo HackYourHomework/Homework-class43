@@ -1,0 +1,5 @@
+
+*** Spell Checker Report ***
+
+ex2-aboutMe/index.js:12:14 - Unknown word (Alya)
+ex2-aboutMe/index.js:14:14 - Unknown word (Cherkassy)
