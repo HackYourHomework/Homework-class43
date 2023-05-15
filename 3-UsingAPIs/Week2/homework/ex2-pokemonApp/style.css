@@ -1,1 +1,13 @@
 /* add your styling here */
+select {
+  width: 200px;
+  margin-left: 10px;
+}
+option {
+  padding-left: 20px;
+  background-color: rgb(179, 184, 188);
+}
+.getPokemonBtn {
+  width: 100px;
+  margin: 10px auto 10px 10px;
+}
