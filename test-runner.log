@@ -608,3 +608,701 @@ Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
 2023-05-09 08:23:44 info: -------------------------------------------------
 2023-05-09 08:23:46 info: All unit tests passed.
 2023-05-09 08:23:49 info: All steps were completed successfully
+2023-05-09 01:49:59 info: ---------------------------------------------
+2023-05-09 01:49:59 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-09 01:49:59 info: ---------------------------------------------
+2023-05-09 01:50:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    × HTML should be syntactically valid (70 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    √ should use async/wait
+    √ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.775 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2023-05-09 01:52:30 info: ---------------------------------------------
+2023-05-09 01:52:30 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-09 01:52:30 info: ---------------------------------------------
+2023-05-09 01:52:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    √ HTML should be syntactically valid (72 ms)
+    × should have all TODO comments removed (1 ms)
+    × should use `fetch()`
+    × should use async/wait
+    × should use try/catch
+
+  ● programmerFun › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● programmerFun › should use `fetch()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      48 |
+      49 |   test('should use `fetch()`', () => {
+    > 50 |     expect(state.fetch).toBeDefined();
+         |                         ^
+      51 |   });
+      52 |
+      53 |   test('should use async/wait', () => {
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:50:25)
+
+  ● programmerFun › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      52 |
+      53 |   test('should use async/wait', () => {
+    > 54 |     expect(state.async).toBeDefined();
+         |                         ^
+      55 |     expect(state.await).toBeDefined();
+      56 |   });
+      57 |
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:54:25)
+
+  ● programmerFun › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      57 |
+      58 |   test('should use try/catch', () => {
+    > 59 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      60 |   });
+      61 | });
+      62 |
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:59:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 1 passed, 5 total
+Snapshots:   0 total
+Time:        2.308 s, estimated 3 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2023-05-09 01:52:35 error: *** ESLint Report ***
+
+ex1-programmerFun/index.js
+  20:22  error  'url' is defined but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-05-09 01:53:01 info: ---------------------------------------------
+2023-05-09 01:53:01 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-09 01:53:01 info: ---------------------------------------------
+2023-05-09 01:53:04 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    × HTML should be syntactically valid (74 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    √ should use async/wait
+    √ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.306 s, estimated 3 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2023-05-09 01:53:54 info: ---------------------------------------------
+2023-05-09 01:53:54 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-09 01:53:54 info: ---------------------------------------------
+2023-05-09 01:53:58 info: All unit tests passed.
+2023-05-09 01:54:01 info: All steps were completed successfully
+2023-05-09 05:38:56 info: ------------------------------------------
+2023-05-09 05:38:56 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-09 05:38:56 info: ------------------------------------------
+2023-05-09 05:39:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    × HTML should be syntactically valid (91 ms)
+    √ should have all TODO comments removed (1 ms)
+    √ should use `fetch()`
+    √ should use `await fetch()`
+    × should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+       9:6     error  <button> is missing required \"type\" attribute  element-required-attributes
+      14:6151  error  <img> is missing required \"alt\" attribute      wcag/h37·
+    ✖ 2 problems (2 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+  ● pokemonApp › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      51 |
+      52 |   test('should use try/catch', () => {
+    > 53 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:53:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.507 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-05-09 05:41:36 info: ------------------------------------------
+2023-05-09 05:41:36 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-09 05:41:36 info: ------------------------------------------
+2023-05-09 05:41:40 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    × HTML should be syntactically valid (99 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    √ should use `await fetch()`
+    × should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:18  error  Prefer to use <button> instead of <input type=\"button\"> when adding buttons  prefer-button·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+  ● pokemonApp › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      51 |
+      52 |   test('should use try/catch', () => {
+    > 53 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:53:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.36 s, estimated 3 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-05-09 05:43:21 info: ------------------------------------------
+2023-05-09 05:43:21 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-09 05:43:21 info: ------------------------------------------
+2023-05-09 05:43:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    √ HTML should be syntactically valid (96 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()` (1 ms)
+    √ should use `await fetch()`
+    × should use try/catch (1 ms)
+
+  ● pokemonApp › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      51 |
+      52 |   test('should use try/catch', () => {
+    > 53 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.toBeDefined (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:53:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.317 s, estimated 3 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-05-09 05:45:01 info: ------------------------------------------
+2023-05-09 05:45:01 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-09 05:45:01 info: ------------------------------------------
+2023-05-09 05:45:04 info: All unit tests passed.
+2023-05-09 05:45:07 info: All steps were completed successfully
+2023-05-09 05:56:27 info: ------------------------------------------
+2023-05-09 05:56:27 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-09 05:56:27 info: ------------------------------------------
+2023-05-09 05:56:31 info: All unit tests passed.
+2023-05-09 05:56:34 info: All steps were completed successfully
+2023-05-11 07:03:15 info: ----------------------------------------
+2023-05-11 07:03:15 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-05-11 07:03:15 info: ----------------------------------------
+2023-05-11 07:03:15 warn: A unit test file was not provided.
+2023-05-11 07:03:19 error: *** Spell Checker Report ***
+
+
+2023-05-11 07:03:44 info: --------------------------------------------
+2023-05-11 07:03:44 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2023-05-11 07:03:44 info: --------------------------------------------
+2023-05-11 07:03:44 warn: A unit test file was not provided.
+2023-05-11 07:03:47 error: *** Spell Checker Report ***
+
+
+2023-05-11 07:15:06 info: ----------------------------------------
+2023-05-11 07:15:06 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-05-11 07:15:06 info: ----------------------------------------
+2023-05-11 07:15:06 warn: A unit test file was not provided.
+2023-05-11 07:15:09 error: *** Spell Checker Report ***
+
+
+2023-05-12 09:35:28 info: -----------------------------------------
+2023-05-12 09:35:28 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-12 09:35:28 info: -----------------------------------------
+2023-05-12 09:35:30 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    × should have all TODO comments removed
+    × `rollDieUntil` should not contain unneeded console.log calls
+    × should not include a recursive call
+    × should use async/wait
+    × should use try/catch
+    × should resolve as soon as a die settles on an ACE
+    × should reject with an Error when a die rolls off the table
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › `rollDieUntil` should not contain unneeded console.log calls
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should use async/wait
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should use try/catch
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should reject with an Error when a die rolls off the table
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 7 total
+Snapshots:   0 total
+Time:        0.528 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-05-12 09:35:33 error: *** Spell Checker Report ***
+
+
+2023-05-12 09:36:29 info: -----------------------------------------
+2023-05-12 09:36:29 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-12 09:36:29 info: -----------------------------------------
+2023-05-12 09:36:30 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    × should have all TODO comments removed
+    × `rollDieUntil` should not contain unneeded console.log calls
+    × should not include a recursive call
+    × should use async/wait
+    × should use try/catch
+    × should resolve as soon as a die settles on an ACE (1 ms)
+    × should reject with an Error when a die rolls off the table
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › `rollDieUntil` should not contain unneeded console.log calls
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should use async/wait
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should use try/catch
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+  ● ex3-rollAnAce › should reject with an Error when a die rolls off the table
+
+    ENOENT: no such file or directory, open 'C:\Users\zek\Desktop\HYF\Homework-class43\3-UsingAPIs\Week2\it\ex3-rollAnAce.js'
+
+      42 |   }
+      43 |
+    > 44 |   result.source = fs.readFileSync(exercisePath, 'utf8');
+         |                      ^
+      45 |
+      46 |   if (options.parse) {
+      47 |     try {
+
+      at readFileSync (test-runner/unit-test-helpers.js:44:22)
+      at Object.beforeAllHelper (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:15:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 7 total
+Snapshots:   0 total
+Time:        0.379 s, estimated 1 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-05-12 09:36:33 error: *** Spell Checker Report ***
+
+
+2023-05-12 09:37:21 info: -----------------------------------------
+2023-05-12 09:37:21 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-12 09:37:21 info: -----------------------------------------
+2023-05-12 09:37:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    √ should have all TODO comments removed (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls
+    √ should not include a recursive call (1 ms)
+    √ should use async/wait
+    √ should use try/catch
+    × should resolve as soon as a die settles on an ACE (164 ms)
+    × should reject with an Error when a die rolls off the table (105 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ACE"
+    Received: undefined
+
+      90 |       expect(promise).toBeInstanceOf(Promise);
+      91 |       const result = await promise;
+    > 92 |       expect(result).toBe('ACE');
+         |                      ^
+      93 |     } finally {
+      94 |       randomSpy.mockRestore();
+      95 |     }
+
+      at Object.toBe (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:92:22)
+
+  ● ex3-rollAnAce › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+       97 |
+       98 |   test('should reject with an Error when a die rolls off the table', async () => {
+    >  99 |     expect.assertions(3);
+          |            ^
+      100 |     expect(exported).toBeDefined();
+      101 |
+      102 |     // This sequence is known to cause the die to roll off the table
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:99:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.674 s, estimated 1 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
