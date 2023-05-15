@@ -39,7 +39,7 @@ function rollDie() {
 
 function main() {
   rollDie()
-    .then((value) => console.log(`Success! Die settled on ${value}.`))
+    .then((resolve) => console.log(`Success! Die settled on ${resolve}.`))
 
     .catch((error) => console.log(error.message));
 }
