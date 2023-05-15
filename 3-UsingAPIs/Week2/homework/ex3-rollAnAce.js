@@ -14,12 +14,11 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 async function rollDieUntil(wantedValue) {
   // TODO: rewrite this function using async/await
-  await rollDie().then((value) => {
-    if (value !== wantedValue) {
-      return rollDieUntil(wantedValue);
-    }
-    return value;
-  });
+  let value = await rollDie();
+  while (value !== wantedValue) {
+    value = await rollDie();
+  }
+  return value;
 }
 
 // TODO refactor this function to use try/catch

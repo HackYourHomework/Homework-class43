@@ -4,14 +4,20 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: blueviolet;
 }
 
 #btn {
   margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
 }
 
 #select {
   margin-bottom: 20px;
+  font-size: 15px;
+  padding: 5px;
 }
 
 #pokemonImage {
