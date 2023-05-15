@@ -22,18 +22,64 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchData(url) {
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error(`Network error: ${error}`);
+      throw error;
+    });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchAndPopulatePokemons(url, selectElement) {
+  return fetchData(url)
+    .then((data) => {
+      data.results.forEach((pokemon) => {
+        const optionElement = document.createElement('option');
+        optionElement.textContent = pokemon.name;
+        optionElement.value = pokemon.url;
+        selectElement.appendChild(optionElement);
+      });
+    })
+    .catch((error) => {
+      console.error(`Error fetching pokemons: ${error}`);
+    });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchImage(url, imgElement) {
+  return fetchData(url)
+    .then((data) => {
+      imgElement.src = data.sprites.front_default;
+    })
+    .catch((error) => {
+      console.error(`Error fetching image: ${error}`);
+    });
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const selectElement = document.getElementById('pokemon-select');
+  const imgElement = document.getElementById('pokemon-image');
+
+  try {
+    await fetchAndPopulatePokemons(
+      'https://pokeapi.co/api/v2/pokemon?limit=151',
+      selectElement
+    );
+
+    selectElement.addEventListener('change', async () => {
+      const url = selectElement.value;
+      await fetchImage(url, imgElement);
+    });
+
+    await fetchImage(selectElement[0].value, imgElement);
+  } catch (error) {
+    console.error(`Unexpected error: ${error}`);
+  }
 }
+
+window.addEventListener('load', main);
