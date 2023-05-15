@@ -28,20 +28,8 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const OFF_TABLE_AFTER = 6;
-  const promises = dice.map((num) => {
-    return new Promise((resolve, reject) => {
-      rollDie(num).then((value) => {
-        if (value === 'JACK' || value === 'QUEEN' || value === 'NINE') {
-          resolve(value);
-        } else if (value === OFF_TABLE_AFTER) {
-          reject(new Error(`Die ${num} rolled off the table.`));
-        }
-      });
-    });
-  });
-
-  return Promise.all(promises);
+  const allDies = Promise.all(dice.map((perDie) => rollDie(perDie)));
+  return allDies;
 }
 
 function main() {

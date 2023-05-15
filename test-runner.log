@@ -3354,3 +3354,8 @@ Ran all test suites matching /ex3-rollAnAce.test.js/i.
 2023-05-15 04:53:43 info: ---------------------------------------
 2023-05-15 04:53:47 info: All unit tests passed.
 2023-05-15 04:53:51 info: All steps were completed successfully
+2023-05-15 05:06:21 info: --------------------------------------------
+2023-05-15 05:06:21 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-15 05:06:21 info: --------------------------------------------
+2023-05-15 05:06:24 info: All unit tests passed.
+2023-05-15 05:06:28 info: All steps were completed successfully
