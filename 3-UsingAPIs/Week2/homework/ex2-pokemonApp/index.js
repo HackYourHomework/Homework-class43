@@ -81,15 +81,12 @@ async function fetchAndPopulatePokemons(url) {
 
 async function fetchImage(imgUrl) {
   const myBody = document.getElementsByTagName('body')[0];
-
   const result = await fetchData(imgUrl);
-
   const pocImgUrl = result.sprites.front_default;
-
   const myImg = document.createElement('img');
+
   myImg.src = pocImgUrl;
   myImg.alt = 'Pokemon image.';
-
   myBody.append(myImg);
 }
 

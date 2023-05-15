@@ -7,12 +7,12 @@ Browserslist: caniuse-lite is outdated. Please run:
  FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
   ex3-rollAnAce
     √ should have all TODO comments removed (1 ms)
-    √ `rollDieUntil` should not contain unneeded console.log calls
-    √ should not include a recursive call (1 ms)
+    √ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    √ should not include a recursive call
     √ should use async/wait
     √ should use try/catch
-    × should resolve as soon as a die settles on an ACE (164 ms)
-    × should reject with an Error when a die rolls off the table (105 ms)
+    × should resolve as soon as a die settles on an ACE (106 ms)
+    × should reject with an Error when a die rolls off the table (121 ms)
 
   ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
 
@@ -50,5 +50,5 @@ Browserslist: caniuse-lite is outdated. Please run:
 Test Suites: 1 failed, 1 total
 Tests:       2 failed, 5 passed, 7 total
 Snapshots:   0 total
-Time:        0.674 s, estimated 1 s
+Time:        0.652 s, estimated 1 s
 Ran all test suites matching /ex3-rollAnAce.test.js/i.

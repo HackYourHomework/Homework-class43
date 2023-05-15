@@ -14,8 +14,6 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO complete this function; use Promise.race() and rollDie()
-
   const dice = [1, 2, 3, 4, 5];
   const rollMultiple = dice.map((el) => rollDie(el));
 

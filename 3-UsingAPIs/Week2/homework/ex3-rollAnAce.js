@@ -14,6 +14,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 async function rollDieUntil(wantedValue) {
   let resValue = '';
+
   try {
     while (resValue !== wantedValue) {
       resValue = await rollDie();

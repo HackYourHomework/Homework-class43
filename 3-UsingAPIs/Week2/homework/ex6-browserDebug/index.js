@@ -1,11 +1,11 @@
 /*
 Full description at:https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-6-using-the-browser-debugger
 */
-
 'use strict';
 
 async function getData(url) {
   const response = await fetch(url);
+
   return response.json();
 }
 
@@ -19,6 +19,7 @@ function createAndAppend(name, parent, options = {}) {
       elem.setAttribute(key, value);
     }
   });
+
   return elem;
 }
 

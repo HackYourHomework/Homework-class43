@@ -47,6 +47,7 @@ function renderImage(data) {
 
 function renderError(error) {
   console.log(error);
+
   const myError = document.createElement('h1');
   myError.textContent = error;
   const myBody = document.getElementsByTagName('body')[0];
