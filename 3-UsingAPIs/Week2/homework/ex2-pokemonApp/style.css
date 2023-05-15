@@ -1,1 +1,44 @@
 /* add your styling here */
+body {
+  background-color: #ffde00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+select {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid #3b4cca;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  margin: 16px auto;
+  max-width: 100%;
+}
+
+button {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 20px;
+}
