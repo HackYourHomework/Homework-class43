@@ -29,10 +29,13 @@ function requestData(url) {
           throw new Error(`There is no server at the modified url, therefore this 
           should result in a network (DNS) error`);
         }
-        return resolve(response.json());
+        return response.json();
+      })
+      .then((data) => {
+        resolve(data);
       })
       .catch((error) => {
-        throw new Error(error);
+        reject(`There was a problem with the fetch request: ${error.message}`);
       });
   });
 }
