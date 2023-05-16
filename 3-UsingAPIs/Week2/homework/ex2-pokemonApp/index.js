@@ -23,7 +23,11 @@ Try and avoid using global variables. As much as possible, try and use function
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 const mainBody = document.getElementsByTagName('body')[0];
-const buttonGetPokemon = document.getElementById('button-get-pokemon');
+
+const buttonGetPokemon = document.createElement('button');
+buttonGetPokemon.textContent = 'Get Pokemon';
+mainBody.appendChild(buttonGetPokemon);
+
 buttonGetPokemon.addEventListener('click', () => {
   const imgToRemove = document.getElementsByTagName('img')[0];
   const selectToRemove = document.getElementsByTagName('select')[0];
@@ -44,7 +48,7 @@ function fetchData(url) {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         resolve(data);
       })
       .catch((err) => {
@@ -57,7 +61,6 @@ function updatePokeImg(e) {
   const myBody = document.getElementsByTagName('body')[0];
   const imgToRemove = document.getElementsByTagName('img')[0];
   myBody.removeChild(imgToRemove);
-
   fetchImage(`https://pokeapi.co/api/v2/pokemon/${e.target.value}`);
 }
 
