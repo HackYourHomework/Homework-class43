@@ -1,1 +1,53 @@
-/* add your styling here */
+#pokemon-btn {
+  margin: auto;
+  display: block;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 15px;
+  background: #f0b70ef2;
+  border: none;
+  outline: none;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 150px;
+}
+
+#pokemon-btn:disabled {
+  opacity: 0.6;
+}
+
+.select-list {
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  width: 300px;
+  margin: auto;
+  margin-top: 50px;
+  cursor: pointer;
+  outline: none;
+}
+
+.select-list:focus {
+  outline: none;
+  border-color: #f0b70ef2;
+  box-shadow: 0px 0px 20px rgba(240, 183, 14, 0.7);
+}
+
+
+.select-list option {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.image {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+}
