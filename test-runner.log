@@ -1,0 +1,825 @@
+2023-05-11 10:46:20 info: ----------------------------------------------
+2023-05-11 10:46:20 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-11 10:46:20 info: ----------------------------------------------
+2023-05-11 10:46:28 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js (5.668 s)
+  ex5-pokerDiceChain
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✕ should resolve when all dice settle successfully (5000 ms)
+    ✓ should reject with an Error when a die rolls off the table (27 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+      23 |   testNoConsoleLog('rollDice', () => rootNode);
+      24 |
+    > 25 |   test('should resolve when all dice settle successfully', async () => {
+         |   ^
+      26 |     expect.assertions(4);
+      27 |     expect(exported).toBeDefined();
+      28 |
+
+      at test (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:25:3)
+      at Object.describe (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:7:1)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        5.733 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2023-05-11 10:47:03 info: Disclaimer turned off
+2023-05-11 10:48:10 info: ---------------------------------------
+2023-05-11 10:48:10 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-11 10:48:10 info: ---------------------------------------
+2023-05-11 10:48:12 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `getAnonName` should not contain unneeded console.log calls (1 ms)
+    ✓ should call `new Promise()`
+    ✓ should take a single argument (1 ms)
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when called with a string argument (2 ms)
+    ✓ should reject with an Error object when called without an argument (1 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.6 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+2023-05-11 10:50:50 info: ---------------------------------------
+2023-05-11 10:50:50 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-11 10:50:50 info: ---------------------------------------
+2023-05-11 10:50:52 info: All unit tests passed.
+2023-05-11 10:50:55 info: All steps were completed successfully
+2023-05-15 08:13:39 info: ---------------------------------------
+2023-05-15 08:13:39 info: >>> Running Unit Test `ex1-johnWho` <<<
+2023-05-15 08:13:39 info: ---------------------------------------
+2023-05-15 08:13:41 info: All unit tests passed.
+2023-05-15 08:13:45 info: All steps were completed successfully
+2023-05-15 08:14:04 info: -------------------------------------------------
+2023-05-15 08:14:04 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2023-05-15 08:14:04 info: -------------------------------------------------
+2023-05-15 08:14:06 info: All unit tests passed.
+2023-05-15 08:14:09 info: All steps were completed successfully
+2023-05-15 08:14:22 info: ---------------------------------------
+2023-05-15 08:14:22 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-15 08:14:22 info: ---------------------------------------
+2023-05-15 08:14:25 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (2 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ should call `new Promise()` (1 ms)
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when the die settles successfully (2 ms)
+    ✓ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.596 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-15 08:15:17 info: ---------------------------------------
+2023-05-15 08:15:17 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-15 08:15:17 info: ---------------------------------------
+2023-05-15 08:15:19 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDie.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDie.test.js
+  rollDie
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ should call `new Promise()`
+    ✓ `resolve()` should be called with a one argument
+    ✓ `reject()` should be called with a one argument (1 ms)
+    ✓ should resolve when the die settles successfully (1 ms)
+    ✓ should reject with an Error when the die rolls off the table (1 ms)
+
+  ● rollDie › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.58 s, estimated 1 s
+Ran all test suites matching /ex3-rollDie.test.js/i.
+2023-05-15 08:15:56 info: ---------------------------------------
+2023-05-15 08:15:56 info: >>> Running Unit Test `ex3-rollDie` <<<
+2023-05-15 08:15:56 info: ---------------------------------------
+2023-05-15 08:15:58 info: All unit tests passed.
+2023-05-15 08:16:02 info: All steps were completed successfully
+2023-05-15 08:16:21 info: --------------------------------------------
+2023-05-15 08:16:21 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-15 08:16:21 info: --------------------------------------------
+2023-05-15 08:16:23 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-pokerDiceAll.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex4-pokerDiceAll.test.js
+  ex4-pokerDiceAll
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.all()` (1 ms)
+    ✓ should resolve when all dice settle successfully (11 ms)
+    ✓ should reject with an Error when a die rolls off the table (25 ms)
+
+  ● ex4-pokerDiceAll › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.635 s
+Ran all test suites matching /ex4-pokerDiceAll.test.js/i.
+2023-05-15 08:17:09 info: --------------------------------------------
+2023-05-15 08:17:09 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2023-05-15 08:17:09 info: --------------------------------------------
+2023-05-15 08:17:12 info: All unit tests passed.
+2023-05-15 08:17:15 info: All steps were completed successfully
+2023-05-15 08:17:40 info: ----------------------------------------------
+2023-05-15 08:17:40 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-15 08:17:40 info: ----------------------------------------------
+2023-05-15 08:17:47 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js (5.482 s)
+  ex5-pokerDiceChain
+    ✓ should exist and be executable (1 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✕ should resolve when all dice settle successfully (5002 ms)
+    ✓ should reject with an Error when a die rolls off the table (27 ms)
+
+  ● ex5-pokerDiceChain › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+      23 |   testNoConsoleLog('rollDice', () => rootNode);
+      24 |
+    > 25 |   test('should resolve when all dice settle successfully', async () => {
+         |   ^
+      26 |     expect.assertions(4);
+      27 |     expect(exported).toBeDefined();
+      28 |
+
+      at test (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:25:3)
+      at Object.describe (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:7:1)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        5.536 s, estimated 6 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2023-05-15 08:19:40 info: ----------------------------------------------
+2023-05-15 08:19:40 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-15 08:19:40 info: ----------------------------------------------
+2023-05-15 08:19:47 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-pokerDiceChain.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js (5.569 s)
+  ex5-pokerDiceChain
+    ✓ should exist and be executable (1 ms)
+    ✓ should have all TODO comments removed
+    ✓ `rollDice` should not contain unneeded console.log calls (1 ms)
+    ✕ should resolve when all dice settle successfully (5001 ms)
+    ✓ should reject with an Error when a die rolls off the table (27 ms)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
+      23 |   testNoConsoleLog('rollDice', () => rootNode);
+      24 |
+    > 25 |   test('should resolve when all dice settle successfully', async () => {
+         |   ^
+      26 |     expect.assertions(4);
+      27 |     expect(exported).toBeDefined();
+      28 |
+
+      at test (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:25:3)
+      at Object.describe (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:7:1)
+
+  ● ex5-pokerDiceChain › should resolve when all dice settle successfully
+
+    expect.assertions(4)
+
+    Expected four assertions to be called but received two assertion calls.
+
+      24 |
+      25 |   test('should resolve when all dice settle successfully', async () => {
+    > 26 |     expect.assertions(4);
+         |            ^
+      27 |     expect(exported).toBeDefined();
+      28 |
+      29 |     const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+
+      at Object.assertions (3-UsingAPIs/Week1/unit-tests/ex5-pokerDiceChain.test.js:26:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        5.628 s, estimated 6 s
+Ran all test suites matching /ex5-pokerDiceChain.test.js/i.
+2023-05-15 08:30:04 info: ----------------------------------------------
+2023-05-15 08:30:04 info: >>> Running Unit Test `ex5-pokerDiceChain` <<<
+2023-05-15 08:30:04 info: ----------------------------------------------
+2023-05-15 08:30:06 info: All unit tests passed.
+2023-05-15 08:30:09 info: All steps were completed successfully
+2023-05-16 01:22:25 info: ---------------------------------------------
+2023-05-16 01:22:25 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-16 01:22:25 info: ---------------------------------------------
+2023-05-16 01:22:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-programmerFun.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js
+  programmerFun
+    ✕ HTML should be syntactically valid (120 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use async/wait (1 ms)
+    ✓ should use try/catch
+
+  ● programmerFun › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:2  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex1-programmerFun.test.js:45:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.78 s
+Ran all test suites matching /ex1-programmerFun.test.js/i.
+2023-05-16 01:34:31 info: ---------------------------------------------
+2023-05-16 01:34:31 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-16 01:34:31 info: ---------------------------------------------
+2023-05-16 01:34:36 info: All unit tests passed.
+2023-05-16 01:34:39 info: All steps were completed successfully
+2023-05-16 08:49:53 info: ---------------------------------------------
+2023-05-16 08:49:53 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-16 08:49:53 info: ---------------------------------------------
+2023-05-16 08:49:59 info: All unit tests passed.
+2023-05-16 08:50:04 info: All steps were completed successfully
+2023-05-16 08:50:23 info: -----------------------------------------
+2023-05-16 08:50:23 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-16 08:50:23 info: -----------------------------------------
+2023-05-16 08:50:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Debugger attached.
+Debugger attached.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    ✓ should not include a recursive call (1 ms)
+    ✓ should use async/wait (1 ms)
+    ✓ should use try/catch
+    ✓ should resolve as soon as a die settles on an ACE (22 ms)
+    ✓ should reject with an Error when a die rolls off the table (12 ms)
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.843 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+2023-05-16 08:50:29 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:10  error    Unexpected constant condition  no-constant-condition
+  41:1   warning  Remove commented-out code      hyf/no-commented-out-code
+  43:1   warning  Remove commented-out code      hyf/no-commented-out-code
+  52:1   warning  Remove commented-out code      hyf/no-commented-out-code
+
+✖ 4 problems (1 error, 3 warnings)
+
+
+2023-05-16 08:50:56 info: -----------------------------------------
+2023-05-16 08:50:56 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-16 08:50:56 info: -----------------------------------------
+2023-05-16 08:51:00 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Debugger attached.
+Debugger attached.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    ✓ should not include a recursive call (1 ms)
+    ✓ should use async/wait (1 ms)
+    ✓ should use try/catch
+    ✓ should resolve as soon as a die settles on an ACE (27 ms)
+    ✓ should reject with an Error when a die rolls off the table (10 ms)
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.toBeFalsy (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.796 s, estimated 1 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+2023-05-16 08:51:02 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:10  error    Unexpected constant condition  no-constant-condition
+  40:1   warning  Remove commented-out code      hyf/no-commented-out-code
+  42:1   warning  Remove commented-out code      hyf/no-commented-out-code
+  51:1   warning  Remove commented-out code      hyf/no-commented-out-code
+
+✖ 4 problems (1 error, 3 warnings)
+
+
+2023-05-16 08:51:39 info: -----------------------------------------
+2023-05-16 08:51:39 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-16 08:51:39 info: -----------------------------------------
+2023-05-16 08:51:43 info: All unit tests passed.
+2023-05-16 08:51:45 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:10  error  Unexpected constant condition  no-constant-condition
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-05-16 08:52:14 info: ----------------------------------------
+2023-05-16 08:52:14 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-05-16 08:52:14 info: ----------------------------------------
+2023-05-16 08:52:18 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-diceRace.test.js --colors
+Debugger attached.
+Debugger attached.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex4-diceRace.test.js
+  ex4-diceRace
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed
+    ✕ `rollDice` should not contain unneeded console.log calls (4 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.race()` (1 ms)
+    ✓ should resolve as soon as a die settles successfully (11 ms)
+    ✓ should reject with an Error as soon as a die rolls off the table (29 ms)
+
+  ● ex4-diceRace › `rollDice` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.851 s
+Ran all test suites matching /ex4-diceRace.test.js/i.
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+2023-05-16 08:54:30 info: ----------------------------------------
+2023-05-16 08:54:30 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-05-16 08:54:30 info: ----------------------------------------
+2023-05-16 08:54:33 info: All unit tests passed.
+2023-05-16 08:54:38 info: All steps were completed successfully
+2023-05-16 08:55:25 info: --------------------------------------------
+2023-05-16 08:55:25 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2023-05-16 08:55:25 info: --------------------------------------------
+2023-05-16 08:55:25 info: Exercise has not yet been modified
+2023-05-16 08:55:25 warn: A unit test file was not provided.
+2023-05-16 08:55:29 info: All steps were completed successfully
+2023-05-16 08:55:56 info: ----------------------------------------
+2023-05-16 08:55:56 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-05-16 08:55:56 info: ----------------------------------------
+2023-05-16 08:55:56 warn: A unit test file was not provided.
+2023-05-16 08:56:01 info: All steps were completed successfully
+2023-05-16 08:56:53 info: ------------------------------------------
+2023-05-16 08:56:53 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-16 08:56:53 info: ------------------------------------------
+2023-05-16 08:56:59 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Debugger attached.
+Debugger attached.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (133 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()` (1 ms)
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:4  error  <button> is missing required \"type\" attribute  element-required-attributes
+      12:4  error  Attribute \"src\" has invalid value \"\"           attribute-allowed-values·
+    ✖ 2 problems (2 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.372 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...
+2023-05-16 08:57:01 error: *** ESLint Report ***
+
+ex2-pokemonApp/index.js
+  42:3  warning  Please do not use `innerHTML` in the homework. Use `textContent` and/or `document.createElement()` instead  no-restricted-syntax
+  51:7  warning  Please do not use `innerHTML` in the homework. Use `textContent` and/or `document.createElement()` instead  no-restricted-syntax
+
+✖ 2 problems (0 errors, 2 warnings)
+
+
+2023-05-16 11:25:32 info: ---------------------------------------------
+2023-05-16 11:25:32 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-16 11:25:32 info: ---------------------------------------------
+2023-05-16 11:25:37 info: All unit tests passed.
+2023-05-16 11:25:41 info: All steps were completed successfully
+2023-05-16 11:25:52 info: ------------------------------------------
+2023-05-16 11:25:52 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-16 11:25:52 info: ------------------------------------------
+2023-05-16 11:25:57 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (123 ms)
+    ✓ should have all TODO comments removed
+    ✓ should use `fetch()` (1 ms)
+    ✓ should use `await fetch()`
+    ✓ should use try/catch (1 ms)
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:4  error  <button> is missing required \"type\" attribute  element-required-attributes
+      13:4  error  Attribute \"src\" has invalid value \"\"           attribute-allowed-values·
+    ✖ 2 problems (2 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.442 s, estimated 4 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-05-16 11:27:59 info: -----------------------------------------
+2023-05-16 11:27:59 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-16 11:27:59 info: -----------------------------------------
+2023-05-16 11:28:01 info: All unit tests passed.
+2023-05-16 11:28:02 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:10  error  Unexpected constant condition  no-constant-condition
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2023-05-16 11:31:54 info: -----------------------------------------
+2023-05-16 11:31:54 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-16 11:31:54 info: -----------------------------------------
+2023-05-16 11:31:56 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    ✓ should have all TODO comments removed (2 ms)
+    ✓ `rollDieUntil` should not contain unneeded console.log calls (1 ms)
+    ✓ should not include a recursive call
+    ✓ should use async/wait
+    ✓ should use try/catch (1 ms)
+    ✕ should resolve as soon as a die settles on an ACE (3 ms)
+    ✕ should reject with an Error when a die rolls off the table (1 ms)
+
+  ● ex3-rollAnAce › should resolve as soon as a die settles on an ACE
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "ACE"
+    Received: undefined
+
+      90 |       expect(promise).toBeInstanceOf(Promise);
+      91 |       const result = await promise;
+    > 92 |       expect(result).toBe('ACE');
+         |                      ^
+      93 |     } finally {
+      94 |       randomSpy.mockRestore();
+      95 |     }
+
+      at Object.toBe (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:92:22)
+
+  ● ex3-rollAnAce › should reject with an Error when a die rolls off the table
+
+    expect.assertions(3)
+
+    Expected three assertions to be called but received two assertion calls.
+
+       97 |
+       98 |   test('should reject with an Error when a die rolls off the table', async () => {
+    >  99 |     expect.assertions(3);
+          |            ^
+      100 |     expect(exported).toBeDefined();
+      101 |
+      102 |     // This sequence is known to cause the die to roll off the table
+
+      at Object.assertions (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:99:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 5 passed, 7 total
+Snapshots:   0 total
+Time:        0.703 s, estimated 1 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2023-05-16 11:31:58 error: *** ESLint Report ***
+
+ex3-rollAnAce.js
+  16:7  warning  'found' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2023-05-16 11:32:48 info: -----------------------------------------
+2023-05-16 11:32:48 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-16 11:32:48 info: -----------------------------------------
+2023-05-16 11:32:50 info: All unit tests passed.
+2023-05-16 11:32:53 info: All steps were completed successfully
+2023-05-16 11:33:14 info: ----------------------------------------
+2023-05-16 11:33:14 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-05-16 11:33:14 info: ----------------------------------------
+2023-05-16 11:33:16 info: All unit tests passed.
+2023-05-16 11:33:19 info: All steps were completed successfully
+2023-05-16 11:33:36 info: ----------------------------------------
+2023-05-16 11:33:36 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-05-16 11:33:36 info: ----------------------------------------
+2023-05-16 11:33:36 info: Exercise has not yet been modified
+2023-05-16 11:33:36 warn: A unit test file was not provided.
+2023-05-16 11:33:39 info: All steps were completed successfully
