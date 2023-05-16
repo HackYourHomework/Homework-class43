@@ -1,1 +1,13 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 25px;
+}
+
+img {
+  margin-top: 50px;
+}

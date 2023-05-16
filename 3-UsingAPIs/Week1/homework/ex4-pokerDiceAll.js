@@ -27,9 +27,10 @@ exercise file.
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const rollMultiple = dice.map((el) => rollDie(el));
+
+  return Promise.all(rollMultiple);
 }
 
 function main() {
@@ -43,3 +44,7 @@ if (process.env.NODE_ENV !== 'test') {
   main();
 }
 module.exports = rollDice;
+
+/*
+  We are creating 5 separate promises at once and each promise starts to run independently/asynchronously. that's wyh, in the case of a rejected promise, dice that have not yet finished their roll continue to do so. 
+*/

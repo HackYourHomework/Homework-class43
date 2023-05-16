@@ -1,11 +1,11 @@
 /*
 Full description at:https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-6-using-the-browser-debugger
 */
-
 'use strict';
 
 async function getData(url) {
   const response = await fetch(url);
+
   return response.json();
 }
 
@@ -19,6 +19,7 @@ function createAndAppend(name, parent, options = {}) {
       elem.setAttribute(key, value);
     }
   });
+
   return elem;
 }
 
@@ -32,8 +33,10 @@ function renderLaureate(ul, { knownName, birth, death }) {
   const li = createAndAppend('li', ul);
   const table = createAndAppend('table', li);
   addTableRow(table, 'Name', knownName.en);
-  addTableRow(table, 'Birth', `${birth.date}, ${birth.place.locationString}`);
-  addTableRow(table, 'Death', `${death.date}, ${death.place.locationString}`);
+  if (birth)
+    addTableRow(table, 'Birth', `${birth.date}, ${birth.place.locationString}`);
+  if (death)
+    addTableRow(table, 'Death', `${death.date}, ${death.place.locationString}`);
 }
 
 function renderLaureates(laureates) {
@@ -43,7 +46,7 @@ function renderLaureates(laureates) {
 
 async function fetchAndRender() {
   try {
-    const laureates = getData(
+    const { laureates } = await getData(
       'https://api.nobelprize.org/2.0/laureates?birthCountry=Netherlands&format=json&csvLang=en'
     );
     renderLaureates(laureates);
