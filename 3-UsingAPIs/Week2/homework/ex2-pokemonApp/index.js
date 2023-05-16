@@ -1,4 +1,5 @@
 'use strict';
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-2-gotta-catch-em-all
 
@@ -62,24 +63,35 @@ function fetchImage(url, imgElement) {
 }
 
 async function main() {
-  const selectElement = document.getElementById('pokemon-select');
-  const imgElement = document.getElementById('pokemon-image');
+  const selectElement = document.createElement('select');
+  document.body.appendChild(selectElement);
+  const imgElement = document.createElement('img');
+  imgElement.setAttribute('src', 'image-url.jpg');
+  imgElement.setAttribute('alt', 'Pokemon Image');
+  document.body.appendChild(imgElement);
+  const buttonElement = document.createElement('button');
+  buttonElement.textContent = 'Fetch Pokemons';
+  buttonElement.setAttribute('type', 'button');
 
-  try {
-    await fetchAndPopulatePokemons(
-      'https://pokeapi.co/api/v2/pokemon?limit=151',
-      selectElement
-    );
+  buttonElement.addEventListener('click', async () => {
+    try {
+      await fetchAndPopulatePokemons(
+        'https://pokeapi.co/api/v2/pokemon?limit=151',
+        selectElement
+      );
 
-    selectElement.addEventListener('change', async () => {
-      const url = selectElement.value;
-      await fetchImage(url, imgElement);
-    });
+      selectElement.addEventListener('change', async () => {
+        const url = selectElement.value;
+        await fetchImage(url, imgElement);
+      });
 
-    await fetchImage(selectElement[0].value, imgElement);
-  } catch (error) {
-    console.error(`Unexpected error: ${error}`);
-  }
+      await fetchImage(selectElement[0].value, imgElement);
+    } catch (error) {
+      console.error(`Unexpected error: ${error}`);
+    }
+  });
+
+  document.body.appendChild(buttonElement);
 }
 
 window.addEventListener('load', main);
