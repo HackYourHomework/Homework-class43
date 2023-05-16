@@ -22,18 +22,58 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons(url) {
+  const data = await fetchData(url);
+  const select = document.createElement('select');
+  document.body.appendChild(select);
+  data.results.forEach((element) => {
+    const option = document.createElement('option');
+    option.textContent = element.name;
+    option.value = element.url;
+    select.appendChild(option);
+  });
+
+  const img = document.createElement('img');
+  document.body.appendChild(img);
+
+  select.addEventListener('change', () => {
+    const selectedElement = event.target.value;
+    fetchImage(selectedElement);
+  });
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url) {
+  const data = await fetchData(url);
+  const img = document.querySelector('img');
+  img.src = data.sprites.front_default;
+  img.alt = data.name;
 }
 
-function main() {
-  // TODO complete this function
+async function main() {
+  const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = 'Get Pokemon!';
+  document.body.appendChild(button);
+
+  function buttonClick() {
+    fetchAndPopulatePokemons(url);
+    button.removeEventListener('click', buttonClick);
+  }
+
+  button.addEventListener('click', buttonClick);
 }
+
+window.addEventListener('load', main);
