@@ -22,18 +22,57 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function fetchData(url) {
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons(url, selectElement) {
+  try {
+    const data = await fetchData(url);
+    data.results.forEach((pokemon) => {
+      const option = document.createElement('option');
+      option.text = pokemon.name;
+      selectElement.appendChild(option);
+    });
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchImage(url, imgElement) {
+  try {
+    const data = await fetchData(url);
+    imgElement.src = data.sprites.front_default;
+    imgElement.alt = 'pokemon';
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
 function main() {
-  // TODO complete this function
+  window.addEventListener('load', () => {
+    const selectElement = document.getElementById('pokemon-select');
+    const imgElement = document.getElementById('pokemon-image');
+
+    fetchAndPopulatePokemons(
+      'https://pokeapi.co/api/v2/pokemon',
+      selectElement
+    );
+    selectElement.addEventListener('change', () => {
+      const selectedPokemon = selectElement.value;
+      const url = `https://pokeapi.co/api/v2/pokemon/${selectedPokemon}`;
+
+      fetchImage(url, imgElement);
+    });
+  });
 }
+main();
