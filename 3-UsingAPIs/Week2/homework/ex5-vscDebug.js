@@ -14,21 +14,26 @@ async function getData(url) {
 function renderLaureate({ knownName, birth, death }) {
   console.log(`\nName: ${knownName.en}`);
   console.log(`Birth: ${birth.date}, ${birth.place.locationString}`);
-  console.log(`Death: ${death.date}, ${death.place.locationString}`);
+  if (death) {
+    console.log(`Death: ${death.date}, ${death.place.locationString}`);
+  }
 }
 
 function renderLaureates(laureates) {
+  // console.log('laureates:', laureates);
   laureates.forEach(renderLaureate);
 }
 
 async function fetchAndRender() {
   try {
-    const laureates = getData(
+    // object destructuring curly braces added:
+    const { laureates } = await getData(
       'http://api.nobelprize.org/2.0/laureates?birthCountry=Netherlands&format=json&csvLang=en'
     );
     renderLaureates(laureates);
   } catch (err) {
     console.error(`Something went wrong: ${err.message}`);
+    // console.log(err.stack);
   }
 }
 
