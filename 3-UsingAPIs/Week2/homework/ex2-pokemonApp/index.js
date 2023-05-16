@@ -23,23 +23,25 @@ Try and avoid using global variables. As much as possible, try and use function
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 
-const BUTTON = document.getElementById('pokemon-btn');
-
-function fetchData(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((data) => {
-        if (data.status === 200) {
-          return resolve(data.json());
-        }
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+function createButton() {
+  const button = document.createElement('button');
+  button.id = 'pokemon-btn';
+  button.textContent = 'Get Pokemon';
+  document.querySelector('body').appendChild(button);
 }
 
-function fetchAndPopulatePokemons(data) {
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (response.status !== 200) throw new Error('Could not fetch the data');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error.errorMessage);
+  }
+}
+
+function fetchAndPopulatePokemons(data, button) {
   const selectElement = document.createElement('select');
   selectElement.classList.add('select-list');
   const pokemons = data.results;
@@ -47,7 +49,7 @@ function fetchAndPopulatePokemons(data) {
     selectElement.add(new Option(pokemon.name, index));
   });
   document.querySelector('body').appendChild(selectElement);
-  BUTTON.disabled = true;
+  button.disabled = true;
   selectElement.addEventListener('change', (e) => {
     fetchImage(pokemons[e.target.value].url, pokemons[e.target.value].name);
   });
@@ -69,16 +71,15 @@ async function fetchImage(url, name) {
   });
 }
 
-async function main() {
-  try {
-    await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151').then((data) => {
-      BUTTON.addEventListener('click', () => {
-        fetchAndPopulatePokemons(data);
-      });
-    });
-  } catch (error) {
-    console.error(error);
-  }
+function main() {
+  const button = document.getElementById('pokemon-btn');
+  button.addEventListener('click', async () => {
+    const data = await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151');
+    fetchAndPopulatePokemons(data, button);
+  });
 }
 
-window.addEventListener('load', main);
+window.addEventListener('load', function () {
+  createButton();
+  main();
+});
