@@ -48,7 +48,7 @@ function fetchData(url) {
         return response.json();
       })
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         resolve(data);
       })
       .catch((err) => {
