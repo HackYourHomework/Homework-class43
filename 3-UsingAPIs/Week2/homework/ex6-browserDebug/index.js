@@ -4,6 +4,8 @@ Full description at:https://github.com/HackYourFuture/Homework/blob/main/3-Using
 
 'use strict';
 
+// const { error } = require('winston');
+
 async function getData(url) {
   const response = await fetch(url);
   return response.json();
@@ -38,17 +40,19 @@ function renderLaureate(ul, { knownName, birth, death }) {
 
 function renderLaureates(laureates) {
   const ul = createAndAppend('ul', document.body);
+  console.log(laureates);
   laureates.forEach((laureate) => renderLaureate(ul, laureate));
 }
 
 async function fetchAndRender() {
   try {
-    const laureates = getData(
+    const { laureates } = await getData(
       'https://api.nobelprize.org/2.0/laureates?birthCountry=Netherlands&format=json&csvLang=en'
     );
     renderLaureates(laureates);
   } catch (err) {
     console.error(`Something went wrong: ${err.message}`);
+    // console.log(err.stack);
   }
 }
 

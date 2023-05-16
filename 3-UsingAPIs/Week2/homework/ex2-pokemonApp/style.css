@@ -1,1 +1,26 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: blueviolet;
+}
+
+#btn {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#select {
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+#pokemonImage {
+  width: 200px;
+  height: 200px;
+}
