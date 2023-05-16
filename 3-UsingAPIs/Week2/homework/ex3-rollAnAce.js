@@ -19,8 +19,9 @@ async function rollDieUntil(wantedValue) {
     while (resValue !== wantedValue) {
       resValue = await rollDie();
     }
+    return resValue;
   } catch (error) {
-    return error.message;
+    throw new Error(error);
   }
 }
 

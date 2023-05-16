@@ -18,21 +18,16 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 function requestData(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          reject(response.status);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        resolve(data);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
+  return fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
 }
 
 function renderImage(data) {
@@ -41,8 +36,7 @@ function renderImage(data) {
   const myImg = document.createElement('img');
   myImg.src = data.img;
   myImg.alt = 'no image found!';
-  const myBody = document.getElementsByTagName('body')[0];
-  myBody.appendChild(myImg);
+  document.body.appendChild(myImg);
 }
 
 function renderError(error) {
@@ -50,8 +44,7 @@ function renderError(error) {
 
   const myError = document.createElement('h1');
   myError.textContent = error;
-  const myBody = document.getElementsByTagName('body')[0];
-  myBody.appendChild(myError);
+  document.body.appendChild(myError);
 }
 
 async function main() {
