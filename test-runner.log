@@ -159,3 +159,8 @@ ex3-rollAnAce.js
 ✖ 1 problem (1 error, 0 warnings)
 
 
+2023-05-16 09:29:15 info: ----------------------------------------
+2023-05-16 09:29:15 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-05-16 09:29:15 info: ----------------------------------------
+2023-05-16 09:29:20 info: All unit tests passed.
+2023-05-16 09:29:24 info: All steps were completed successfully
