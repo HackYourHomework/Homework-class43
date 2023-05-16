@@ -22,13 +22,12 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-const mainBody = document.getElementsByTagName('body')[0];
 const buttonGetPokemon = document.getElementById('button-get-pokemon');
 buttonGetPokemon.addEventListener('click', () => {
   const imgToRemove = document.getElementsByTagName('img')[0];
   const selectToRemove = document.getElementsByTagName('select')[0];
-  mainBody.removeChild(imgToRemove);
-  mainBody.removeChild(selectToRemove);
+  document.body.removeChild(imgToRemove);
+  document.body.removeChild(selectToRemove);
 
   main();
 });
