@@ -18,28 +18,41 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 function requestData(url) {
-  // TODO return a promise using `fetch()`
+  return fetch(url)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error(response.statusText);
+      }
+    })
+    .then((responseData) => {
+      console.log(responseData);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 function renderImage(data) {
-  // TODO render the image to the DOM
-  console.log(data);
+  const imgEl = document.createElement('img');
+  imgEl.src = data.img;
+  document.getElementsByTagName('body').appendChild(imgEl);
 }
 
 function renderError(error) {
-  // TODO render the error to the DOM
-  console.log(error);
+  const h1El = document.createElement('h1');
+  h1El.textContent = error;
+  document.querySelector('body').appendChild(h1El);
 }
 
-// TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
-      renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+async function main() {
+  try {
+    const data = await fetch(requestData('https://xkcd.now.sh/?comic=latest'));
+    renderImage(data);
+  } catch (error) {
+    renderError(error);
+  }
 }
 
 window.addEventListener('load', main);
