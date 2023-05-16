@@ -26,27 +26,34 @@ const cat = document.getElementById('cat');
 cat.style.position = 'absolute';
 cat.style.left = '0px';
 
+let intervalId = null;
+
 function catWalk() {
-  const currentLeft = parseInt(cat.style.left);
-  const newLeft = currentLeft + 10;
+  const currentLeft = parseInt(cat.style.left) || 0;
+  let newLeft = currentLeft + 10;
 
   if (newLeft >= window.innerWidth / 2 - cat.width / 2 && !cat.isDancing) {
     cat.isDancing = true;
+    clearInterval(intervalId);
     cat.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
     setTimeout(() => {
       cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
       cat.isDancing = false;
-    }, 4000);
+      intervalId = setInterval(catWalk, 50);
+    }, 5000);
+  } else if (
+    newLeft > window.innerWidth ||
+    (cat.isDancing && newLeft > window.innerWidth - cat.offsetWidth)
+  ) {
+    cat.style.left = -cat.offsetWidth + 'px';
+    cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    newLeft = -cat.offsetWidth;
   }
 
-  if (newLeft > window.innerWidth) {
-    cat.style.left = cat.width * -1 + 'px';
-    cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-  } else {
-    cat.style.left = newLeft + 'px';
-  }
+  cat.style.left = newLeft + 'px';
 }
 
-setInterval(catWalk, 50);
-window.addEventListener('load', catWalk);
+window.addEventListener('load', () => {
+  intervalId = setInterval(catWalk, 50);
+});
