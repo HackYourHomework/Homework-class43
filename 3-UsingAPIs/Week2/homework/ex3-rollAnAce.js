@@ -29,7 +29,7 @@ async function main() {
     console.log('resolved', results);
     return;
   } catch (error) {
-    console.log('resolved', error);
+    console.log('rejected', error);
   }
 }
 
