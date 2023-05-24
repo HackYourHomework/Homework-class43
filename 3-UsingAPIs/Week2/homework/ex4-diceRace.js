@@ -17,10 +17,12 @@ async function rollDice() {
   const dice = [1, 2, 3, 4, 5];
   const promises = dice.map((die) => rollDie(die));
   // eslint-disable-next-line no-useless-catch
+
   try {
     const result = await Promise.race(promises);
     return result;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 }
