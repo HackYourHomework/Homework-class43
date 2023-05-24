@@ -23,10 +23,9 @@ async function requestData(url) {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
-    const data = await response.json();
-    return data;
+    return response.json();
   } catch (error) {
-    console.log(error);
+    throw new Error(`Network error: ${error.message}`);
   }
 }
 
