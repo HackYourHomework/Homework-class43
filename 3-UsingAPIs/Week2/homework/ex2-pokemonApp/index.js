@@ -28,9 +28,7 @@ async function fetchData(url) {
     if (!response.ok) {
       throw new Error('HTTP or network error: ' + response.status);
     }
-
-    const jsonData = await response.json();
-    return jsonData;
+    return response.json();
   } catch (error) {
     console.log('Show error', error);
     throw error;
@@ -38,10 +36,12 @@ async function fetchData(url) {
 }
 
 async function fetchAndPopulatePokemons(data) {
-  const pokemonSelect = document.getElementById('pokemonSelect');
-  const selectButton = document.querySelector('.selectButton');
+  const selectButtonEl = Object.assign(document.createElement('button'), {
+    textContent: 'Get Pokemon!',
+  });
+  const pokemonSelect = document.createElement('select');
 
-  selectButton.addEventListener('click', async () => {
+  selectButtonEl.addEventListener('click', async () => {
     try {
       const getPokemonData = await fetchData(data);
       const getPokemonNames = getPokemonData.results.map(
@@ -59,23 +59,40 @@ async function fetchAndPopulatePokemons(data) {
       console.error('Error:', error);
     }
   });
+
+  document.body.appendChild(pokemonSelect);
+  document.body.appendChild(selectButtonEl);
 }
 
-function fetchImage(url) {
-  const imageElement = document.getElementById('pokemonImage');
-  imageElement.src = url;
+async function fetchImage(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error('HTTP error: ' + response.status);
+    }
+
+    const imageUrl = response.url;
+    const imageDisplayEl = document.createElement('img');
+    imageDisplayEl.src = imageUrl;
+    document.body.appendChild(imageDisplayEl);
+  } catch (error) {
+    console.log('Error:', error);
+  }
 }
 
 async function main() {
   const data = 'https://pokeapi.co/api/v2/pokemon?limit=151';
   fetchAndPopulatePokemons(data);
 
-  const pokemonSelect = document.getElementById('pokemonSelect');
+  const pokemonSelect = document.querySelector('select');
   pokemonSelect.addEventListener('change', async () => {
+    const selectedOption = pokemonSelect.options[pokemonSelect.selectedIndex];
+    const pokemonName = selectedOption.textContent;
+
     try {
-      const selectedPokemonName = pokemonSelect.value;
       const pokemonData = await fetchData(
-        `https://pokeapi.co/api/v2/pokemon/${selectedPokemonName}`
+        `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
       );
       const imageUrl = pokemonData.sprites.front_default;
       fetchImage(imageUrl);
