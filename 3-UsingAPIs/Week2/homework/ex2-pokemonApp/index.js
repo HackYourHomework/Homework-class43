@@ -28,29 +28,19 @@ async function fetchData(url) {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return await response.json();
+    return response.json();
   } catch (error) {
     console.error(error);
   }
 }
 
-async function fetchAndPopulatePokemons(url) {
+async function fetchAndPopulatePokemons(url, select) {
   const data = await fetchData(url);
-  const select = document.createElement('select');
-  document.body.appendChild(select);
   data.results.forEach((element) => {
     const option = document.createElement('option');
     option.textContent = element.name;
     option.value = element.url;
     select.appendChild(option);
-  });
-
-  const img = document.createElement('img');
-  document.body.appendChild(img);
-
-  select.addEventListener('change', () => {
-    const selectedElement = event.target.value;
-    fetchImage(selectedElement);
   });
 }
 
@@ -63,17 +53,26 @@ async function fetchImage(url) {
 
 async function main() {
   const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+  const select = document.createElement('select');
+  const img = document.createElement('img');
   const button = document.createElement('button');
   button.type = 'button';
   button.textContent = 'Get Pokemon!';
-  document.body.appendChild(button);
 
-  function buttonClick() {
-    fetchAndPopulatePokemons(url);
-    button.removeEventListener('click', buttonClick);
+  document.body.appendChild(button);
+  document.body.appendChild(select);
+  document.body.appendChild(img);
+
+  async function buttonClick() {
+    await fetchAndPopulatePokemons(url, select);
   }
 
   button.addEventListener('click', buttonClick);
+
+  select.addEventListener('change', () => {
+    const selectedElement = select.value;
+    fetchImage(selectedElement);
+  });
 }
 
 window.addEventListener('load', main);
