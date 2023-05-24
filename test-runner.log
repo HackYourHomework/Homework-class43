@@ -823,3 +823,148 @@ ex3-rollAnAce.js
 2023-05-16 11:33:36 info: Exercise has not yet been modified
 2023-05-16 11:33:36 warn: A unit test file was not provided.
 2023-05-16 11:33:39 info: All steps were completed successfully
+2023-05-24 02:51:27 info: ---------------------------------------------
+2023-05-24 02:51:27 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2023-05-24 02:51:27 info: ---------------------------------------------
+2023-05-24 02:51:34 info: All unit tests passed.
+2023-05-24 02:51:38 info: All steps were completed successfully
+2023-05-24 02:51:47 info: ------------------------------------------
+2023-05-24 02:51:47 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-24 02:51:47 info: ------------------------------------------
+2023-05-24 02:51:51 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (127 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()`
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      13:19  error  <button> is missing required \"type\" attribute  element-required-attributes·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.116 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-05-24 02:53:29 info: ------------------------------------------
+2023-05-24 02:53:29 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2023-05-24 02:53:29 info: ------------------------------------------
+2023-05-24 02:53:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js
+  pokemonApp
+    ✕ HTML should be syntactically valid (128 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✓ should use `fetch()`
+    ✓ should use `await fetch()`
+    ✓ should use try/catch
+
+  ● pokemonApp › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      12:19  error  <button> is missing required \"type\" attribute  element-required-attributes·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at toBe (test-runner/jsdom-helpers.js:46:28)
+      at Object.validateHTML (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:40:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.563 s, estimated 4 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2023-05-24 02:53:49 info: -----------------------------------------
+2023-05-24 02:53:49 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2023-05-24 02:53:49 info: -----------------------------------------
+2023-05-24 02:53:52 info: All unit tests passed.
+2023-05-24 02:53:56 info: All steps were completed successfully
+2023-05-24 02:54:08 info: ----------------------------------------
+2023-05-24 02:54:08 info: >>> Running Unit Test `ex4-diceRace` <<<
+2023-05-24 02:54:08 info: ----------------------------------------
+2023-05-24 02:54:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-diceRace.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex4-diceRace.test.js
+  ex4-diceRace
+    ✓ should exist and be executable (2 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✕ `rollDice` should not contain unneeded console.log calls (4 ms)
+    ✓ should use `dice.map()`
+    ✓ should use `Promise.race()`
+    ✓ should resolve as soon as a die settles successfully (10 ms)
+    ✓ should reject with an Error as soon as a die rolls off the table (28 ms)
+
+  ● ex4-diceRace › `rollDice` should not contain unneeded console.log calls
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      137 |       });
+      138 |
+    > 139 |     expect(callsConsoleLog).toBe(false);
+          |                             ^
+      140 |   });
+      141 | }
+      142 |
+
+      at Object.toBe (test-runner/unit-test-helpers.js:139:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
+Snapshots:   0 total
+Time:        0.813 s
+Ran all test suites matching /ex4-diceRace.test.js/i.
+2023-05-24 02:54:38 info: ----------------------------------------
+2023-05-24 02:54:38 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2023-05-24 02:54:38 info: ----------------------------------------
+2023-05-24 02:54:38 info: Exercise has not yet been modified
+2023-05-24 02:54:38 warn: A unit test file was not provided.
+2023-05-24 02:54:41 info: All steps were completed successfully
