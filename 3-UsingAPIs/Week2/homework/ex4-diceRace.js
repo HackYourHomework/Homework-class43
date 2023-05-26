@@ -15,7 +15,8 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  return Promise.race(dice.map((promise) => rollDie(promise)));
+  const promises = dice.map(() => rollDie());
+  return Promise.race(promises);
 }
 
 // Refactor this function to use async/await and try/catch
@@ -33,6 +34,7 @@ The reason is that Promise.race() takes an array of promises and returns a new p
 Unlike Promise.all() which waits for all promises to resolve, Promise.race() only waits for the fastest promise to resolve. This means that even if some promises haven't resolved yet, the result of the first resolved promise will be used.
 
  Promise.race() allows you to handle the result of the fastest promise and continue with the rest of your code.
+ -The dice continued rolling after the promise is that the promises for rolling the the dice are scheduled to execute immediately upon creation. Promise.race() determines the winner, but it doesn't stop the ongoing execution of the remaining promises. They continue rolling independently until they complete their execution.
 */
 
 // ! Do not change or remove the code below
