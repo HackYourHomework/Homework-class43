@@ -34,7 +34,31 @@ async function fetchData(url) {
   }
 }
 
-async function fetchAndPopulatePokemons(select) {
+async function fetchAndPopulatePokemons() {
+  const body = document.querySelector('body');
+
+  const divOuter = document.createElement('div');
+
+  const pEl = document.createElement('p');
+  pEl.textContent = 'Choose your favorite Pokemon';
+  divOuter.appendChild(pEl);
+
+  const button = document.createElement('button');
+  button.id = 'getPokemon';
+  button.textContent = 'Choose..';
+  divOuter.appendChild(button);
+
+  const divInner = document.createElement('div');
+  divOuter.appendChild(divInner);
+
+  const select = document.createElement('select');
+  divInner.appendChild(select);
+
+  const img = document.createElement('img');
+  divOuter.appendChild(img);
+
+  body.appendChild(divOuter);
+
   const url = `https://pokeapi.co/api/v2/pokemon?limit=151`;
 
   try {
@@ -48,6 +72,15 @@ async function fetchAndPopulatePokemons(select) {
   } catch (error) {
     console.error('Error:', error);
   }
+
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+
+    select.addEventListener('change', async () => {
+      const url = `https://pokeapi.co/api/v2/pokemon/${select.value}`;
+      await fetchImage(url);
+    });
+  });
 }
 
 async function fetchImage(url) {
@@ -61,19 +94,7 @@ async function fetchImage(url) {
 }
 
 async function main() {
-  const select = document.querySelector('select');
-  const button = document.querySelector('#getPokemon');
-
-  button.addEventListener('click', async () => {
-    await fetchAndPopulatePokemons(select);
-
-    button.disabled = true;
-
-    select.addEventListener('change', async () => {
-      const url = `https://pokeapi.co/api/v2/pokemon/${select.value}`;
-      await fetchImage(url);
-    });
-  });
+  await fetchAndPopulatePokemons();
 }
 
 window.addEventListener('load', main);
