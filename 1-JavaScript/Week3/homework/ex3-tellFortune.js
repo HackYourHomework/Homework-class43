@@ -33,37 +33,53 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+
+/*function selectRandomly(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function tellFortune(/* TODO add parameter(s) here */) {
-  // TODO complete this function
+function tellFortune(kids, names, location, jobs) {
+  const randomNum = selectRandomly(kids);
+  const randomName = selectRandomly(names);
+  const randomLocation = selectRandomly(location);
+  const randomJob = selectRandomly(jobs);
+
+  return `You will be a ${randomJob} in ${randomLocation} married to ${randomName} with ${randomNum} kids.`;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-  ];
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+  console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+}*/
+const numKids = [3, 2, 4, 1, 6];
 
-  const partnerNames = [
-    // TODO add elements here
-  ];
+const partnerNames = ['Peter', 'Luke', 'Matt', 'John', 'Paul'];
 
-  const locations = [
-    // TODO add elements here
-  ];
+const locations = ['London', 'Manchester', 'Amsterdam', 'Paris', 'Rotterdam'];
 
-  const jobTitles = [
-    // TODO add elements here
-  ];
+const jobTitles = ['Banker', 'Lawyer', 'Engineer', 'Programmer', 'Investor'];
 
+function selectRandomly(arr) {
+  const randomSelection = Math.floor(Math.random() * arr.length);
+  const randomString = arr[randomSelection];
+  return randomString;
+}
+
+function tellFortune(numKids, partnerNames, locations, jobTitles) {
+  const kids = parseInt(selectRandomly(numKids));
+  const forKids = kids === 1 ? 'kid' : 'kids';
+  return `You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(
+    locations
+  )}, married to ${selectRandomly(partnerNames)} with ${kids} ${forKids}.`;
+}
+function main() {
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
 }
-
 // ! Do not change or remove the code below
+
 if (process.env.NODE_ENV !== 'test') {
   main();
 }

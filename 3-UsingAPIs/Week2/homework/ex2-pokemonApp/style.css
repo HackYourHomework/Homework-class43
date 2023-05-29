@@ -1,1 +1,42 @@
-/* add your styling here */
+div {
+  margin: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+select {
+  font-size: 16px;
+}
+
+img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+}
+p {
+  font-size: 18px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+select {
+  font-size: 16px;
+}
+
+img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+}
