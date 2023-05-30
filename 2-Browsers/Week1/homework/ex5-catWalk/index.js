@@ -21,8 +21,39 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
+
+const cat = document.getElementById('cat');
+cat.style.position = 'absolute';
+cat.style.left = '0px';
+
+let intervalId = null;
+
 function catWalk() {
-  // TODO complete this function
+  const currentLeft = parseInt(cat.style.left) || 0;
+  let newLeft = currentLeft + 10;
+
+  if (newLeft >= window.innerWidth / 2 - cat.width / 2 && !cat.isDancing) {
+    cat.isDancing = true;
+    clearInterval(intervalId);
+    cat.src =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+    setTimeout(() => {
+      cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+      intervalId = setInterval(catWalk, 50);
+    }, 5000);
+  } else if (
+    newLeft > window.innerWidth ||
+    (cat.isDancing && newLeft > window.innerWidth - cat.offsetWidth)
+  ) {
+    cat.isDancing = false;
+    cat.style.left = -cat.offsetWidth + 'px';
+    cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    newLeft = -cat.offsetWidth;
+  }
+
+  cat.style.left = newLeft + 'px';
 }
 
-// TODO execute `catWalk` when the browser has completed loading the page
+window.addEventListener('load', () => {
+  intervalId = setInterval(catWalk, 50);
+});
