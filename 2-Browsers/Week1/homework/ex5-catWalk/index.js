@@ -39,13 +39,13 @@ function catWalk() {
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
     setTimeout(() => {
       cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-      cat.isDancing = false;
       intervalId = setInterval(catWalk, 50);
     }, 5000);
   } else if (
     newLeft > window.innerWidth ||
     (cat.isDancing && newLeft > window.innerWidth - cat.offsetWidth)
   ) {
+    cat.isDancing = false;
     cat.style.left = -cat.offsetWidth + 'px';
     cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
     newLeft = -cat.offsetWidth;
