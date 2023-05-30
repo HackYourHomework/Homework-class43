@@ -32,6 +32,7 @@ function fetchData(url) {
     })
     .catch((error) => {
       console.error('Error:', error);
+      throw error;
     });
 }
 
@@ -60,13 +61,20 @@ async function fetchImage(url, imgElement) {
 
 function main() {
   window.addEventListener('load', () => {
-    const selectElement = document.getElementById('pokemon-select');
-    const imgElement = document.getElementById('pokemon-image');
+    const selectElement = document.createElement('select');
+    const imgElement = document.createElement('img');
+
+    selectElement.id = 'pokemon-select';
+    imgElement.id = 'pokemon-image';
+
+    document.body.appendChild(selectElement);
+    document.body.appendChild(imgElement);
 
     fetchAndPopulatePokemons(
       'https://pokeapi.co/api/v2/pokemon',
       selectElement
     );
+
     selectElement.addEventListener('change', () => {
       const selectedPokemon = selectElement.value;
       const url = `https://pokeapi.co/api/v2/pokemon/${selectedPokemon}`;
@@ -75,4 +83,5 @@ function main() {
     });
   });
 }
+
 main();
