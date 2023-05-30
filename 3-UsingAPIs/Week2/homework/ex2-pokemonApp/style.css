@@ -1,1 +1,42 @@
-/* add your styling here */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #faf4f4;
+  font-family: Arial, sans-serif;
+}
+
+select {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+select:hover {
+  background: #e3e6e8;
+  font-weight: bolder;
+}
+
+image {
+  display: block;
+  margin-top: 10px;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
