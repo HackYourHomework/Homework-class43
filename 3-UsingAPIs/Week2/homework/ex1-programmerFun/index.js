@@ -18,22 +18,25 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(imgUrl) {
-  const response = await fetch(imgUrl);
-
+  try {
+     const response = await fetch(imgUrl);
   return await response.json();
+  }catch(error){
+    renderError(error)
+  }
+ 
 }
 
 function renderImage(data) {
   const imgElem = document.createElement('img');
-  const imgHolder = document.querySelector('.imgHolder');
-  imgHolder.append(imgElem);
+  document.body.appendChild(imgElem);
 
   imgElem.src = data.img;
 }
 
 function renderError(error) {
   const pElem = document.createElement('p');
-  document.body.append(pElem);
+  document.body.appendChild(pElem);
   pElem.textContent = error;
 }
 

@@ -7,7 +7,7 @@ option {
   padding-left: 20px;
   background-color: rgb(179, 184, 188);
 }
-.getPokemonBtn {
+button {
   width: 100px;
   margin: 10px auto 10px 10px;
 }

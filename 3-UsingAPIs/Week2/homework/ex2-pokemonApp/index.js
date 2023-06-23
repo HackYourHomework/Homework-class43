@@ -28,20 +28,25 @@ async function fetchData(url) {
   // TODO complete this function
   try {
     const response = await fetch(url);
-    // console.log(response);
+
     if (!response.ok) {
       throw new Error(`HTTP Error! Status: ${response.status}`);
     } else {
-      // console.log(response.json());
+     
       return await response.json();
     }
   } catch (error) {
     console.log(`Network error: ${error}`);
   }
 }
-const pokemonDropdown = document.querySelector('.pokemonDropdown');
+
+const pokemonDropdown = document.createElement('div');
 const selectElem = document.createElement('select');
 pokemonDropdown.append(selectElem);
+const imgHolder = document.createElement('p');
+
+document.body.append(pokemonDropdown, imgHolder)
+
 async function fetchAndPopulatePokemons() {
   const data = await fetchData(baseUrl);
 
@@ -56,17 +61,20 @@ async function fetchImage() {
   if (selectedPokemon) {
     const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${selectedPokemon}`;
     const data = await fetchData(pokemonUrl);
-    const imgHolder = document.querySelector('.imgHolder');
-    imgHolder.textContent = '';
+    
+    imgHolder.innerHTML = "";
     const imgElem = document.createElement('img');
     imgHolder.append(imgElem);
     imgElem.src = data.sprites.front_default;
+   
   }
 }
 async function main() {
   try {
-    const getPokemonBtn = document.querySelector('.getPokemonBtn');
-    getPokemonBtn.addEventListener(
+    const pokemonBtn = document.createElement('button');
+    pokemonBtn.textContent = "Get Pokemon"
+    document.body.prepend(pokemonBtn)
+    pokemonBtn.addEventListener(
       'click',
       async () => await fetchAndPopulatePokemons()
     );
