@@ -8,5 +8,22 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    `list-item`.
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
+const myInfo = {
+  nickname: 'Alya',
+  'fav-food': 'sushi',
+  hometown: 'Cherkassy',
+};
+function createMyData() {
+  const myData = document.querySelectorAll('span');
+  const ulElem = document.querySelector('ul');
 
-// TODO add your JavaScript code here.
+  console.log(myData);
+  for (const child of myData) {
+    child.textContent = myInfo[child.id];
+  }
+  for (const item of ulElem.children) {
+    item.classList.add('list-item');
+  }
+}
+
+createMyData();

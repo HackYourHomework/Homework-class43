@@ -1,1 +1,16 @@
 /* Write your style here */
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+  width: 25em;
+  margin: 2em;
+  padding: 2em;
+}
+.book {
+  background-color: green;
+}
+.bookRed {
+  background-color: red;
+}

@@ -1,0 +1,14 @@
+
+*** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  4:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+*** Spell Checker Report ***
+
+ex2-mondaysWorth.test.js:46:44 - Unknown word (accum)
+ex2-mondaysWorth.test.js:47:7 - Unknown word (accum)
+ex2-mondaysWorth.test.js:48:14 - Unknown word (accum)

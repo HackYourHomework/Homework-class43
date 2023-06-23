@@ -22,18 +22,65 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
+const baseUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+
+async function fetchData(url) {
   // TODO complete this function
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error! Status: ${response.status}`);
+    } else {
+     
+      return await response.json();
+    }
+  } catch (error) {
+    console.log(`Network error: ${error}`);
+  }
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
-}
+const pokemonDropdown = document.createElement('div');
+const selectElem = document.createElement('select');
+pokemonDropdown.append(selectElem);
+const imgHolder = document.createElement('p');
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
-}
+document.body.append(pokemonDropdown, imgHolder)
 
-function main() {
-  // TODO complete this function
+async function fetchAndPopulatePokemons() {
+  const data = await fetchData(baseUrl);
+
+  for (const item of data.results) {
+    const optionElem = document.createElement('option');
+    selectElem.append(optionElem);
+    optionElem.textContent = item.name;
+  }
 }
+async function fetchImage() {
+  const selectedPokemon = selectElem.value;
+  if (selectedPokemon) {
+    const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${selectedPokemon}`;
+    const data = await fetchData(pokemonUrl);
+    
+    imgHolder.innerHTML = "";
+    const imgElem = document.createElement('img');
+    imgHolder.append(imgElem);
+    imgElem.src = data.sprites.front_default;
+   
+  }
+}
+async function main() {
+  try {
+    const pokemonBtn = document.createElement('button');
+    pokemonBtn.textContent = "Get Pokemon"
+    document.body.prepend(pokemonBtn)
+    pokemonBtn.addEventListener(
+      'click',
+      async () => await fetchAndPopulatePokemons()
+    );
+    selectElem.addEventListener('change', fetchImage);
+  } catch (error) {
+    console.log(error);
+  }
+}
+window.addEventListener('load', main);
