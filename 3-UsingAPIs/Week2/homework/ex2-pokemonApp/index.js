@@ -22,18 +22,79 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-function fetchData(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+const buttonGetPokemon = document.getElementById('button-get-pokemon');
+buttonGetPokemon.addEventListener('click', () => {
+  const imgToRemove = document.getElementsByTagName('img')[0];
+  const selectToRemove = document.getElementsByTagName('select')[0];
+  document.body.removeChild(imgToRemove);
+  document.body.removeChild(selectToRemove);
+
+  main();
+});
+
+function fetchData(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          console.log(response.status);
+          reject(response.status);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        resolve(data);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
 }
 
-function fetchAndPopulatePokemons(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function updatePokeImg(e) {
+  const myBody = document.getElementsByTagName('body')[0];
+  const imgToRemove = document.getElementsByTagName('img')[0];
+  myBody.removeChild(imgToRemove);
+
+  fetchImage(`https://pokeapi.co/api/v2/pokemon/${e.target.value}`);
 }
 
-function fetchImage(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+async function fetchAndPopulatePokemons(url) {
+  const pokes = await fetchData(url);
+
+  const mySelect = document.createElement('select');
+  const myBody = document.getElementsByTagName('body')[0];
+  myBody.appendChild(mySelect);
+  mySelect.addEventListener('change', updatePokeImg);
+
+  pokes.results.forEach((element) => {
+    const myOption = document.createElement('option');
+    myOption.value = element.name;
+    myOption.textContent = element.name;
+    mySelect.appendChild(myOption);
+  });
+
+  fetchImage(`https://pokeapi.co/api/v2/pokemon/bulbasaur`);
+}
+
+async function fetchImage(imgUrl) {
+  const myBody = document.getElementsByTagName('body')[0];
+  const result = await fetchData(imgUrl);
+  const pocImgUrl = result.sprites.front_default;
+  const myImg = document.createElement('img');
+
+  myImg.src = pocImgUrl;
+  myImg.alt = 'Pokemon image.';
+  myBody.append(myImg);
 }
 
 function main() {
-  // TODO complete this function
+  try {
+    fetchAndPopulatePokemons('https://pokeapi.co/api/v2/pokemon?limit=151');
+  } catch (error) {
+    console.log(error);
+  }
 }
+
+window.addEventListener('load', main);
